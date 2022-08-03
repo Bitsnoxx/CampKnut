@@ -19,14 +19,18 @@ export const components = {
       <a
         target={"_blank"}
         rel="noreferrer"
-        className="dark:text-gray-300 text-gray-700 underline"
+        className="dark:text-knut-dark-post-link text-knut-light-post-link underline"
         {...props}
       />
     );
   },
   Important: (props: any) => {
     const text = props.children.props.children;
-    return <div className="p-4 my-4 bg-gray-200 dark:bg-gray-600">{text}</div>;
+    return (
+      <div className="p-4 my-4 bg-knut-light-bg-info dark:bg-knut-dark-bg-info">
+        {text}
+      </div>
+    );
   },
   Info: (props: any) => null,
   ["*"]: (props: any) => null,

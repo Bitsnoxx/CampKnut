@@ -10,11 +10,15 @@ module.exports = {
         knut: {
           light: {
             bg: "#fff",
+            "bg-info": "#f0f8ff",
             text: "#000",
+            "post-link": "#43484d",
           },
           dark: {
             bg: "#121212",
+            "bg-info": "#242424",
             text: "#fff",
+            "post-link": "#9b9b9b",
           },
           other: {
             twitch: "#6441A5",
