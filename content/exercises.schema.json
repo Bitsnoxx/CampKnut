@@ -1,0 +1,88 @@
+{
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": ["items"],
+  "properties": {
+    "items": {
+      "type": "array",
+      "default": [],
+      "title": "The items Schema",
+      "items": {
+        "type": "object",
+        "default": {},
+        "title": "A Schema",
+        "required": ["name", "slug", "tags", "youtubeLink", "imageUrl"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "default": "",
+            "title": "The name Schema",
+            "examples": ["Iso-lateral Row"]
+          },
+          "slug": {
+            "type": "string",
+            "default": "",
+            "title": "slug Schema",
+            "examples": ["iso-lateral-row"]
+          },
+          "tags": {
+            "type": "array",
+            "default": [],
+            "title": "The tags Schema",
+            "items": {
+              "type": "string",
+              "title": "A Schema",
+              "examples": ["back", "traps"]
+            },
+            "examples": [["back", "traps"]]
+          },
+          "youtubeLink": {
+            "type": "string",
+            "default": "",
+            "title": "The youtubeLink Schema",
+            "examples": ["https://youtu.be/MWRZ-R2K74Q?t=5974"]
+          },
+          "imageUrl": {
+            "type": "string",
+            "default": "",
+            "title": "The imageUrl Schema",
+            "examples": [""]
+          }
+        },
+        "examples": [
+          {
+            "name": "Iso-lateral Row",
+            "tags": ["back", "traps"],
+            "youtubeLink": "https://youtu.be/MWRZ-R2K74Q?t=5974",
+            "imageUrl": ""
+          }
+        ]
+      },
+      "examples": [
+        [
+          {
+            "name": "Iso-lateral Row",
+            "slug": "iso-lateral-row",
+            "tags": ["back", "traps"],
+            "youtubeLink": "https://youtu.be/MWRZ-R2K74Q?t=5974",
+            "imageUrl": ""
+          }
+        ]
+      ]
+    }
+  },
+  "examples": [
+    {
+      "items": [
+        {
+          "name": "Iso-lateral Row",
+          "tags": ["back", "traps"],
+          "youtubeLink": "https://youtu.be/MWRZ-R2K74Q?t=5974",
+          "imageUrl": ""
+        }
+      ]
+    }
+  ]
+}
