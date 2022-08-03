@@ -12,23 +12,16 @@ import {
 import { Container, Center, AspectRatio } from "@mantine/core";
 import { introduction, tips } from "../content/text";
 import { MdContactSupport } from "react-icons/md";
-import { participants } from "../content/streamers";
+/* import { participants } from "../content/streamers"; */
 
 const Home: NextPage = () => {
   return (
     <Container size="md" px="md">
       <article className="page sans">
         <header>
-          <Center>
-            <h1 className="page-title">Camp Knut 💪</h1>
-          </Center>
-          <Center>
-            <FaTwitch color="#9146FF" size={42} />
-            <FaReddit size={42} />
-            <FaYoutube color="#FF0000" size={42} />
-            <FaTwitter color="#1DA1F2" size={42} />
-            <FaInstagram className="instagram" size={42} />
-          </Center>
+          <p className="page-title text-2xl text-center font-bold	my-12">
+            {introduction.title} 💪
+          </p>
         </header>
 
         <div className="page-body">
@@ -40,26 +33,25 @@ const Home: NextPage = () => {
               priority={true}
             />
           </AspectRatio>
-          <h1>Camp Knut</h1>
-          <h2>What is Camp Knut?</h2>
+          <h2 className="mt-8 text-2xl font-bold">
+            What is {introduction.title}?
+          </h2>
           <p>{introduction.whatIs}</p>
-          <h2>Goal🏆</h2>
+          <h2 className="mt-8 text-2xl font-bold">Goal🏆</h2>
           <p>{introduction.goal}</p>
-          <p>Final show will be a fitness/bodybuilding competition.</p>
-          <h2>Who is Knut?</h2>
+          <h2 className="mt-8 text-2xl font-bold">Who is Knut?</h2>
           <p>{introduction.whoIsKnut}</p>
-          <hr />
-          <div className="column-list">
-            <div className="column">
-              <p></p>
-              <h1>Trainers</h1>
+
+          <div className="flex mb-8">
+            <div className="w-1/2">
+              <h1 className="text-2xl font-bold mt-4">Trainers</h1>
               <p>
                 <a href="https://twitch.tv/knut">Knut</a>
               </p>
               <p>
                 <a href="https://www.twitch.tv/wakewilder">WakeWilder</a>
               </p>
-              <h1>Judges</h1>
+              <h1 className="text-2xl font-bold mt-4">Judges</h1>
               <p>
                 <a href="https://twitch.tv/knut">Knut</a>
               </p>
@@ -72,10 +64,14 @@ const Home: NextPage = () => {
               <p>
                 <a href="https://www.twitch.tv/malena">Malena</a>
               </p>
+
+              <h1 className="text-2xl font-bold mt-4">Guests</h1>
+              <p>
+                <a href="https://www.twitch.tv/mitchjones">MitchJones</a>
+              </p>
             </div>
-            <div className="column">
-              <p></p>
-              <h1>Streamers</h1>
+            <div className="w-1/2">
+              <h1 className="text-2xl font-bold mt-4">Streamers</h1>
               <p>
                 <a href="https://www.twitch.tv/mizkif">Mizkif</a>
               </p>
@@ -100,26 +96,13 @@ const Home: NextPage = () => {
               <p>
                 <a href="https://www.twitch.tv/Lacari">Lacari</a>
               </p>
-            </div>
-          </div>
-          <div className="column-list">
-            <div className="column">
-              <h1>Chef</h1>
+              <h1 className="text-2xl font-bold mt-4">Chef</h1>
               <p>
-                <a href="https://www.twitch.tv/exxzy">
-                  <strong>Exxzy</strong>
-                </a>
-              </p>
-            </div>
-            <div className="column">
-              <h1>Guests</h1>
-              <p>
-                <a href="https://www.twitch.tv/mitchjones">MitchJones</a>
+                <a href="https://www.twitch.tv/exxzy">Exxzy</a>
               </p>
             </div>
           </div>
-          <p></p>
-          <hr />
+
           <p></p>
           <figure className="block-color-gray_background callout">
             <div>
@@ -134,15 +117,15 @@ const Home: NextPage = () => {
             <div>
               <span className="icon">💡</span>
             </div>
-            <div>
+            <div className="mb-8">
               <strong>{tips.supplements}</strong>
             </div>
           </figure>
           <p></p>
-          <hr />
-          <div className="column-list">
-            <div className="column">
-              <h1>🥩 Meal Plans</h1>
+
+          <div className="flex">
+            <div className="w-1/2">
+              <h1 className="text-2xl font-bold mt-4">🥩 Meal Plans</h1>
               <p>
                 🧾{" "}
                 <a href="https://docs.google.com/spreadsheets/d/1Fto6sArnx-lBoxXyFEC3cLCbVQkJdwT9-JsPD9Agra8/edit?usp=sharing">
@@ -161,64 +144,14 @@ const Home: NextPage = () => {
                   Mizkif meal plan without eggs and supplements
                 </a>
               </p>
-            </div>
-            <div className="column">
-              <h1>📕 Plans</h1>
-              <figure className="link-to-page">
-                <a href="Camp%20Knut%20%F0%9F%92%AA%2017e230f0c0994684b7fd08ded2966fcf/Workout%20Beginner%20b0e37f37cc5a4500af7cd172fcd9ac43.html">
-                  <span className="icon">📝</span>Workout Beginner
-                </a>
-              </figure>
-              <figure className="link-to-page">
-                <a href="Camp%20Knut%20%F0%9F%92%AA%2017e230f0c0994684b7fd08ded2966fcf/Workout%20plan%20Week%201%20fdfd1d70e98d484f82f5380a8477fa53.html">
-                  <span className="icon">📝</span>Workout plan Week 1
-                </a>
-              </figure>
-              <figure className="link-to-page">
-                <a href="Camp%20Knut%20%F0%9F%92%AA%2017e230f0c0994684b7fd08ded2966fcf/Workout%20plan%20Week%202%202581ca6ecaef4fb591068811a919793e.html">
-                  <span className="icon">📝</span>Workout plan Week 2
-                </a>
-              </figure>
-              <figure className="link-to-page">
-                <a href="Camp%20Knut%20%F0%9F%92%AA%2017e230f0c0994684b7fd08ded2966fcf/Exercises%20941851ed2bd5482eb0ef19f46239fde3.html">
-                  <span className="icon">📝</span>Exercises
-                </a>
-              </figure>
-            </div>
-          </div>
-          <div className="column-list">
-            <div className="column">
-              <h1>💊 Supplements</h1>
+              <h1 className="text-2xl font-bold mt-4">💊 Supplements</h1>
               <figure className="link-to-page">
                 <a href="Camp%20Knut%20%F0%9F%92%AA%2017e230f0c0994684b7fd08ded2966fcf/Camp%20Knut%20Amazon%20Suplements%20by%20WakeWilder%200e73dd9909e84c338a704638a837289d.html">
                   <span className="icon">📝</span>Camp Knut Amazon Suplements by
                   WakeWilder
                 </a>
               </figure>
-            </div>
-            <div className="column">
-              <h1>🛠️ Tools</h1>
-              <p>
-                📱 MyFitnessPal{" "}
-                <a href="https://apps.apple.com/us/app/myfitnesspal-calorie-counter/id341232718">
-                  iOS{" "}
-                </a>
-                /{" "}
-                <a href="https://play.google.com/store/apps/details?id=com.myfitnesspal.android&amp;hl=en&amp;gl=US">
-                  Android
-                </a>
-              </p>
-              <p>
-                📱{" "}
-                <a href="https://www.bodybuilding.com/fun/bmr_calculator.htm">
-                  BMR Calculator
-                </a>
-              </p>
-            </div>
-          </div>
-          <div className="column-list">
-            <div className="column">
-              <h1>
+              <h1 className="text-2xl font-bold mt-4">
                 <strong>💖</strong> Community
               </h1>
               <figure className="link-to-page">
@@ -238,9 +171,45 @@ const Home: NextPage = () => {
                   </strong>
                 </a>
               </p>
+              <h1 className="text-2xl font-bold mt-4">📃 Articles</h1>
+              <p>
+                🧾{" "}
+                <a href="https://physiqonomics.com/fat-loss/">
+                  <strong>
+                    The Best Fat Loss Article on the Motherfuckin’ Internet
+                  </strong>
+                </a>
+              </p>
+              <h3 className="{ContentTitle}">Want to help out?</h3>
+              <figure className="link-to-page">
+                <a href="Camp%20Knut%20%F0%9F%92%AA%2017e230f0c0994684b7fd08ded2966fcf/Roadmap%20ffe306ad089245cc99038389d2d9061d.html">
+                  <span className="icon">🚗</span>Roadmap
+                </a>
+              </figure>
             </div>
-            <div className="column">
-              <h1>📈 Progress</h1>
+            <div className="w-1/2">
+              <h1 className="text-2xl font-bold mt-4">📕 Plans</h1>
+              <figure className="link-to-page">
+                <a href="Camp%20Knut%20%F0%9F%92%AA%2017e230f0c0994684b7fd08ded2966fcf/Workout%20Beginner%20b0e37f37cc5a4500af7cd172fcd9ac43.html">
+                  <span className="icon">📝</span>Workout Beginner
+                </a>
+              </figure>
+              <figure className="link-to-page">
+                <a href="Camp%20Knut%20%F0%9F%92%AA%2017e230f0c0994684b7fd08ded2966fcf/Workout%20plan%20Week%201%20fdfd1d70e98d484f82f5380a8477fa53.html">
+                  <span className="icon">📝</span>Workout plan Week 1
+                </a>
+              </figure>
+              <figure className="link-to-page">
+                <a href="Camp%20Knut%20%F0%9F%92%AA%2017e230f0c0994684b7fd08ded2966fcf/Workout%20plan%20Week%202%202581ca6ecaef4fb591068811a919793e.html">
+                  <span className="icon">📝</span>Workout plan Week 2
+                </a>
+              </figure>
+              <figure className="link-to-page">
+                <a href="Camp%20Knut%20%F0%9F%92%AA%2017e230f0c0994684b7fd08ded2966fcf/Exercises%20941851ed2bd5482eb0ef19f46239fde3.html">
+                  <span className="icon">📝</span>Exercises
+                </a>
+              </figure>{" "}
+              <h1 className="text-2xl font-bold mt-4">📈 Progress</h1>
               <figure className="link-to-page">
                 <a href="Camp%20Knut%20%F0%9F%92%AA%2017e230f0c0994684b7fd08ded2966fcf/Camp%20Knut%20-%20Calendar%20034214e271cf4dd68ac7a1020cd8795d.html">
                   <span className="icon">📅</span>Camp Knut - Calendar
@@ -251,41 +220,37 @@ const Home: NextPage = () => {
                   <span className="icon">📝</span>Weekly results
                 </a>
               </figure>
+              <h1 className="text-2xl font-bold mt-4">🛠️ Tools</h1>
+              <p>
+                📱 MyFitnessPal{" "}
+                <a href="https://apps.apple.com/us/app/myfitnesspal-calorie-counter/id341232718">
+                  iOS{" "}
+                </a>
+                /{" "}
+                <a href="https://play.google.com/store/apps/details?id=com.myfitnesspal.android&amp;hl=en&amp;gl=US">
+                  Android
+                </a>
+              </p>
+              <p>
+                📱{" "}
+                <a href="https://www.bodybuilding.com/fun/bmr_calculator.htm">
+                  BMR Calculator
+                </a>
+              </p>
             </div>
           </div>
-          <h1>📃 Articles</h1>
-          <p>
-            🧾{" "}
-            <a href="https://physiqonomics.com/fat-loss/">
-              <strong>
-                The Best Fat Loss Article on the Motherfuckin’ Internet
-              </strong>
-            </a>
-          </p>
-          <p></p>
-          <hr />
-          <p></p>
-          <h3>Want to help out?</h3>
-          <figure className="link-to-page">
-            <a href="Camp%20Knut%20%F0%9F%92%AA%2017e230f0c0994684b7fd08ded2966fcf/Roadmap%20ffe306ad089245cc99038389d2d9061d.html">
-              <span className="icon">🚗</span>Roadmap
-            </a>
-          </figure>
-          <p></p>
-          <hr />
-          <p></p>
-          <figure className="block-color-gray_background callout">
-            <div>
-              <span className="icon">🛠</span>
-            </div>
-            <div>
+
+          <figure className="block-color-gray_background callout mt-8">
+            <div className="text-center">
               If you have questions about training - Post them in #camp-knut in
               the{" "}
               <strong>
                 <a href="http://discord.gg/knut">Discord</a>
               </strong>
-              . Feedback, issues or questions? Contact{" "}
-              <strong>Bitsnoxx#1337</strong> on Discord.{" "}
+            </div>
+            <div className="text-center">
+              Feedback, issues or questions? Contact{" "}
+              <strong>Bitsnoxx#1337</strong> on Discord.
             </div>
           </figure>
         </div>
