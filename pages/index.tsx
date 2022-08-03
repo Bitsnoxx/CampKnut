@@ -1,7 +1,15 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import { Container, Center, AspectRatio, Image } from "@mantine/core";
+import {
+  FaTwitch,
+  FaYoutube,
+  FaTwitter,
+  FaInstagram,
+  FaReddit,
+} from "react-icons/fa";
+import { Container, Center, AspectRatio } from "@mantine/core";
 import { introduction, tips } from "../content/text";
 import { MdContactSupport } from "react-icons/md";
 /* import { participants } from "../content/streamers"; */
@@ -19,11 +27,10 @@ const Home: NextPage = () => {
         <div className="page-body">
           <AspectRatio ratio={16 / 9}>
             <Image
-              // width={2560}
-              // height={1250}
+              layout="fill"
               src="/CampKnut.avif"
               alt="Camp Knut"
-              // priority={true}
+              priority={true}
             />
           </AspectRatio>
           <h2 className="mt-8 text-2xl font-bold">
