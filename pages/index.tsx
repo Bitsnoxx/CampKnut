@@ -187,12 +187,6 @@ const Home: NextPage = () => {
                   </strong>
                 </a>
               </p>
-              <h3 className="{ContentTitle}">Want to help out?</h3>
-              <figure className="link-to-page">
-                <a href="Camp%20Knut%20%F0%9F%92%AA%2017e230f0c0994684b7fd08ded2966fcf/Roadmap%20ffe306ad089245cc99038389d2d9061d.html">
-                  <span className="icon">🚗</span>Roadmap
-                </a>
-              </figure>
             </div>
             <div className="w-1/2">
               <h1 className="text-2xl font-bold mt-4">📕 Plans</h1>
@@ -244,6 +238,17 @@ const Home: NextPage = () => {
                   BMR Calculator
                 </a>
               </p>
+            </div>
+          </div>
+
+          <div className="flex mt-20">
+            <div  className="w-1/2">
+              <h3 className="text-xl font-bold mt-4">Want to help out?</h3>
+              <figure className="link-to-page">
+                <a href="Camp%20Knut%20%F0%9F%92%AA%2017e230f0c0994684b7fd08ded2966fcf/Roadmap%20ffe306ad089245cc99038389d2d9061d.html">
+                  <span className="icon">🚗</span>Roadmap
+                </a>
+              </figure>
             </div>
           </div>
 
