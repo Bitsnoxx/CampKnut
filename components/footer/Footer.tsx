@@ -4,26 +4,61 @@ import {
   FaTwitter,
   FaInstagram,
   FaReddit,
+  FaShoppingBag,
+  FaHeart,
 } from "react-icons/fa";
 import Image from "next/image";
+import FooterIconLink from "./FooterIconLink";
+import { socials } from "../../content/links";
+import { useState } from "react";
+
+const platformColors = {
+  Twitch: "#6441a4",
+  Reddit: "#ff4500",
+  Youtube: "#ff0000",
+  Twitter: "#00acee",
+  Instagram: "#bc2a8d",
+  Merch: "#ffd700",
+};
 
 export default function Footer() {
+  const [counter, setCounter] = useState(0);
   return (
-    <footer className="text-center text-white mt-8">
-      <Image width={128} height={128} alt="Knut" src="/knut3head.avif" />
-      <div className="container px-6 pt-6">
-        <div className="flex justify-center mb-6 space-y-4">
-          <div className="justify-items-center inline-flex">
-            <FaTwitch className="inline-flex	" color="#9146FF" size={42} />
-            <FaReddit className="inline-flex	" size={42} />
-            <FaYoutube className="inline-flex	" color="#FF0000" size={42} />
-            <FaTwitter className="inline-flex	" color="#1DA1F2" size={42} />
-            <FaInstagram className="inline-flex	" size={42} />
+    <footer className="text-center text-knut-light-text dark:text-knut-dark-text my-8">
+      <Image
+        width={128 + (counter > 5 ? counter * 3 : 0)}
+        height={128 + (counter > 5 ? counter * 3 : 0)}
+        alt="Knut"
+        src="/knut3head.avif"
+        onClick={() => setCounter(counter + 1)}
+      />
+      <div className="w-full ">
+        <div className="flex flex-col items-center justify-center mt-4">
+          <span className="text-xl font-bold">Camp Knut 2022</span>
+          <div className="flex flex-row justify-center items-center text-4xl gap-4 my-2">
+            <FooterIconLink platform="Twitch">
+              <FaTwitch className="hover:text-knut-other-twitch transition duration-300" />
+            </FooterIconLink>
+            <FooterIconLink platform="Reddit">
+              <FaReddit className="hover:text-knut-other-reddit transition duration-300" />
+            </FooterIconLink>
+            <FooterIconLink platform="Youtube">
+              <FaYoutube className="hover:text-knut-other-youtube transition duration-300" />
+            </FooterIconLink>
+            <FooterIconLink platform="Twitter">
+              <FaTwitter className="hover:text-knut-other-twitter transition duration-300" />
+            </FooterIconLink>
+            <FooterIconLink platform="Instagram">
+              <FaInstagram className="hover:text-knut-other-instagram transition duration-300" />
+            </FooterIconLink>
+            <FooterIconLink platform="Merch">
+              <FaShoppingBag className="hover:text-knut-other-merch transition duration-300" />
+            </FooterIconLink>
           </div>
         </div>
       </div>
-      <span>
-        Made with 💖 on{" "}
+      <span className="flex flex-row items-center gap-1 justify-center">
+        Made with <FaHeart className="hover:text-red-600" /> on{" "}
         <a className="font-bold" href="https://github.com/Bitsnoxx/CampKnut">
           Github
         </a>
