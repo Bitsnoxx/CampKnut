@@ -9,7 +9,7 @@ export default function Custom404() {
       </Center>
       <Center>
         <Image
-          src={"/404.png"}
+          src={"/404.webp"}
           height={600}
           width={1000}
           alt={"This page couldn't be found"}
