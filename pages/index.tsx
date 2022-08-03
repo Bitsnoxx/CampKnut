@@ -2,9 +2,17 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import { FaTwitch, FaYoutube, FaTwitter, FaInstagram } from "react-icons/fa";
-import { FcReddit } from "react-icons/fc";
+import {
+  FaTwitch,
+  FaYoutube,
+  FaTwitter,
+  FaInstagram,
+  FaReddit,
+} from "react-icons/fa";
 import { Container, Center } from "@mantine/core";
+import { introduction, tips } from "../content/text";
+import { MdContactSupport } from "react-icons/md";
+import { participants } from "../content/streamers";
 
 const Home: NextPage = () => {
   return (
@@ -16,7 +24,7 @@ const Home: NextPage = () => {
           </Center>
           <Center>
             <FaTwitch color="#9146FF" size={42} />
-            <FcReddit size={42} />
+            <FaReddit size={42} />
             <FaYoutube color="#FF0000" size={42} />
             <FaTwitter color="#1DA1F2" size={42} />
             <FaInstagram className="instagram" size={42} />
@@ -29,21 +37,16 @@ const Home: NextPage = () => {
             height={1250}
             src="/CampKnut.avif"
             alt="Camp Knut"
+            priority={true}
           />
-          <h1>What is Camp Knut?</h1>
-          <p>
-            Camp Knut is a 30-day long training camp, where a group of streamers
-            tries to follow Knut’s workout routine and diet.
-          </p>
-          <h1>
-            <strong>Goal </strong>🏆
-          </h1>
-          <p>
-            Improve fitness, look and health as much as possible in 30 days.
-          </p>
+          <h1>Camp Knut</h1>
+          <h2>What is Camp Knut?</h2>
+          <p>{introduction.whatIs}</p>
+          <h2>Goal🏆</h2>
+          <p>{introduction.goal}</p>
           <p>Final show will be a fitness/bodybuilding competition.</p>
-          <p></p>
-          <p></p>
+          <h2>Who is Knut?</h2>
+          <p>{introduction.whoIsKnut}</p>
           <hr />
           <div className="column-list">
             <div className="column">
@@ -122,11 +125,7 @@ const Home: NextPage = () => {
               <span className="icon">💡</span>
             </div>
             <div>
-              <strong>
-                Remember to take care of your health, you know your own limits
-                better than anyone else. If you end up injuring yourself, it
-                will only set you further back.
-              </strong>
+              <strong>{tips.knowYourLimits}</strong>
             </div>
           </figure>
           <p></p>
@@ -135,10 +134,7 @@ const Home: NextPage = () => {
               <span className="icon">💡</span>
             </div>
             <div>
-              <strong>
-                Supplements aren’t needed, but if you have the money and want to
-                maximize your workouts - Go for it!
-              </strong>
+              <strong>{tips.supplements}</strong>
             </div>
           </figure>
           <p></p>
