@@ -1,0 +1,12 @@
+{
+  "$schema": "./exercises.schema.json",
+  "items": [
+    {
+      "name": "Iso-lateral Row",
+      "tags": ["back", "traps"],
+      "youtubeLink": "https://youtu.be/MWRZ-R2K74Q?t=5974",
+      "imageUrl": "",
+      "slug": "iso-lateral-row"
+    }
+  ]
+}
