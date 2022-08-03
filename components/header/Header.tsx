@@ -12,7 +12,7 @@ export default function Header() {
             <Link href="/socials">Socials</Link>
           </li>
           <li>
-            <Link href="https://store.streamelements.com/knut">Merch</Link>
+            <Link href="https://store.streamelements.com/knut" target="_blank">Merch</Link>
           </li>
         </ul>
       </nav>
