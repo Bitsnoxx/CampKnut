@@ -26,7 +26,7 @@ const Home: NextPage = () => {
 
         <div className="page-body">
           <Image
-            src="/CampKnut.jpg"
+            src="/CampKnut.webp"
             alt="Camp Knut"
             width={2560}
             height={1250}
