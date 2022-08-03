@@ -28,10 +28,12 @@ const Home: NextPage = () => {
           <picture>
             <source srcSet="/CampKnut.avif" type="image/avif" />
             <source srcSet="/CampKnut.webp" type="image/webp" />
-            <source srcSet="/CampKnut.jpg" type={`image/jpg`} />
+            <source srcSet="/CampKnut.jpg" type="image/jpg" />
             <Image
               src="/CampKnut.avif"
               alt="Camp Knut"
+              width={2560}
+              height={1250}
               priority={true}
               decoding="async"
               className="aspect-video"
