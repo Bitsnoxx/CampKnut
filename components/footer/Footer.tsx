@@ -24,7 +24,7 @@ const platformColors = {
 export default function Footer() {
   const [counter, setCounter] = useState(0);
   return (
-    <footer className="text-center text-white my-8">
+    <footer className="text-center text-knut-light-text dark:text-knut-dark-text my-8">
       <Image
         width={128 + (counter > 5 ? counter * 3 : 0)}
         height={128 + (counter > 5 ? counter * 3 : 0)}
@@ -32,7 +32,7 @@ export default function Footer() {
         src="/knut3head.avif"
         onClick={() => setCounter(counter + 1)}
       />
-      <div className="w-full">
+      <div className="w-full ">
         <div className="flex flex-col items-center justify-center mt-4">
           <span className="text-xl font-bold">Camp Knut 2022</span>
           <div className="flex flex-row justify-center items-center text-4xl gap-4 my-2">
