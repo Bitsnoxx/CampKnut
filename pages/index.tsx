@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import {
   FaTwitch,
@@ -9,7 +8,7 @@ import {
   FaInstagram,
   FaReddit,
 } from "react-icons/fa";
-import { Container, Center } from "@mantine/core";
+import { Container, Center, AspectRatio, Image } from "@mantine/core";
 import { introduction, tips } from "../content/text";
 import { MdContactSupport } from "react-icons/md";
 import { participants } from "../content/streamers";
@@ -32,13 +31,15 @@ const Home: NextPage = () => {
         </header>
 
         <div className="page-body">
-          <Image
-            width={2560}
-            height={1250}
-            src="/CampKnut.avif"
-            alt="Camp Knut"
-            priority={true}
-          />
+          <AspectRatio ratio={16 / 9}>
+            <Image
+              // width={2560}
+              // height={1250}
+              src="/CampKnut.avif"
+              alt="Camp Knut"
+              // priority={true}
+            />
+          </AspectRatio>
           <h1>Camp Knut</h1>
           <h2>What is Camp Knut?</h2>
           <p>{introduction.whatIs}</p>
