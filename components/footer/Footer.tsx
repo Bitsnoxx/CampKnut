@@ -29,7 +29,7 @@ export default function Footer() {
         width={128 + (counter > 5 ? counter * 3 : 0)}
         height={128 + (counter > 5 ? counter * 3 : 0)}
         alt="Knut"
-        src="/knut3head.png"
+        src="/knut3head.webp"
         onClick={() => setCounter(counter + 1)}
       />
       <div className="w-full ">
