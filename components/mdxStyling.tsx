@@ -28,4 +28,6 @@ export const components = {
     const text = props.children.props.children;
     return <div className="p-4 my-4 bg-gray-200 dark:bg-gray-600">{text}</div>;
   },
+  Info: (props: any) => null,
+  ["*"]: (props: any) => null,
 };
