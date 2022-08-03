@@ -25,20 +25,15 @@ const Home: NextPage = () => {
         </header>
 
         <div className="page-body">
-          <picture>
-            <source srcSet="/CampKnut.avif" type="image/avif" />
-            <source srcSet="/CampKnut.webp" type="image/webp" />
-            <source srcSet="/CampKnut.jpg" type="image/jpg" />
-            <Image
-              src="/CampKnut.avif"
-              alt="Camp Knut"
-              width={2560}
-              height={1250}
-              priority={true}
-              decoding="async"
-              className="aspect-video"
-            />
-          </picture>
+          <Image
+            src="/CampKnut.jpg"
+            alt="Camp Knut"
+            width={2560}
+            height={1250}
+            priority={true}
+            decoding="async"
+            className="aspect-video"
+          />
 
           <h2 className="mt-8 text-2xl font-bold">
             What is {introduction.title}?
@@ -53,59 +48,155 @@ const Home: NextPage = () => {
             <div className="w-1/2">
               <h1 className="text-2xl font-bold mt-4">Trainers</h1>
               <p>
-                <a href="https://twitch.tv/knut" target="_blank" rel="noreferrer">Knut</a>
+                <a
+                  href="https://twitch.tv/knut"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Knut
+                </a>
               </p>
               <p>
-                <a href="https://www.twitch.tv/wakewilder" target="_blank" rel="noreferrer">WakeWilder</a>
+                <a
+                  href="https://www.twitch.tv/wakewilder"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  WakeWilder
+                </a>
               </p>
               <h1 className="text-2xl font-bold mt-4">Judges</h1>
               <p>
-                <a href="https://twitch.tv/knut" target="_blank" rel="noreferrer">Knut</a>
+                <a
+                  href="https://twitch.tv/knut"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Knut
+                </a>
               </p>
               <p>
-                <a href="https://www.twitch.tv/asmongold" target="_blank" rel="noreferrer" >Asmongold</a>
+                <a
+                  href="https://www.twitch.tv/asmongold"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Asmongold
+                </a>
               </p>
               <p>
-                <a href="https://www.twitch.tv/wakewilder" target="_blank" rel="noreferrer">WakeWilder</a>
+                <a
+                  href="https://www.twitch.tv/wakewilder"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  WakeWilder
+                </a>
               </p>
               <p>
-                <a href="https://www.twitch.tv/malena" target="_blank" rel="noreferrer">Malena</a>
+                <a
+                  href="https://www.twitch.tv/malena"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Malena
+                </a>
               </p>
 
               <h1 className="text-2xl font-bold mt-4">Guests</h1>
               <p>
-                <a href="https://www.twitch.tv/mitchjones" target="_blank" rel="noreferrer">MitchJones</a>
+                <a
+                  href="https://www.twitch.tv/mitchjones"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  MitchJones
+                </a>
               </p>
             </div>
             <div className="w-1/2">
               <h1 className="text-2xl font-bold mt-4">Streamers</h1>
               <p>
-                <a href="https://www.twitch.tv/mizkif" target="_blank" rel="noreferrer">Mizkif</a>
+                <a
+                  href="https://www.twitch.tv/mizkif"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Mizkif
+                </a>
               </p>
               <p>
-                <a href="https://www.twitch.tv/nmplol" target="_blank" rel="noreferrer">Nmplol</a>
+                <a
+                  href="https://www.twitch.tv/nmplol"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Nmplol
+                </a>
               </p>
               <p>
-                <a href="https://www.twitch.tv/cyr" target="_blank" rel="noreferrer">Cyr</a>
+                <a
+                  href="https://www.twitch.tv/cyr"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Cyr
+                </a>
               </p>
               <p>
-                <a href="https://www.twitch.tv/richwcampbell" target="_blank" rel="noreferrer">RichwCampbell</a>
+                <a
+                  href="https://www.twitch.tv/richwcampbell"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  RichwCampbell
+                </a>
               </p>
               <p>
-                <a href="https://www.twitch.tv/tectone" target="_blank" rel="noreferrer">Tectone</a>
+                <a
+                  href="https://www.twitch.tv/tectone"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Tectone
+                </a>
               </p>
               <p>
-                <a href="https://www.twitch.tv/erobb221" target="_blank" rel="noreferrer">Erobb221</a>
+                <a
+                  href="https://www.twitch.tv/erobb221"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Erobb221
+                </a>
               </p>
               <p>
-                <a href="https://www.twitch.tv/esfandtv" target="_blank" rel="noreferrer">EsfandTV</a>
+                <a
+                  href="https://www.twitch.tv/esfandtv"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  EsfandTV
+                </a>
               </p>
               <p>
-                <a href="https://www.twitch.tv/Lacari" target="_blank" rel="noreferrer">Lacari</a>
+                <a
+                  href="https://www.twitch.tv/Lacari"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Lacari
+                </a>
               </p>
               <h1 className="text-2xl font-bold mt-4">Chef</h1>
               <p>
-                <a href="https://www.twitch.tv/exxzy" target="_blank" rel="noreferrer">Exxzy</a>
+                <a
+                  href="https://www.twitch.tv/exxzy"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Exxzy
+                </a>
               </p>
             </div>
           </div>
@@ -135,7 +226,11 @@ const Home: NextPage = () => {
               <h1 className="text-2xl font-bold mt-4">🥩 Meal Plans</h1>
               <p>
                 🧾{" "}
-                <a href="https://docs.google.com/spreadsheets/d/1Fto6sArnx-lBoxXyFEC3cLCbVQkJdwT9-JsPD9Agra8/edit?usp=sharing" target="_blank" rel="noreferrer">
+                <a
+                  href="https://docs.google.com/spreadsheets/d/1Fto6sArnx-lBoxXyFEC3cLCbVQkJdwT9-JsPD9Agra8/edit?usp=sharing"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   OTK Meal plans
                 </a>
               </p>
@@ -154,8 +249,8 @@ const Home: NextPage = () => {
               <h1 className="text-2xl font-bold mt-4">💊 Supplements</h1>
               <figure className="link-to-page">
                 <a href="Camp%20Knut%20%F0%9F%92%AA%2017e230f0c0994684b7fd08ded2966fcf/Camp%20Knut%20Amazon%20Suplements%20by%20WakeWilder%200e73dd9909e84c338a704638a837289d.html">
-                  <span className="icon">📝</span>Camp Knut Amazon Supplements by
-                  WakeWilder
+                  <span className="icon">📝</span>Camp Knut Amazon Supplements
+                  by WakeWilder
                 </a>
               </figure>
               <h1 className="text-2xl font-bold mt-4">
@@ -169,10 +264,18 @@ const Home: NextPage = () => {
               </figure>
               <p>
                 📀{" "}
-                <a href="https://open.spotify.com/playlist/0bNUdcAFj5Un6XNKZ5Xora?si=e5e3832466244996" target="_blank" rel="noreferrer">
+                <a
+                  href="https://open.spotify.com/playlist/0bNUdcAFj5Un6XNKZ5Xora?si=e5e3832466244996"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Camp Knut Gym Playlist - Maintained by{" "}
                 </a>
-                <a href="https://open.spotify.com/playlist/0bNUdcAFj5Un6XNKZ5Xora?si=e5e3832466244996" target="_blank" rel="noreferrer">
+                <a
+                  href="https://open.spotify.com/playlist/0bNUdcAFj5Un6XNKZ5Xora?si=e5e3832466244996"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <strong>
                     <strong>Tahtooz</strong>
                   </strong>
@@ -224,17 +327,29 @@ const Home: NextPage = () => {
               <h1 className="text-2xl font-bold mt-4">🛠️ Tools</h1>
               <p>
                 📱 MyFitnessPal{" "}
-                <a href="https://apps.apple.com/us/app/myfitnesspal-calorie-counter/id341232718" target="_blank" rel="noreferrer">
+                <a
+                  href="https://apps.apple.com/us/app/myfitnesspal-calorie-counter/id341232718"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   iOS{" "}
                 </a>
                 /{" "}
-                <a href="https://play.google.com/store/apps/details?id=com.myfitnesspal.android&amp;hl=en&amp;gl=US" target="_blank" rel="noreferrer">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.myfitnesspal.android&amp;hl=en&amp;gl=US"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Android
                 </a>
               </p>
               <p>
                 📱{" "}
-                <a href="https://www.bodybuilding.com/fun/bmr_calculator.htm" target="_blank" rel="noreferrer">
+                <a
+                  href="https://www.bodybuilding.com/fun/bmr_calculator.htm"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   BMR Calculator
                 </a>
               </p>
@@ -242,7 +357,7 @@ const Home: NextPage = () => {
           </div>
 
           <div className="flex mt-20">
-            <div  className="w-1/2">
+            <div className="w-1/2">
               <h3 className="text-xl font-bold mt-4">Want to help out?</h3>
               <figure className="link-to-page">
                 <a href="Camp%20Knut%20%F0%9F%92%AA%2017e230f0c0994684b7fd08ded2966fcf/Roadmap%20ffe306ad089245cc99038389d2d9061d.html">
@@ -257,7 +372,13 @@ const Home: NextPage = () => {
               If you have questions about training - Post them in #camp-knut in
               the{" "}
               <strong>
-                <a href="http://discord.gg/knut" target="_blank" rel="noreferrer">Discord</a>
+                <a
+                  href="http://discord.gg/knut"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Discord
+                </a>
               </strong>
             </div>
             <div className="text-center">
