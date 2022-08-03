@@ -25,14 +25,19 @@ const Home: NextPage = () => {
         </header>
 
         <div className="page-body">
-          <AspectRatio ratio={16 / 9}>
+          <picture>
+            <source srcSet="/CampKnut.avif" type="image/avif" />
+            <source srcSet="/CampKnut.webp" type="image/webp" />
+            <source srcSet="/CampKnut.jpg" type={`image/jpg`} />
             <Image
-              layout="fill"
               src="/CampKnut.avif"
               alt="Camp Knut"
               priority={true}
+              decoding="async"
+              className="aspect-video"
             />
-          </AspectRatio>
+          </picture>
+
           <h2 className="mt-8 text-2xl font-bold">
             What is {introduction.title}?
           </h2>
