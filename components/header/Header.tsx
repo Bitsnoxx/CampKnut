@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { introduction, seo } from "../../content/text";
+import { NextSeo } from "next-seo";
 import {useState} from "react";
 import clsx from "clsx";
 
@@ -14,6 +16,22 @@ export default function Header() {
    *
    */
   return (
+    <header>
+      <NextSeo title={introduction.title} description={seo.description} />
+      <nav>
+        <ul className="flex flex-row justify-center gap-4">
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li>
+            <Link href="/socials">Socials</Link>
+          </li>
+          <li>
+            <Link href="https://store.streamelements.com/knut" target="_blank">
+              Merch
+            </Link>
+          </li>
+        </ul>
     <header className="sticky top-0 z-10">
       <nav className="relative flex flex-wrap items-center px-2 py-3 mb-3 bg-knut-dark-bg">
         <div className="container px-4 mx-auto flex flex-wrap items-center">
@@ -55,6 +73,10 @@ export default function Header() {
           </div>
         </div>
       </nav>
+
+      <p className="page-title text-4xl text-center font-bold	mt-10 mb-3.5">
+        {introduction.title} 💪
+      </p>
     </header>
   );
 
