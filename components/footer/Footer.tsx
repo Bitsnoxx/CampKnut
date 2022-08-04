@@ -12,15 +12,6 @@ import FooterIconLink from "./FooterIconLink";
 import { socials } from "../../content/links";
 import { useState } from "react";
 
-const platformColors = {
-  Twitch: "#6441a4",
-  Reddit: "#ff4500",
-  Youtube: "#ff0000",
-  Twitter: "#00acee",
-  Instagram: "#bc2a8d",
-  Merch: "#ffd700",
-};
-
 export default function Footer() {
   const [counter, setCounter] = useState(0);
   return (
