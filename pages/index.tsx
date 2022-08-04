@@ -11,6 +11,11 @@ const Home: NextPage = () => {
   return (
     <Container size="md" px="md">
       <article className="page sans">
+        <header>
+          <p className="page-title text-4xl text-center font-bold my-12">
+            {introduction.title} 💪
+          </p>
+        </header>
         <div className="page-body">
           <Image
             src="/CampKnut.webp"
@@ -259,6 +264,20 @@ const Home: NextPage = () => {
                   rel="noreferrer"
                 >
                   <strong>Tahtooz</strong>
+
+                  <strong>
+                    <strong>Tahtooz</strong>
+                  </strong>
+                </a>
+              </p>
+              <h1 className="text-2xl font-bold mt-4">📃 Articles</h1>
+              <p className="underline underline-offset-4">
+                <a
+                  href="https://physiqonomics.com/fat-loss/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  🧾 The Best Fat Loss Article on the Motherfuckin’ Internet
                 </a>
               </p>
             </div>
@@ -280,6 +299,32 @@ const Home: NextPage = () => {
                 <Link href="/exercises">
                   <a>Exercises</a>
                 </Link>
+              <h1 className="text-2xl font-bold mt-4">📕 Plans</h1>
+              <figure className="link-to-page underline underline-offset-4">
+                <Link href={"/workout/beginner"} passHref>
+                  <a>📝 Workout Beginner</a>
+                </Link>
+              </figure>
+              <figure className="link-to-page underline underline-offset-4">
+                <Link href={"/workout/plan-w1"} passHref>
+                  <a>📝 Workout plan Week 1</a>
+                </Link>
+              </figure>
+              <figure className="link-to-page underline underline-offset-4">
+                <Link href={"/workout/plan-w2"} passHref>
+                  <a>📝 Workout plan Week 2</a>
+                </Link>
+              </figure>
+              <figure className="link-to-page underline underline-offset-4">
+                <Link href={"/exercises"} passHref>
+                  <a>📝 Exercises</a>
+                </Link>
+              </figure>
+              <h1 className="text-2xl font-bold mt-4">📈 Progress</h1>
+              <figure className="link-to-page underline underline-offset-4">
+                <a href="Camp%20Knut%20%F0%9F%92%AA%2017e230f0c0994684b7fd08ded2966fcf/Camp%20Knut%20-%20Calendar%20034214e271cf4dd68ac7a1020cd8795d.html">
+                  <span className="icon">📅</span>Camp Knut - Calendar
+                </a>
               </figure>
             </div>
             <div className="w-1/2">
