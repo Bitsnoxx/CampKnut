@@ -1,6 +1,4 @@
-
 import { defineSchema, defineConfig } from 'tinacms'
-
 
 const branch =
   process.env.NEXT_PUBLIC_TINA_BRANCH ||
@@ -10,8 +8,8 @@ const branch =
 const schema = defineSchema({
   // See https://tina.io/docs/tina-cloud/connecting-site/ for more information about this config
   config: {
-    token: '<Your Read Only Token>', // generated on app.tina.io,
-    clientId: '<Your Client ID>', // generated on app.tina.io
+    token: process.env.TINA_TOKEN, // generated on app.tina.io,
+    clientId: process.env.TINA_CLIENT_ID, // generated on app.tina.io
     branch,
   },
   collections: [
