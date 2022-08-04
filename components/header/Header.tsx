@@ -1,8 +1,9 @@
-import Link from "next/link";
+import a from "next/link";
 import { introduction, seo } from "../../content/text";
 import { NextSeo } from "next-seo";
 import { useState } from "react";
 import clsx from "clsx";
+import Link from "next/link";
 
 export default function Header() {
   const [active, setActive] = useState(false);
@@ -34,25 +35,24 @@ export default function Header() {
             </div>
             <div
               className={clsx(active ? "flex" : "hidden", "lg:flex flex-grow")}
-
             >
               <ul className="flex flex-col lg:flex-row list-none lg:mx-auto lg:justify-center">
-                <li className="nav-item">
+                <li>
                   <Link href="/">
-                    <span className="cursor-pointer px-3 py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
+                    <a className="cursor-pointer px-3 py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
                       Home
-                    </span>
+                    </a>
                   </Link>
                 </li>
-                <li className="nav-item">
+                <li>
                   <Link href="/socials">
-                    <span className="cursor-pointer px-3 py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
+                    <a className="cursor-pointer px-3 py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
                       Socials
-                    </span>
+                    </a>
                   </Link>
                 </li>
-                <li className="nav-item">
-                  <Link
+                <li>
+                  <a
                     href="https://store.streamelements.com/knut"
                     target="_blank"
                     rel="noreferrer"
@@ -60,7 +60,7 @@ export default function Header() {
                     <span className="cursor-pointer px-3 py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
                       Merch
                     </span>
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>
