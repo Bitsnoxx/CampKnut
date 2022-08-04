@@ -5,8 +5,15 @@
       "name": "Iso-lateral Row",
       "tags": ["back", "traps"],
       "youtubeLink": "https://youtu.be/MWRZ-R2K74Q?t=5974",
-      "imageUrl": "",
+      "imageUrl": "http://placekitten.com/200/300",
       "slug": "iso-lateral-row"
+    },
+    {
+      "name": "Cambered Bar Pushdowns",
+      "tags": ["chest"],
+      "youtubeLink": "https://youtu.be/MWRZ-R2K74Q?t=5974",
+      "imageUrl": "http://placekitten.com/200/300",
+      "slug": "cambered-bar-pushdowns"
     }
   ]
 }

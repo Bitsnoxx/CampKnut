@@ -6,6 +6,7 @@ const nextConfig = {
   swcMinify: true,
   images: {
     formats: ["image/avif", "image/webp"],
+    domains: ["placekitten.com"],
   },
   productionBrowserSourceMaps: true,
   i18n: {
