@@ -19,7 +19,7 @@ const Home: NextPage = () => {
     <Container size="md" px="md">
       <article className="page sans">
         <header>
-          <p className="page-title text-2xl text-center font-bold	my-12">
+          <p className="page-title text-4xl text-center font-bold my-12">
             {introduction.title} 💪
           </p>
         </header>
