@@ -1,13 +1,12 @@
-const withCss = require("@zeit/next-css");
-const withPurgeCss = require("next-purgecss");
-
-module.exports = withCss(withPurgeCss());
+const withPlugins = require("next-compose-plugins");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  productionBrowserSourceMaps: true,
+  images: {
+    formats: ["image/avif", "image/webp"],
+  },
 };
 
 const withMDX = require("@next/mdx")({
@@ -21,18 +20,9 @@ const withMDX = require("@next/mdx")({
   },
 });
 
-module.exports = withMDX({
-  // Append the default value with md extensions
-  pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
-});
-
-module.exports = {
-  productionBrowserSourceMaps: true,
-  i18n: {
-    locales: ["en"],
-    defaultLocale: "en",
-  },
-  compiler: {
-    /* removeConsole: true, */
-  },
-};
+module.exports = withPlugins(
+  [[withMDX, { pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"] }]],
+  {
+    ...nextConfig,
+  }
+);
