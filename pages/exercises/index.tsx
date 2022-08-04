@@ -21,7 +21,6 @@ export default function ExerciseListPage({
     return name.includes(term) || t.some((x) => x.includes(term));
   };
 
-  console.log(exercises);
   return (
     <>
       <h1 className="text-3xl font-bold">Exercises</h1>
