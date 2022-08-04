@@ -1,7 +1,13 @@
+const withCss = require("@zeit/next-css");
+const withPurgeCss = require("next-purgecss");
+
+module.exports = withCss(withPurgeCss());
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  productionBrowserSourceMaps: true,
 };
 
 const withMDX = require("@next/mdx")({
@@ -29,6 +35,6 @@ module.exports = {
     defaultLocale: "en",
   },
   compiler: {
-    removeConsole: true,
+    /* removeConsole: true, */
   },
 };

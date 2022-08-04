@@ -19,7 +19,6 @@ const Home: NextPage = () => {
             height={1250}
             priority={true}
             decoding="async"
-            className="aspect-video"
           />
           <section className="mb-10 mt-5">
             <h1 className="text-2xl font-bold">
