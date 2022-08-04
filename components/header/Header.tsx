@@ -1,5 +1,7 @@
 import Link from "next/link";
-import {useState} from "react";
+import { introduction, seo } from "../../content/text";
+import { NextSeo } from "next-seo";
+import { useState } from "react";
 import clsx from "clsx";
 
 export default function Header() {
@@ -15,40 +17,49 @@ export default function Header() {
    */
   return (
     <header className="sticky top-0 z-10 text-knut-light-text dark:text-knut-dark-text bg-knut-light-bg dark:bg-knut-dark-bg w-full">
+      <NextSeo title={introduction.title} description={seo.description} />
       <nav className="relative flex flex-wrap items-center py-3">
         <div className="container flex-1 mx-auto max-w-5xl">
           <div className="mantine-Container-root mantine-5e0mpf">
             <div className="w-full">
               <button
-                  onClick={handleClick}
-                  className="cursor-pointer text-xl leading-none px-3 py-5 lg:hidden"
-                  type="button">
+                onClick={handleClick}
+                className="cursor-pointer text-xl leading-none px-3 py-5 lg:hidden"
+                type="button"
+              >
                 <span className="block relative w-6 h-px rounded-sm bg-knut-dark-bg dark:bg-knut-light-bg "></span>
                 <span className="block relative w-6 h-px rounded-sm bg-knut-dark-bg dark:bg-knut-light-bg mt-1"></span>
                 <span className="block relative w-6 h-px rounded-sm bg-knut-dark-bg dark:bg-knut-light-bg mt-1"></span>
               </button>
             </div>
             <div
-                className={clsx(active ? 'flex' : 'hidden', 'lg:flex flex-grow')}
+              className={clsx(active ? "flex" : "hidden", "lg:flex flex-grow")}
+
             >
               <ul className="flex flex-col lg:flex-row list-none lg:mx-auto lg:justify-center">
                 <li className="nav-item">
                   <Link href="/">
-                    <span className="cursor-pointer px-3 py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">Home</span>
+                    <span className="cursor-pointer px-3 py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
+                      Home
+                    </span>
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link href="/socials">
-                    <span className="cursor-pointer px-3 py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">Socials</span>
+                    <span className="cursor-pointer px-3 py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
+                      Socials
+                    </span>
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link
-                      href="https://store.streamelements.com/knut"
-                      target="_blank"
-                      rel="noreferrer"
+                    href="https://store.streamelements.com/knut"
+                    target="_blank"
+                    rel="noreferrer"
                   >
-                    <span className="cursor-pointer px-3 py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">Merch</span>
+                    <span className="cursor-pointer px-3 py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
+                      Merch
+                    </span>
                   </Link>
                 </li>
               </ul>
@@ -58,5 +69,4 @@ export default function Header() {
       </nav>
     </header>
   );
-
 }

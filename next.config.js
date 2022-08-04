@@ -7,6 +7,14 @@ const nextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
   },
+  productionBrowserSourceMaps: true,
+  i18n: {
+    locales: ["en"],
+    defaultLocale: "en",
+  },
+  compiler: {
+    /* removeConsole: true, */
+  },
 };
 
 const withMDX = require("@next/mdx")({
