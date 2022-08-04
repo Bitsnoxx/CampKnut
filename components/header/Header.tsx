@@ -33,26 +33,23 @@ export default function Header() {
           >
             <ul className="flex flex-col lg:flex-row list-none mr-auto">
               <li className="nav-item">
-                <a className="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug text-white hover:opacity-75"
-                   href="/">
-                  <i className="fab fa-twitter text-lg leading-lg text-white opacity-75"/> <span
-                    className="ml-2">HOME</span>
-                </a>
+                <Link href="/">
+                  <span className="cursor-pointer ml-2 px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug text-white hover:opacity-75">Home</span>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug text-white hover:opacity-75"
-                   href="/socials">
-                  <span className="ml-2">SOCIALS</span>
-                </a>
+                <Link href="/socials">
+                  <span className="cursor-pointer ml-2 px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug text-white hover:opacity-75">Socials</span>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug text-white hover:opacity-75"
-                   href="https://store.streamelements.com/knut"
-                   rel="noreferrer"
-                   target="_blank"
+                <Link
+                    href="https://store.streamelements.com/knut"
+                    target="_blank"
+                    rel="noreferrer"
                 >
-                  <span className="ml-2">MERCH</span>
-                </a>
+                  <span className="cursor-pointer ml-2 px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug text-white hover:opacity-75">Merch</span>
+                </Link>
               </li>
             </ul>
           </div>
