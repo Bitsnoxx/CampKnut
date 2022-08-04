@@ -34,6 +34,7 @@ export default function Header() {
             </div>
             <div
               className={clsx(active ? "flex" : "hidden", "lg:flex flex-grow")}
+
             >
               <ul className="flex flex-col lg:flex-row list-none lg:mx-auto lg:justify-center">
                 <li className="nav-item">
