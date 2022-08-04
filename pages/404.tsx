@@ -11,6 +11,7 @@ export default function Custom404() {
           height={90}
           width={90}
           alt={"modCheck"}
+          priority={true}
         ></Image>
       </div>
 
@@ -19,6 +20,7 @@ export default function Custom404() {
         height={1077}
         width={1413}
         alt={"This page couldn't be found"}
+        priority={true}
       ></Image>
     </div>
   );
