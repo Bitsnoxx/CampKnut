@@ -22,7 +22,7 @@ export default function Header() {
         </ul>
       </nav>
 
-      <p className="page-title text-4xl text-center font-bold	mt-10 mb-8">
+      <p className="page-title text-4xl text-center font-bold	mt-10 mb-3.5">
         {introduction.title} 💪
       </p>
     </header>

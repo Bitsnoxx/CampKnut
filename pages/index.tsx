@@ -40,7 +40,7 @@ const Home: NextPage = () => {
           <div className="flex my-10">
             <div className="w-1/2">
               <h1 className="text-2xl font-bold mt-4">Trainers</h1>
-              <p className="hover:underline">
+              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
                 <a
                   href="https://twitch.tv/knut"
                   target="_blank"
@@ -49,7 +49,7 @@ const Home: NextPage = () => {
                   Knut
                 </a>
               </p>
-              <p className="hover:underline">
+              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
                 <a
                   href="https://www.twitch.tv/wakewilder"
                   target="_blank"
@@ -59,7 +59,7 @@ const Home: NextPage = () => {
                 </a>
               </p>
               <h1 className="text-2xl font-bold mt-4">Judges</h1>
-              <p className="hover:underline">
+              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
                 <a
                   href="https://twitch.tv/knut"
                   target="_blank"
@@ -68,7 +68,7 @@ const Home: NextPage = () => {
                   Knut
                 </a>
               </p>
-              <p className="hover:underline">
+              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
                 <a
                   href="https://www.twitch.tv/asmongold"
                   target="_blank"
@@ -77,7 +77,7 @@ const Home: NextPage = () => {
                   Asmongold
                 </a>
               </p>
-              <p className="hover:underline">
+              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
                 <a
                   href="https://www.twitch.tv/wakewilder"
                   target="_blank"
@@ -86,7 +86,7 @@ const Home: NextPage = () => {
                   WakeWilder
                 </a>
               </p>
-              <p className="hover:underline">
+              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
                 <a
                   href="https://www.twitch.tv/malena"
                   target="_blank"
@@ -97,19 +97,19 @@ const Home: NextPage = () => {
               </p>
 
               <h1 className="text-2xl font-bold mt-4">Guests</h1>
-              <p className="hover:underline">
+              <p className="text-neutral-300	hover:text-neutral-50">
                 <a
                   href="https://www.twitch.tv/mitchjones"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  MitchJones
+                  <span className="">MitchJones</span>
                 </a>
               </p>
             </div>
             <div className="w-1/2">
               <h1 className="text-2xl font-bold mt-4">Streamers</h1>
-              <p className="hover:underline">
+              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
                 <a
                   href="https://www.twitch.tv/mizkif"
                   target="_blank"
@@ -118,7 +118,7 @@ const Home: NextPage = () => {
                   Mizkif
                 </a>
               </p>
-              <p className="hover:underline">
+              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
                 <a
                   href="https://www.twitch.tv/nmplol"
                   target="_blank"
@@ -127,7 +127,7 @@ const Home: NextPage = () => {
                   Nmplol
                 </a>
               </p>
-              <p className="hover:underline">
+              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
                 <a
                   href="https://www.twitch.tv/cyr"
                   target="_blank"
@@ -136,7 +136,7 @@ const Home: NextPage = () => {
                   Cyr
                 </a>
               </p>
-              <p className="hover:underline">
+              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
                 <a
                   href="https://www.twitch.tv/richwcampbell"
                   target="_blank"
@@ -145,7 +145,7 @@ const Home: NextPage = () => {
                   RichwCampbell
                 </a>
               </p>
-              <p className="hover:underline">
+              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
                 <a
                   href="https://www.twitch.tv/tectone"
                   target="_blank"
@@ -154,7 +154,7 @@ const Home: NextPage = () => {
                   Tectone
                 </a>
               </p>
-              <p className="hover:underline">
+              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
                 <a
                   href="https://www.twitch.tv/erobb221"
                   target="_blank"
@@ -163,7 +163,7 @@ const Home: NextPage = () => {
                   Erobb221
                 </a>
               </p>
-              <p className="hover:underline">
+              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
                 <a
                   href="https://www.twitch.tv/esfandtv"
                   target="_blank"
@@ -172,7 +172,7 @@ const Home: NextPage = () => {
                   EsfandTV
                 </a>
               </p>
-              <p className="hover:underline">
+              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
                 <a
                   href="https://www.twitch.tv/Lacari"
                   target="_blank"
@@ -182,7 +182,7 @@ const Home: NextPage = () => {
                 </a>
               </p>
               <h1 className="text-2xl font-bold mt-4">Chef</h1>
-              <p className="hover:underline">
+              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
                 <a
                   href="https://www.twitch.tv/exxzy"
                   target="_blank"
@@ -194,29 +194,18 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <div className="my-10">
-            <div
-              className=" border-l-4 text-white-700 p-4 font-bold"
-              role="alert"
-            >
-              <p>💡</p>
-              <p>{tips.knowYourLimits}</p>
-            </div>
-
-            <div className="my-10">
-              <div
-                className=" border-l-4 text-white-700 p-4 font-bold"
-                role="alert"
-              >
-                <p>💡</p>
-                <p>{tips.supplements}</p>
-              </div>
-            </div>
+          <div className="my-10 font-bold">
+            <p>💡 {tips.knowYourLimits}</p>
           </div>
+
+          <div className="my-10 font-bold">
+            <p>💡 {tips.supplements}</p>
+          </div>
+
           <div className="flex">
             <div className="w-1/2">
               <h1 className="text-2xl font-bold mt-4 mb-2">🥩 Meal Plans</h1>
-              <p className="hover:underline">
+              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
                 {" "}
                 <a
                   href="https://docs.google.com/spreadsheets/d/1Fto6sArnx-lBoxXyFEC3cLCbVQkJdwT9-JsPD9Agra8/edit?usp=sharing"
@@ -226,13 +215,13 @@ const Home: NextPage = () => {
                   OTK Meal plans
                 </a>
               </p>
-              <p className="hover:underline">
+              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
                 {" "}
                 <a href="https://bit.ly/3vil5en">
                   Mizkif meal plan with supplements
                 </a>
               </p>
-              <p className="hover:underline">
+              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
                 {" "}
                 <a href="https://bit.ly/3cReLVb">
                   Mizkif meal plan without eggs and supplements
@@ -244,17 +233,17 @@ const Home: NextPage = () => {
               <h1 className="text-2xl font-bold mt-4">
                 <strong>💖</strong> Community
               </h1>
-              <figure className="link-to-page hover:underline">
+              <figure className="link-to-page text-neutral-300 hover:text-neutral-50 hover:font-bold">
                 <a href="">
                   Amazon Supplements by <strong>WakeWilder</strong>
                 </a>
               </figure>
-              <figure className="link-to-page hover:underline">
+              <figure className="link-to-page text-neutral-300 hover:text-neutral-50 hover:font-bold">
                 <a href="">
                   Stream workout log - Maintained by <strong>DrStone</strong>
                 </a>
               </figure>
-              <p className="hover:underline">
+              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
                 📀{" "}
                 <a
                   href="https://open.spotify.com/playlist/0bNUdcAFj5Un6XNKZ5Xora?si=e5e3832466244996"
@@ -277,16 +266,16 @@ const Home: NextPage = () => {
           <div className="flex">
             <div className="w-1/2">
               <h1 className="text-2xl font-bold mt-4 mb-2">📕 Plans</h1>
-              <figure className="link-to-page hover:underline">
+              <figure className="link-to-page text-neutral-300 hover:text-neutral-50 hover:font-bold">
                 <a href="">Workout Beginner</a>
               </figure>
-              <figure className="link-to-page hover:underline">
+              <figure className="link-to-page text-neutral-300 hover:text-neutral-50 hover:font-bold">
                 <a href="">Workout plan Week 1</a>
               </figure>
-              <figure className="link-to-page hover:underline">
+              <figure className="link-to-page text-neutral-300 hover:text-neutral-50 hover:font-bold">
                 <a href="">Workout plan Week 2</a>
               </figure>
-              <figure className="link-to-page hover:underline">
+              <figure className="link-to-page text-neutral-300 hover:text-neutral-50 hover:font-bold">
                 <Link href="/exercises">
                   <a>Exercises</a>
                 </Link>
@@ -294,12 +283,13 @@ const Home: NextPage = () => {
             </div>
             <div className="w-1/2">
               <h1 className="text-2xl font-bold mt-4 mb-2">🛠️ Tools</h1>
-              <p className="hover:underline">
+              <p className="text-neutral-300">
                 MyFitnessPal{" "}
                 <a
                   href="https://apps.apple.com/us/app/myfitnesspal-calorie-counter/id341232718"
                   target="_blank"
                   rel="noreferrer"
+                  className="text-neutral-300 hover:text-neutral-50 hover:font-bold hover:font-bold"
                 >
                   iOS{" "}
                 </a>
@@ -308,11 +298,12 @@ const Home: NextPage = () => {
                   href="https://play.google.com/store/apps/details?id=com.myfitnesspal.android&amp;hl=en&amp;gl=US"
                   target="_blank"
                   rel="noreferrer"
+                  className="text-neutral-300 hover:text-neutral-50 hover:font-bold"
                 >
                   Android
                 </a>
               </p>
-              <p className="hover:underline">
+              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
                 {" "}
                 <a
                   href="https://www.bodybuilding.com/fun/bmr_calculator.htm"
@@ -328,19 +319,19 @@ const Home: NextPage = () => {
           <div className="flex">
             <div className="w-1/2">
               <h1 className="text-2xl font-bold mt-4 mb-2">📈 Progress</h1>
-              <figure className="link-to-page hover:underline">
+              <figure className="link-to-page text-neutral-300 hover:text-neutral-50 hover:font-bold">
                 <a href="">
                   <h1> Camp Knut - Calendar</h1>
                 </a>
               </figure>
 
-              <figure className="link-to-page hover:underline">
+              <figure className="link-to-page text-neutral-300 hover:text-neutral-50 hover:font-bold">
                 <a href="">Weekly results</a>
               </figure>
             </div>
             <div className="w-1/2">
               <h1 className="text-2xl font-bold mt-4 mb-2">📃 Articles</h1>
-              <p className="hover:underline">
+              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
                 {" "}
                 <a href="https://physiqonomics.com/fat-loss/">
                   The Best Fat Loss Article on the Motherfuckin’ Internet
@@ -351,7 +342,7 @@ const Home: NextPage = () => {
 
           <div className="w-1/2 mt-20">
             <h3 className="text-xl font-bold mt-4">Want to help out?</h3>
-            <figure className="link-to-page hover:underline">
+            <figure className="link-to-page text-neutral-300 hover:text-neutral-50 hover:font-bold">
               <a href="https://github.com/Bitsnoxx/CampKnut/issues">
                 <h1>Roadmap</h1>
               </a>
@@ -362,7 +353,7 @@ const Home: NextPage = () => {
             <div className="text-center">
               If you have questions about training - Post them in #camp-knut in
               the{" "}
-              <strong className="hover:underline">
+              <strong className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
                 <a
                   href="http://discord.gg/knut"
                   target="_blank"
