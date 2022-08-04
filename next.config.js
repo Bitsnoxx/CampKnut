@@ -1,7 +1,12 @@
+const withPlugins = require("next-compose-plugins");
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  images: {
+    formats: ["image/avif", "image/webp"],
+  },
 };
 
 const withMDX = require("@next/mdx")({
@@ -15,13 +20,9 @@ const withMDX = require("@next/mdx")({
   },
 });
 
-module.exports = withMDX({
-  // Append the default value with md extensions
-  pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
-});
-
-module.exports = {
-  images: {
-    formats: ["image/avif", "image/webp"],
-  },
-};
+module.exports = withPlugins(
+  [[withMDX, { pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"] }]],
+  {
+    ...nextConfig,
+  }
+);
