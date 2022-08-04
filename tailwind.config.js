@@ -13,12 +13,14 @@ module.exports = {
             "bg-info": "#f0f8ff",
             text: "#000",
             "post-link": "#43484d",
+            primary: "#5762D5",
           },
           dark: {
             bg: "#121212",
             "bg-info": "#242424",
             text: "#fff",
             "post-link": "#9b9b9b",
+            primary: "#5762D5",
           },
           other: {
             twitch: "#6441A5",
