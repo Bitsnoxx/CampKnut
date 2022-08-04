@@ -12,6 +12,7 @@ import {
 import { Container, Center, AspectRatio } from "@mantine/core";
 import { introduction, tips } from "../content/text";
 import { MdContactSupport } from "react-icons/md";
+import Link from "next/link";
 /* import { participants } from "../content/streamers"; */
 
 const Home: NextPage = () => {
@@ -283,11 +284,12 @@ const Home: NextPage = () => {
               </p>
               <h1 className="text-2xl font-bold mt-4">📃 Articles</h1>
               <p className="underline underline-offset-4">
-                🧾{" "}
-                <a href="https://physiqonomics.com/fat-loss/">
-                  <strong>
-                    The Best Fat Loss Article on the Motherfuckin’ Internet
-                  </strong>
+                <a
+                  href="https://physiqonomics.com/fat-loss/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  🧾 The Best Fat Loss Article on the Motherfuckin’ Internet
                 </a>
               </p>
             </div>
@@ -295,25 +297,25 @@ const Home: NextPage = () => {
             <div className="w-1/2">
               <h1 className="text-2xl font-bold mt-4">📕 Plans</h1>
               <figure className="link-to-page underline underline-offset-4">
-                <a href="Camp%20Knut%20%F0%9F%92%AA%2017e230f0c0994684b7fd08ded2966fcf/Workout%20Beginner%20b0e37f37cc5a4500af7cd172fcd9ac43.html">
-                  <span className="icon">📝</span>Workout Beginner
-                </a>
+                <Link href={"/workout/beginner"} passHref>
+                  <a>📝 Workout Beginner</a>
+                </Link>
               </figure>
               <figure className="link-to-page underline underline-offset-4">
-                <a href="Camp%20Knut%20%F0%9F%92%AA%2017e230f0c0994684b7fd08ded2966fcf/Workout%20plan%20Week%201%20fdfd1d70e98d484f82f5380a8477fa53.html">
-                  <span className="icon">📝</span>Workout plan Week 1
-                </a>
+                <Link href={"/workout/plan-w1"} passHref>
+                  <a>📝 Workout plan Week 1</a>
+                </Link>
               </figure>
               <figure className="link-to-page underline underline-offset-4">
-                <a href="Camp%20Knut%20%F0%9F%92%AA%2017e230f0c0994684b7fd08ded2966fcf/Workout%20plan%20Week%202%202581ca6ecaef4fb591068811a919793e.html">
-                  <span className="icon">📝</span>Workout plan Week 2
-                </a>
+                <Link href={"/workout/plan-w2"} passHref>
+                  <a>📝 Workout plan Week 2</a>
+                </Link>
               </figure>
               <figure className="link-to-page underline underline-offset-4">
-                <a href="Camp%20Knut%20%F0%9F%92%AA%2017e230f0c0994684b7fd08ded2966fcf/Exercises%20941851ed2bd5482eb0ef19f46239fde3.html">
-                  <span className="icon">📝</span>Exercises
-                </a>
-              </figure>{" "}
+                <Link href={"/exercises"} passHref>
+                  <a>📝 Exercises</a>
+                </Link>
+              </figure>
               <h1 className="text-2xl font-bold mt-4">📈 Progress</h1>
               <figure className="link-to-page underline underline-offset-4">
                 <a href="Camp%20Knut%20%F0%9F%92%AA%2017e230f0c0994684b7fd08ded2966fcf/Camp%20Knut%20-%20Calendar%20034214e271cf4dd68ac7a1020cd8795d.html">
