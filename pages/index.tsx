@@ -16,9 +16,10 @@ const Home: NextPage = () => {
             src="/CampKnut.webp"
             alt="Camp Knut"
             width={2560}
-            height={1250}
+            height={1450}
             priority={true}
             decoding="async"
+            className="aspect-auto"
           />
           <section className="mb-10 mt-5">
             <h1 className="text-2xl font-bold">
@@ -340,7 +341,7 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <div className="w-1/2 mt-20">
+          <div className="text-center my-20">
             <h3 className="text-xl font-bold mt-4">Want to help out?</h3>
             <figure className="link-to-page text-neutral-300 hover:text-neutral-50 hover:font-bold">
               <a href="https://github.com/Bitsnoxx/CampKnut/issues">
