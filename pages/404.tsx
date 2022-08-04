@@ -17,8 +17,8 @@ export default function Custom404() {
 
       <Image
         src={"/404.webp"}
-        height={1077}
-        width={1413}
+        height={538}
+        width={706}
         alt={"This page couldn't be found"}
         priority={true}
       ></Image>
