@@ -1,27 +1,20 @@
 import Image from "next/image";
-import { errors } from "../content/text";
+import { Center } from "@mantine/core";
 
 export default function Custom404() {
   return (
-    <div className="flex flex-col items-center">
-      <div className="font-bold text-2xl">{errors.missingPage}</div>
-      <div className="my-2">
+    <>
+      <Center>
+        <h1>404 - Page Not Found</h1>
+      </Center>
+      <Center>
         <Image
-          src={"/modCheck.webp"}
-          height={90}
-          width={90}
-          alt={"modCheck"}
-          priority={true}
+          src={"/404.webp"}
+          height={600}
+          width={1000}
+          alt={"This page couldn't be found"}
         ></Image>
-      </div>
-
-      <Image
-        src={"/404.webp"}
-        height={1077}
-        width={1413}
-        alt={"This page couldn't be found"}
-        priority={true}
-      ></Image>
-    </div>
+      </Center>
+    </>
   );
 }

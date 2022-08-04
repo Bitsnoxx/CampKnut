@@ -8,13 +8,6 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/knut3head.webp"
-        ></link>
-
-        <meta name="theme-color" content="#121212" />
         {analyticsSecret && (
           <>
             <script
