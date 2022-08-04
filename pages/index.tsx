@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Container } from "@mantine/core";
 import { introduction, tips } from "../content/text";
 import { MdContactSupport } from "react-icons/md";
+import Link from "next/link";
 /* import { participants } from "../content/streamers"; */
 
 const Home: NextPage = () => {
@@ -285,7 +286,9 @@ const Home: NextPage = () => {
                 <a href="">Workout plan Week 2</a>
               </figure>
               <figure className="link-to-page underline underline-offset-4">
-                <a href="/exercises">Exercises</a>
+                <Link href="/exercises">
+                  <a>Exercises</a>
+                </Link>
               </figure>
             </div>
             <div className="w-1/2">
