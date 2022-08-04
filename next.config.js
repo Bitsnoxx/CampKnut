@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  productionBrowserSourceMaps: true,
 };
 
 const withMDX = require("@next/mdx")({
@@ -21,14 +22,12 @@ module.exports = withMDX({
 });
 
 module.exports = {
-  images: {
-    formats: ["image/avif", "image/webp"],
-  },
+  productionBrowserSourceMaps: true,
   i18n: {
     locales: ["en"],
     defaultLocale: "en",
   },
   compiler: {
-    removeConsole: true,
+    /* removeConsole: true, */
   },
 };
