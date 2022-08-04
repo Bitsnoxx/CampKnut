@@ -1,3 +1,5 @@
+import Important from "./ui/Important";
+
 export const components = {
   h1: (props: any) => {
     return <h1 className="text-3xl font-bold mb-6" {...props} />;
@@ -24,14 +26,6 @@ export const components = {
       />
     );
   },
-  Important: (props: any) => {
-    const text = props.children.props.children;
-    return (
-      <div className="p-4 my-4 bg-knut-light-bg-info dark:bg-knut-dark-bg-info">
-        {text}
-      </div>
-    );
-  },
+  Important: Important,
   Info: (props: any) => null,
-  ["*"]: (props: any) => null,
 };

@@ -3,9 +3,17 @@ import Image from "next/image";
 import { Container } from "@mantine/core";
 import { introduction, tips } from "../content/text";
 import Link from "next/link";
-/* import { participants } from "../content/streamers"; */
+import CustomLink from "../components/ui/CustomLink";
+import { participants } from "../content/streamers";
+import Important from "../components/ui/Important";
 
 const Home: NextPage = () => {
+  const trainers = participants.find((e) => e.category === "trainers");
+  const judges = participants.find((e) => e.category === "judges");
+  const streamers = participants.find((e) => e.category === "streamers");
+  const guests = participants.find((e) => e.category === "guests");
+  const chefs = participants.find((e) => e.category === "chefs");
+
   return (
     <Container size="md" px="md">
       <article className="page sans">
@@ -38,168 +46,81 @@ const Home: NextPage = () => {
 
           <div className="flex my-10">
             <div className="w-1/2">
-              <h1 className="text-2xl font-bold mt-4">Trainers</h1>
-              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
-                <a
-                  href="https://twitch.tv/knut"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Knut
-                </a>
-              </p>
-              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
-                <a
-                  href="https://www.twitch.tv/wakewilder"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  WakeWilder
-                </a>
-              </p>
-              <h1 className="text-2xl font-bold mt-4">Judges</h1>
-              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
-                <a
-                  href="https://twitch.tv/knut"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Knut
-                </a>
-              </p>
-              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
-                <a
-                  href="https://www.twitch.tv/asmongold"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Asmongold
-                </a>
-              </p>
-              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
-                <a
-                  href="https://www.twitch.tv/wakewilder"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  WakeWilder
-                </a>
-              </p>
-              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
-                <a
-                  href="https://www.twitch.tv/malena"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Malena
-                </a>
-              </p>
+              <div>
+                <h1 className="text-2xl font-bold mt-4">Trainers</h1>
+                <ul>
+                  {trainers?.members.map((e) => (
+                    <li key={e.name}>
+                      <CustomLink href={e.url} type="a">
+                        {e.name}
+                      </CustomLink>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-              <h1 className="text-2xl font-bold mt-4">Guests</h1>
-              <p className="text-neutral-300	hover:text-neutral-50">
-                <a
-                  href="https://www.twitch.tv/mitchjones"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span className="">MitchJones</span>
-                </a>
-              </p>
+              <div>
+                <h1 className="text-2xl font-bold mt-4">Judges</h1>
+                <ul>
+                  {judges?.members.map((e) => (
+                    <li key={e.name}>
+                      <CustomLink href={e.url} type="a">
+                        {e.name}
+                      </CustomLink>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <h1 className="text-2xl font-bold mt-4">Guests</h1>
+                <ul>
+                  {guests?.members.map((e) => (
+                    <li key={e.name}>
+                      <CustomLink href={e.url} type="a">
+                        {e.name}
+                      </CustomLink>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
             <div className="w-1/2">
-              <h1 className="text-2xl font-bold mt-4">Streamers</h1>
-              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
-                <a
-                  href="https://www.twitch.tv/mizkif"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Mizkif
-                </a>
-              </p>
-              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
-                <a
-                  href="https://www.twitch.tv/nmplol"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Nmplol
-                </a>
-              </p>
-              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
-                <a
-                  href="https://www.twitch.tv/cyr"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Cyr
-                </a>
-              </p>
-              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
-                <a
-                  href="https://www.twitch.tv/richwcampbell"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  RichwCampbell
-                </a>
-              </p>
-              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
-                <a
-                  href="https://www.twitch.tv/tectone"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Tectone
-                </a>
-              </p>
-              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
-                <a
-                  href="https://www.twitch.tv/erobb221"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Erobb221
-                </a>
-              </p>
-              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
-                <a
-                  href="https://www.twitch.tv/esfandtv"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  EsfandTV
-                </a>
-              </p>
-              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
-                <a
-                  href="https://www.twitch.tv/Lacari"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Lacari
-                </a>
-              </p>
-              <h1 className="text-2xl font-bold mt-4">Chef</h1>
-              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
-                <a
-                  href="https://www.twitch.tv/exxzy"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Exxzy
-                </a>
-              </p>
+              <div>
+                <h1 className="text-2xl font-bold mt-4">Streamers</h1>
+                <ul>
+                  {streamers?.members.map((e) => (
+                    <li key={e.name}>
+                      <CustomLink href={e.url} type="a">
+                        {e.name}
+                      </CustomLink>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <h1 className="text-2xl font-bold mt-4">Chefs</h1>
+                <ul>
+                  {chefs?.members.map((e) => (
+                    <li key={e.name}>
+                      <CustomLink href={e.url} type="a">
+                        {e.name}
+                      </CustomLink>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
 
-          <div className="my-10 font-bold">
+          <Important>
             <p>💡 {tips.knowYourLimits}</p>
-          </div>
+          </Important>
 
-          <div className="my-10 font-bold">
+          <Important>
             <p>💡 {tips.supplements}</p>
-          </div>
+          </Important>
 
           <div className="flex">
             <div className="w-1/2">
