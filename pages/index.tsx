@@ -243,12 +243,12 @@ const Home: NextPage = () => {
                 <strong>💖</strong> Community
               </h1>
               <figure className="link-to-page underline underline-offset-4">
-                <a href="Camp%20Knut%20%F0%9F%92%AA%2017e230f0c0994684b7fd08ded2966fcf/Camp%20Knut%20Amazon%20Suplements%20by%20WakeWilder%200e73dd9909e84c338a704638a837289d.html">
+                <a href="">
                   Amazon Supplements by <strong>WakeWilder</strong>
                 </a>
               </figure>
               <figure className="link-to-page underline underline-offset-4">
-                <a href="Camp%20Knut%20%F0%9F%92%AA%2017e230f0c0994684b7fd08ded2966fcf/Stream%20workout%20log%20-%20Maintained%20by%20DrStone%209b89ac122f0749328c7f13ffc63fe256.html">
+                <a href="">
                   Stream workout log - Maintained by <strong>DrStone</strong>
                 </a>
               </figure>
@@ -274,52 +274,18 @@ const Home: NextPage = () => {
 
           <div className="flex">
             <div className="w-1/2">
-              <h1 className="text-2xl font-bold mt-4 mb-2">📈 Progress</h1>
-              <figure className="link-to-page underline underline-offset-4">
-                <a href="Camp%20Knut%20%F0%9F%92%AA%2017e230f0c0994684b7fd08ded2966fcf/Camp%20Knut%20-%20Calendar%20034214e271cf4dd68ac7a1020cd8795d.html">
-                  <h1> Camp Knut - Calendar</h1>
-                </a>
-              </figure>
-
-              <figure className="link-to-page underline underline-offset-4">
-                <a href="Camp%20Knut%20%F0%9F%92%AA%2017e230f0c0994684b7fd08ded2966fcf/Weekly%20results%200756d199cefd4d90b2be7aad2faf8f0d.html">
-                  Weekly results
-                </a>
-              </figure>
-            </div>
-            <div className="w-1/2">
-              <h1 className="text-2xl font-bold mt-4 mb-2">📃 Articles</h1>
-              <p className="underline underline-offset-4">
-                {" "}
-                <a href="https://physiqonomics.com/fat-loss/">
-                  The Best Fat Loss Article on the Motherfuckin’ Internet
-                </a>
-              </p>
-            </div>
-          </div>
-
-          <div className="flex">
-            <div className="w-1/2">
               <h1 className="text-2xl font-bold mt-4 mb-2">📕 Plans</h1>
               <figure className="link-to-page underline underline-offset-4">
-                <a href="Camp%20Knut%20%F0%9F%92%AA%2017e230f0c0994684b7fd08ded2966fcf/Workout%20Beginner%20b0e37f37cc5a4500af7cd172fcd9ac43.html">
-                  Workout Beginner
-                </a>
+                <a href="">Workout Beginner</a>
               </figure>
               <figure className="link-to-page underline underline-offset-4">
-                <a href="Camp%20Knut%20%F0%9F%92%AA%2017e230f0c0994684b7fd08ded2966fcf/Workout%20plan%20Week%201%20fdfd1d70e98d484f82f5380a8477fa53.html">
-                  Workout plan Week 1
-                </a>
+                <a href="">Workout plan Week 1</a>
               </figure>
               <figure className="link-to-page underline underline-offset-4">
-                <a href="Camp%20Knut%20%F0%9F%92%AA%2017e230f0c0994684b7fd08ded2966fcf/Workout%20plan%20Week%202%202581ca6ecaef4fb591068811a919793e.html">
-                  Workout plan Week 2
-                </a>
+                <a href="">Workout plan Week 2</a>
               </figure>
               <figure className="link-to-page underline underline-offset-4">
-                <a href="Camp%20Knut%20%F0%9F%92%AA%2017e230f0c0994684b7fd08ded2966fcf/Exercises%20941851ed2bd5482eb0ef19f46239fde3.html">
-                  Exercises
-                </a>
+                <a href="/exercises">Exercises</a>
               </figure>
             </div>
             <div className="w-1/2">
@@ -355,10 +321,34 @@ const Home: NextPage = () => {
             </div>
           </div>
 
+          <div className="flex">
+            <div className="w-1/2">
+              <h1 className="text-2xl font-bold mt-4 mb-2">📈 Progress</h1>
+              <figure className="link-to-page underline underline-offset-4">
+                <a href="">
+                  <h1> Camp Knut - Calendar</h1>
+                </a>
+              </figure>
+
+              <figure className="link-to-page underline underline-offset-4">
+                <a href="">Weekly results</a>
+              </figure>
+            </div>
+            <div className="w-1/2">
+              <h1 className="text-2xl font-bold mt-4 mb-2">📃 Articles</h1>
+              <p className="underline underline-offset-4">
+                {" "}
+                <a href="https://physiqonomics.com/fat-loss/">
+                  The Best Fat Loss Article on the Motherfuckin’ Internet
+                </a>
+              </p>
+            </div>
+          </div>
+
           <div className="w-1/2 mt-20">
             <h3 className="text-xl font-bold mt-4">Want to help out?</h3>
             <figure className="link-to-page underline underline-offset-4">
-              <a href="Camp%20Knut%20%F0%9F%92%AA%2017e230f0c0994684b7fd08ded2966fcf/Roadmap%20ffe306ad089245cc99038389d2d9061d.html">
+              <a href="https://campknut.gg/roadmap">
                 <h1>Roadmap</h1>
               </a>
             </figure>
