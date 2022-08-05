@@ -9,7 +9,7 @@ import { components } from "../components/mdxStyling";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider attribute="class">
+    <ThemeProvider attribute="class" defaultTheme="dark">
       <PageLayout>
         <MDXProvider components={components}>
           <Component {...pageProps} />
