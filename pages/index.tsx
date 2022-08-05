@@ -189,6 +189,7 @@ const Home: NextPage = () => {
                 href="https://open.spotify.com/playlist/0bNUdcAFj5Un6XNKZ5Xora?si=e5e3832466244996"
                 target="_blank"
                 rel="noreferrer"
+                className="light:text-knut-light-header dark:text-knut-dark-header hover:font-black"
               >
                 Camp Knut Gym Playlist - Maintained by{" "}
               </a>
