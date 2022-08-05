@@ -6,7 +6,7 @@ import clsx from "clsx";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { FaMoon } from "react-icons/fa";
-import { useRouter } from "next/router";
+import Router, { useRouter } from "next/router";
 
 export default function Header() {
   const [active, setActive] = useState(false);
@@ -22,9 +22,7 @@ export default function Header() {
 
   const { theme, setTheme } = useTheme();
 
-  const router = useRouter();
-
-  router.events.on("routeChangeStart", () => setActive(false));
+  Router.events.on("routeChangeStart", () => setActive(false));
 
   return (
     <header className="sticky top-0 z-10 text-knut-light-text dark:text-knut-dark-text bg-knut-light-bg dark:bg-knut-dark-bg w-full">
