@@ -10,6 +10,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^15.12.1",
+    "@contentful/rich-text-types": "^15.12.1",
     "@mdx-js/loader": "^2.1.2",
     "@mdx-js/react": "^2.1.2",
     "@next/mdx": "^12.2.3",
