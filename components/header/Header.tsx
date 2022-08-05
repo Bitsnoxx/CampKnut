@@ -45,7 +45,7 @@ export default function Header() {
             <div
               className={clsx(active ? "flex" : "hidden", "lg:flex flex-grow")}
             >
-              <ul className="flex flex-col lg:flex-row lg:gap-8 list-none lg:mx-auto lg:justify-center">
+              <ul className="flex flex-col lg:flex-row px-4 lg:gap-8 list-none lg:mx-auto lg:justify-center">
                 <li>
                   <Link href="/">
                     <a className="cursor-pointer py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
