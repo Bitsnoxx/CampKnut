@@ -10,7 +10,7 @@ export default function WorkoutListPage({
   const items = workouts.items as IWorkoutPost[];
   return (
     <div>
-      <h1 className="text-3xl">Workout Posts</h1>
+      <h1 className="text-3xl ">Workout Posts</h1>
       {items.map(({ fields }) => (
         <Link passHref key={fields.slug} href={`/workout/${fields.slug}`}>
           <h2 className="cursor-pointer">{fields.title}</h2>
