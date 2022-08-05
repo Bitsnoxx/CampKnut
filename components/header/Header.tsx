@@ -1,7 +1,7 @@
 import a from "next/link";
 import { introduction, seo } from "../../content/text";
 import { NextSeo } from "next-seo";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import clsx from "clsx";
 import Link from "next/link";
 import { useTheme } from "next-themes";
@@ -16,14 +16,18 @@ export default function Header() {
     setActive(!active);
   };
 
-  /**
-   * Z- index set to 10 as header should always show no matter content behind
-   *
-   */
-
+  const [isMounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   Router.events.on("routeChangeStart", () => setActive(false));
+
+  if (!isMounted) {
+    return null;
+  }
 
   return (
     <header className="sticky top-0 z-10 text-knut-light-text dark:text-knut-dark-text bg-knut-light-bg dark:bg-knut-dark-bg w-full">

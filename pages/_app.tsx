@@ -8,7 +8,7 @@ import { components } from "../components/mdxStyling";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider attribute="class" defaultTheme="dark">
+    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={true}>
       <PageLayout>
         <MDXProvider components={components}>
           <Component {...pageProps} />
