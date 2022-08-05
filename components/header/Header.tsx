@@ -82,7 +82,11 @@ export default function Header() {
                       setTheme(theme === "light" ? "dark" : "light");
                     }}
                   >
-                    {theme === "light" ?  <FaSun size={19} /> : <FaMoon size={19} /> }
+                    {theme === "light" ? (
+                      <FaSun size={19} />
+                    ) : (
+                      <FaMoon size={19} />
+                    )}
                   </button>
                 </li>
               </ul>
