@@ -1,7 +1,4 @@
-import { createGetInitialProps } from "@mantine/next";
 import { Html, Head, Main, NextScript } from "next/document";
-
-const getInitialProps = createGetInitialProps();
 
 export default function Document() {
   const analyticsSecret = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;

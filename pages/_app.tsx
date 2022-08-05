@@ -1,6 +1,5 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { MantineProvider } from "@mantine/core";
 import PageLayout from "../components/layout/PageLayout";
 import { MDXProvider } from "@mdx-js/react";
 import { ThemeProvider } from "next-themes";

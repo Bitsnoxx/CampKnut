@@ -29,7 +29,7 @@ export default function Header() {
       <NextSeo title={introduction.title} description={seo.description} />
       <nav className="relative flex flex-wrap items-center py-3">
         <div className="container flex-1 mx-auto max-w-5xl">
-          <div className="mantine-Container-root mantine-5e0mpf">
+          <div>
             <div className="w-full">
               <button
                 onClick={handleClick}
