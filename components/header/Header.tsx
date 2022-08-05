@@ -82,10 +82,10 @@ export default function Header() {
                       setTheme(theme === "light" ? "dark" : "light");
                     }}
                   >
-                    {theme === "light" ? (
-                      <FaSun size={19} />
+                    {theme === "dark" ? (
+                      <FaSun size={19} title="Switch to light theme"/>
                     ) : (
-                      <FaMoon size={19} />
+                      <FaMoon size={19} title="Switch to gamer mode"/>
                     )}
                   </button>
                 </li>
