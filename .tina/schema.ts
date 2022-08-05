@@ -1,4 +1,5 @@
 import { defineSchema, defineConfig } from 'tinacms'
+import { client } from './__generated__/client'
 
 const branch =
   process.env.NEXT_PUBLIC_TINA_BRANCH ||
@@ -40,6 +41,7 @@ export default schema
 // Your tina config
 
 export const tinaConfig = defineConfig({
+  client,
   schema,
   cmsCallback: (cms) => {
     //  add your CMS callback code here (if you want)

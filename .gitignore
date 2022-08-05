@@ -33,4 +33,4 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-.tina/__generated__/
+.tina/__generated__/db
