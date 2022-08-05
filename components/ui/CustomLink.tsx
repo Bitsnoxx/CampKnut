@@ -14,7 +14,7 @@ export default function CustomLink({
   href,
   className,
 }: CustomLinkType) {
-  const style = `text-neutral-800 dark:text-neutral-300 hover:dark:text-neutral-50 hover:font-bold`;
+  const style = `knut-dark-text knut-light-text hover:font-extrabold`;
   if (type === "a")
     return (
       <a

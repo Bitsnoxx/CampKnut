@@ -9,6 +9,14 @@ module.exports = {
     extend: {
       colors: {
         knut: {
+          light: {
+            bg: "#121212",
+            "bg-info": "#242424",
+            text: "#d4d4d4",
+            "post-link": "#9b9b9b",
+            primary: "#5762D5",
+            header: "#ffffff",
+          },
           dark: {
             bg: "#ffffff",
             "bg-info": "#f0f8ff",
@@ -16,17 +24,6 @@ module.exports = {
             header: "#121212",
             "post-link": "#43484d",
             primary: "#5762D5",
-          },
-          light: {
-            bg: "#121212",
-            "bg-info": "#242424",
-            text: "#d4d4d4",
-            "post-link": "#9b9b9b",
-<<<<<<< Updated upstream
-            primary: "#5762D5",
-=======
-            header: "#ffffff",
->>>>>>> Stashed changes
           },
           other: {
             twitch: "#6441A5",
