@@ -131,7 +131,7 @@ const Home: NextPage = () => {
               <h1 className="text-2xl font-bold mt-4 light:text-knut-light-header dark:text-knut-dark-header mb-2">
                 🥩 Meal Plans
               </h1>
-              <p className="knut-dark-text knut-light-text hover:font-extrabold">
+              <p className="knut-dark-text knut-light-text hover:font-black">
                 {" "}
                 <a
                   href="https://docs.google.com/spreadsheets/d/1Fto6sArnx-lBoxXyFEC3cLCbVQkJdwT9-JsPD9Agra8/edit?usp=sharing"
@@ -141,13 +141,13 @@ const Home: NextPage = () => {
                   OTK Meal plans
                 </a>
               </p>
-              <p className="knut-dark-text knut-light-text hover:font-extrabold">
+              <p className="knut-dark-text knut-light-text hover:font-black">
                 {" "}
                 <a href="https://bit.ly/3vil5en">
                   Mizkif meal plan with supplements
                 </a>
               </p>
-              <p className="knut-dark-text knut-light-text hover:font-extrabold">
+              <p className="knut-dark-text knut-light-text hover:font-black">
                 {" "}
                 <a href="https://bit.ly/3cReLVb">
                   Mizkif meal plan without eggs and supplements
@@ -169,7 +169,7 @@ const Home: NextPage = () => {
                   Stream workout log - Maintained by <strong>DrStone</strong>
                 </a>
               </figure>
-              <p className="knut-dark-text knut-light-text hover:font-extrabold">
+              <p className="knut-dark-text knut-light-text hover:font-black">
                 📀{" "}
                 <a
                   href="https://open.spotify.com/playlist/0bNUdcAFj5Un6XNKZ5Xora?si=e5e3832466244996"
@@ -233,7 +233,7 @@ const Home: NextPage = () => {
                   Android
                 </a>
               </p>
-              <p className="knut-dark-text knut-light-text hover:font-extrabold">
+              <p className="knut-dark-text knut-light-text hover:font-black">
                 {" "}
                 <a
                   href="https://www.bodybuilding.com/fun/bmr_calculator.htm"
@@ -265,7 +265,7 @@ const Home: NextPage = () => {
               <h1 className="text-2xl font-bold mt-4 light:text-knut-light-header dark:text-knut-dark-header mb-2">
                 📃 Articles
               </h1>
-              <p className="knut-dark-text knut-light-text hover:font-extrabold">
+              <p className="knut-dark-text knut-light-text hover:font-black">
                 {" "}
                 <a href="https://physiqonomics.com/fat-loss/">
                   The Best Fat Loss Article on the Motherfuckin’ Internet
