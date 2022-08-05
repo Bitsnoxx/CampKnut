@@ -48,8 +48,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <span className="flex flex-row items-center gap-1 justify-center">
-        Made with <FaHeart className="hover:text-red-600" /> on{" "}
+      <span className="flex flex-row items-center gap-1 justify-center pb-0.5">
+        Made with <FaHeart className="hover:text-red-600 mx-0.5" /> on{" "}
         <a className="font-bold" href="https://github.com/Bitsnoxx/CampKnut">
           Github
         </a>

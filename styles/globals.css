@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: Inter ;
+    font-family: Inter;
     src: url(../public/Inter-Regular.otf);
 }
 

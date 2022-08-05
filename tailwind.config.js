@@ -4,23 +4,29 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: true,
   theme: {
     extend: {
       colors: {
         knut: {
-          light: {
-            bg: "#fff",
+          dark: {
+            bg: "#ffffff",
             "bg-info": "#f0f8ff",
-            text: "#000",
+            text: "#495057",
+            header: "#121212",
             "post-link": "#43484d",
             primary: "#5762D5",
           },
-          dark: {
+          light: {
             bg: "#121212",
             "bg-info": "#242424",
-            text: "#fff",
+            text: "#d4d4d4",
             "post-link": "#9b9b9b",
+<<<<<<< Updated upstream
             primary: "#5762D5",
+=======
+            header: "#ffffff",
+>>>>>>> Stashed changes
           },
           other: {
             twitch: "#6441A5",
@@ -34,5 +40,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [`@tailwindcss/aspect-ratio`],
 };

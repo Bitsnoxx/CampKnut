@@ -28,24 +28,29 @@ const Home: NextPage = () => {
             className="aspect-auto"
           />
           <section className="mb-10 mt-5">
-            <h1 className="text-2xl font-bold">
+            <h1 className="text-2xl font-bold light:text-knut-light-header dark:text-knut-dark-header">
               What is {introduction.title}?
             </h1>
             <section>
               <h3>{introduction.whatIs}</h3>
             </section>
             <div className="my-10">
-              <h2 className="mt-8 text-2xl font-bold">Goal 🏆</h2>
+              <h2 className="mt-8 text-2xl font-bold light:text-knut-light-header dark:text-knut-dark-header">
+                Goal 🏆
+              </h2>
               <h1>{introduction.goal}</h1>
             </div>
             <div className="my-10">
-              <h2 className="mt-8 text-2xl font-bold">Who is Knut?</h2>
+              <h2 className="mt-8 text-2xl font-bold light:text-knut-light-header dark:text-knut-dark-header">
+                Who is Knut?
+              </h2>
               <h1>{introduction.whoIsKnut}</h1>
             </div>
           </section>
 
           <div className="flex my-10">
             <div className="w-1/2">
+<<<<<<< Updated upstream
               <div>
                 <h1 className="text-2xl font-bold mt-4">Trainers</h1>
                 <ul>
@@ -111,6 +116,170 @@ const Home: NextPage = () => {
                   ))}
                 </ul>
               </div>
+=======
+              <h1 className="text-2xl font-bold mt-4 light:text-knut-light-header dark:text-knut-dark-header">
+                Trainers
+              </h1>
+              <p className="knut-dark-text knut-light-text hover:font-extrabold">
+                <a
+                  href="https://twitch.tv/knut"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Knut
+                </a>
+              </p>
+              <p className="knut-dark-text knut-light-text hover:font-extrabold">
+                <a
+                  href="https://www.twitch.tv/wakewilder"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  WakeWilder
+                </a>
+              </p>
+              <h1 className="text-2xl font-bold mt-4 light:text-knut-light-header dark:text-knut-dark-header">
+                Judges
+              </h1>
+              <p className="knut-dark-text knut-light-text hover:font-extrabold">
+                <a
+                  href="https://twitch.tv/knut"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Knut
+                </a>
+              </p>
+              <p className="knut-dark-text knut-light-text hover:font-extrabold">
+                <a
+                  href="https://www.twitch.tv/asmongold"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Asmongold
+                </a>
+              </p>
+              <p className="knut-dark-text knut-light-text hover:font-extrabold">
+                <a
+                  href="https://www.twitch.tv/wakewilder"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  WakeWilder
+                </a>
+              </p>
+              <p className="knut-dark-text knut-light-text hover:font-extrabold">
+                <a
+                  href="https://www.twitch.tv/malena"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Malena
+                </a>
+              </p>
+
+              <h1 className="text-2xl font-bold mt-4 light:text-knut-light-header dark:text-knut-dark-header">
+                Guests
+              </h1>
+              <p className="knut-dark-text knut-light-text hover:font-extrabold">
+                <a
+                  href="https://www.twitch.tv/mitchjones"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span className="">MitchJones</span>
+                </a>
+              </p>
+            </div>
+            <div className="w-1/2">
+              <h1 className="text-2xl font-bold mt-4 light:text-knut-light-header dark:text-knut-dark-header">
+                Streamers
+              </h1>
+              <p className="knut-dark-text knut-light-text hover:font-extrabold">
+                <a
+                  href="https://www.twitch.tv/mizkif"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Mizkif
+                </a>
+              </p>
+              <p className="knut-dark-text knut-light-text hover:font-extrabold">
+                <a
+                  href="https://www.twitch.tv/nmplol"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Nmplol
+                </a>
+              </p>
+              <p className="knut-dark-text knut-light-text hover:font-extrabold">
+                <a
+                  href="https://www.twitch.tv/cyr"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Cyr
+                </a>
+              </p>
+              <p className="knut-dark-text knut-light-text hover:font-extrabold">
+                <a
+                  href="https://www.twitch.tv/richwcampbell"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  RichwCampbell
+                </a>
+              </p>
+              <p className="knut-dark-text knut-light-text hover:font-extrabold">
+                <a
+                  href="https://www.twitch.tv/tectone"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Tectone
+                </a>
+              </p>
+              <p className="knut-dark-text knut-light-text hover:font-extrabold">
+                <a
+                  href="https://www.twitch.tv/erobb221"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Erobb221
+                </a>
+              </p>
+              <p className="knut-dark-text knut-light-text hover:font-extrabold">
+                <a
+                  href="https://www.twitch.tv/esfandtv"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  EsfandTV
+                </a>
+              </p>
+              <p className="knut-dark-text knut-light-text hover:font-extrabold">
+                <a
+                  href="https://www.twitch.tv/Lacari"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Lacari
+                </a>
+              </p>
+              <h1 className="text-2xl font-bold mt-4 light:text-knut-light-header dark:text-knut-dark-header">
+                Chef
+              </h1>
+              <p className="knut-dark-text knut-light-text hover:font-extrabold">
+                <a
+                  href="https://www.twitch.tv/exxzy"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Exxzy
+                </a>
+              </p>
+>>>>>>> Stashed changes
             </div>
           </div>
 
@@ -124,8 +293,10 @@ const Home: NextPage = () => {
 
           <div className="flex">
             <div className="w-1/2">
-              <h1 className="text-2xl font-bold mt-4 mb-2">🥩 Meal Plans</h1>
-              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
+              <h1 className="text-2xl font-bold mt-4 light:text-knut-light-header dark:text-knut-dark-header mb-2">
+                🥩 Meal Plans
+              </h1>
+              <p className="knut-dark-text knut-light-text hover:font-extrabold">
                 {" "}
                 <a
                   href="https://docs.google.com/spreadsheets/d/1Fto6sArnx-lBoxXyFEC3cLCbVQkJdwT9-JsPD9Agra8/edit?usp=sharing"
@@ -135,13 +306,13 @@ const Home: NextPage = () => {
                   OTK Meal plans
                 </a>
               </p>
-              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
+              <p className="knut-dark-text knut-light-text hover:font-extrabold">
                 {" "}
                 <a href="https://bit.ly/3vil5en">
                   Mizkif meal plan with supplements
                 </a>
               </p>
-              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
+              <p className="knut-dark-text knut-light-text hover:font-extrabold">
                 {" "}
                 <a href="https://bit.ly/3cReLVb">
                   Mizkif meal plan without eggs and supplements
@@ -150,20 +321,20 @@ const Home: NextPage = () => {
             </div>
 
             <div className="w-1/2">
-              <h1 className="text-2xl font-bold mt-4">
-                <strong>💖</strong> Community
+              <h1 className="text-2xl font-bold mt-4 light:text-knut-light-header dark:text-knut-dark-header">
+                💖 Community
               </h1>
-              <figure className="link-to-page text-neutral-300 hover:text-neutral-50 hover:font-bold">
+              <figure className="link-to-page light:text-knut-light-header dark:text-knut-dark-header hover:font-bold">
                 <a href="">
                   Amazon Supplements by <strong>WakeWilder</strong>
                 </a>
               </figure>
-              <figure className="link-to-page text-neutral-300 hover:text-neutral-50 hover:font-bold">
+              <figure className="link-to-page light:text-knut-light-header dark:text-knut-dark-header hover:font-bold">
                 <a href="">
                   Stream workout log - Maintained by <strong>DrStone</strong>
                 </a>
               </figure>
-              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
+              <p className="knut-dark-text knut-light-text hover:font-extrabold">
                 📀{" "}
                 <a
                   href="https://open.spotify.com/playlist/0bNUdcAFj5Un6XNKZ5Xora?si=e5e3832466244996"
@@ -185,31 +356,35 @@ const Home: NextPage = () => {
 
           <div className="flex">
             <div className="w-1/2">
-              <h1 className="text-2xl font-bold mt-4 mb-2">📕 Plans</h1>
-              <figure className="link-to-page text-neutral-300 hover:text-neutral-50 hover:font-bold">
+              <h1 className="text-2xl font-bold mt-4 light:text-knut-light-header dark:text-knut-dark-header mb-2">
+                📕 Plans
+              </h1>
+              <figure className="link-to-page light:text-knut-light-header dark:text-knut-dark-header hover:font-bold">
                 <a href="">Workout Beginner</a>
               </figure>
-              <figure className="link-to-page text-neutral-300 hover:text-neutral-50 hover:font-bold">
+              <figure className="link-to-page light:text-knut-light-header dark:text-knut-dark-header hover:font-bold">
                 <a href="">Workout plan Week 1</a>
               </figure>
-              <figure className="link-to-page text-neutral-300 hover:text-neutral-50 hover:font-bold">
+              <figure className="link-to-page light:text-knut-light-header dark:text-knut-dark-header hover:font-bold">
                 <a href="">Workout plan Week 2</a>
               </figure>
-              <figure className="link-to-page text-neutral-300 hover:text-neutral-50 hover:font-bold">
+              <figure className="link-to-page light:text-knut-light-header dark:text-knut-dark-header hover:font-bold">
                 <Link href="/exercises">
                   <a>Exercises</a>
                 </Link>
               </figure>
             </div>
             <div className="w-1/2">
-              <h1 className="text-2xl font-bold mt-4 mb-2">🛠️ Tools</h1>
-              <p className="text-neutral-300">
+              <h1 className="text-2xl font-bold mt-4 light:text-knut-light-header dark:text-knut-dark-header mb-2">
+                🛠️ Tools
+              </h1>
+              <p className="light:text-knut-light-header dark:text-knut-dark-header hover:font-bold">
                 MyFitnessPal{" "}
                 <a
                   href="https://apps.apple.com/us/app/myfitnesspal-calorie-counter/id341232718"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-neutral-300 hover:text-neutral-50 hover:font-bold"
+                  className="light:text-knut-light-header dark:text-knut-dark-header hover:font-bold"
                 >
                   iOS{" "}
                 </a>
@@ -218,12 +393,12 @@ const Home: NextPage = () => {
                   href="https://play.google.com/store/apps/details?id=com.myfitnesspal.android&amp;hl=en&amp;gl=US"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-neutral-300 hover:text-neutral-50 hover:font-bold"
+                  className="light:text-knut-light-header dark:text-knut-dark-header hover:font-bold"
                 >
                   Android
                 </a>
               </p>
-              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
+              <p className="knut-dark-text knut-light-text hover:font-extrabold">
                 {" "}
                 <a
                   href="https://www.bodybuilding.com/fun/bmr_calculator.htm"
@@ -238,20 +413,24 @@ const Home: NextPage = () => {
 
           <div className="flex">
             <div className="w-1/2">
-              <h1 className="text-2xl font-bold mt-4 mb-2">📈 Progress</h1>
-              <figure className="link-to-page text-neutral-300 hover:text-neutral-50 hover:font-bold">
+              <h1 className="text-2xl font-bold mt-4 light:text-knut-light-header dark:text-knut-dark-header mb-2">
+                📈 Progress
+              </h1>
+              <figure className="link-to-page light:text-knut-light-header dark:text-knut-dark-header hover:font-bold">
                 <a href="">
                   <h1> Camp Knut - Calendar</h1>
                 </a>
               </figure>
 
-              <figure className="link-to-page text-neutral-300 hover:text-neutral-50 hover:font-bold">
+              <figure className="link-to-page light:text-knut-light-header dark:text-knut-dark-header hover:font-bold">
                 <a href="">Weekly results</a>
               </figure>
             </div>
             <div className="w-1/2">
-              <h1 className="text-2xl font-bold mt-4 mb-2">📃 Articles</h1>
-              <p className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
+              <h1 className="text-2xl font-bold mt-4 light:text-knut-light-header dark:text-knut-dark-header mb-2">
+                📃 Articles
+              </h1>
+              <p className="knut-dark-text knut-light-text hover:font-extrabold">
                 {" "}
                 <a href="https://physiqonomics.com/fat-loss/">
                   The Best Fat Loss Article on the Motherfuckin’ Internet
@@ -262,7 +441,7 @@ const Home: NextPage = () => {
 
           <div className="text-center my-20">
             <h3 className="text-xl font-bold mt-4">Want to help out?</h3>
-            <figure className="link-to-page text-neutral-300 hover:text-neutral-50 hover:font-bold">
+            <figure className="link-to-page light:text-knut-light-header dark:text-knut-dark-header hover:font-bold">
               <a href="https://github.com/Bitsnoxx/CampKnut/issues">
                 <h1>Roadmap</h1>
               </a>
@@ -273,7 +452,7 @@ const Home: NextPage = () => {
             <div className="text-center">
               If you have questions about training - Post them in #camp-knut in
               the{" "}
-              <strong className="text-neutral-300 hover:text-neutral-50 hover:font-bold">
+              <p className="light:text-knut-light-header dark:text-knut-dark-header hover:font-bold">
                 <a
                   href="http://discord.gg/knut"
                   target="_blank"
@@ -281,7 +460,7 @@ const Home: NextPage = () => {
                 >
                   Discord
                 </a>
-              </strong>
+              </p>
             </div>
             <div className="text-center">
               Feedback, issues or questions? Contact{" "}

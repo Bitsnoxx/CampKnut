@@ -17,6 +17,7 @@ export default function FooterIconLink({
       className={clsx(className)}
       target={"_blank"}
       rel="noreferrer"
+      aria-label={clsx(platform)}
       href={socials.find((e) => e.name === platform)?.url ?? "#"}
     >
       {children}
