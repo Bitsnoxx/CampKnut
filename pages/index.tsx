@@ -1,17 +1,12 @@
 import type { NextPage } from "next";
 import Image from "next/image";
-import { introduction, tips } from "../content/text";
+import { tips } from "../content/text";
 import Link from "next/link";
-import CustomLink from "../components/ui/CustomLink";
-import { participants } from "../content/streamers";
 import Important from "../components/ui/Important";
+import Participants from "../components/mainPage/Participants";
+import Introduction from "../components/mainPage/Introduction";
 
 const Home: NextPage = () => {
-  const trainers = participants.find((e) => e.category === "trainers");
-  const judges = participants.find((e) => e.category === "judges");
-  const streamers = participants.find((e) => e.category === "streamers");
-  const guests = participants.find((e) => e.category === "guests");
-  const chefs = participants.find((e) => e.category === "chefs");
   return (
     <article>
       <div>
@@ -24,106 +19,10 @@ const Home: NextPage = () => {
           decoding="async"
           className="aspect-auto"
         />
-        <section className="mb-10 mt-5">
-          <h1 className="text-2xl font-black light:text-knut-light-header dark:text-knut-dark-header">
-            What is {introduction.title}?
-          </h1>
-          <section>
-            <h3>{introduction.whatIs}</h3>
-          </section>
-          <div className="my-10">
-            <h2 className="mt-8 text-2xl font-black light:text-knut-light-header dark:text-knut-dark-header">
-              Goal 🏆
-            </h2>
-            <h1>{introduction.goal}</h1>
-          </div>
-          <div className="my-10">
-            <h2 className="mt-8 text-2xl font-black light:text-knut-light-header dark:text-knut-dark-header">
-              Who is Knut?
-            </h2>
-            <h1>{introduction.whoIsKnut}</h1>
-          </div>
-        </section>
 
-        <div className="flex my-10">
-          <div className="w-1/2">
-            <div>
-              <h1 className="text-2xl font-black light:text-knut-light-header dark:text-knut-dark-header  mt-4">
-                Trainers
-              </h1>
-              <ul>
-                {trainers?.members.map((e) => (
-                  <li key={e.name}>
-                    <CustomLink href={e.url} type="a">
-                      {e.name}
-                    </CustomLink>
-                  </li>
-                ))}
-              </ul>
-            </div>
+        <Introduction />
 
-            <div>
-              <h1 className="text-2xl font-black mt-4 light:text-knut-light-header dark:text-knut-dark-header">
-                Judges
-              </h1>
-              <ul>
-                {judges?.members.map((e) => (
-                  <li key={e.name}>
-                    <CustomLink href={e.url} type="a">
-                      {e.name}
-                    </CustomLink>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h1 className="text-2xl font-black mt-4 light:text-knut-light-header dark:text-knut-dark-header">
-                Guests
-              </h1>
-              <ul>
-                {guests?.members.map((e) => (
-                  <li key={e.name}>
-                    <CustomLink href={e.url} type="a">
-                      {e.name}
-                    </CustomLink>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <div className="w-1/2">
-            <div>
-              <h1 className="text-2xl font-black mt-4 light:text-knut-light-header dark:text-knut-dark-header">
-                Streamers
-              </h1>
-              <ul>
-                {streamers?.members.map((e) => (
-                  <li key={e.name}>
-                    <CustomLink href={e.url} type="a">
-                      {e.name}
-                    </CustomLink>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h1 className="text-2xl font-black mt-4 light:text-knut-light-header dark:text-knut-dark-header">
-                Chefs
-              </h1>
-              <ul>
-                {chefs?.members.map((e) => (
-                  <li key={e.name}>
-                    <CustomLink href={e.url} type="a">
-                      {e.name}
-                    </CustomLink>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
+        <Participants />
 
         <Important>
           <p>💡 {tips.knowYourLimits}</p>
