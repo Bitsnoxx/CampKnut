@@ -37,5 +37,5 @@ module.exports = {
       },
     },
   },
-  plugins: [`@tailwindcss/aspect-ratio`],
+  plugins: [`@tailwindcss/aspect-ratio`, require("@tailwindcss/typography")],
 };
