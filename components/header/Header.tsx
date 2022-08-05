@@ -6,6 +6,7 @@ import clsx from "clsx";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { FaMoon } from "react-icons/fa";
+import { FaSun } from "react-icons/fa";
 import Router, { useRouter } from "next/router";
 
 export default function Header() {
@@ -27,7 +28,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-10 text-knut-light-text dark:text-knut-dark-text bg-knut-light-bg dark:bg-knut-dark-bg w-full">
       <NextSeo title={introduction.title} description={seo.description} />
-      <nav className="relative flex flex-wrap items-center py-3">
+      <nav className="relative flex flex-wrap items-center">
         <div className="container flex-1 mx-auto max-w-5xl">
           <div>
             <div className="w-full">
@@ -44,17 +45,17 @@ export default function Header() {
             <div
               className={clsx(active ? "flex" : "hidden", "lg:flex flex-grow")}
             >
-              <ul className="flex flex-col lg:flex-row list-none lg:mx-auto lg:justify-center">
+              <ul className="flex flex-col lg:flex-row lg:gap-8 list-none lg:mx-auto lg:justify-center">
                 <li>
                   <Link href="/">
-                    <a className="cursor-pointer px-3 py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
+                    <a className="cursor-pointer py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
                       Home
                     </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/socials">
-                    <a className="cursor-pointer px-3 py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
+                    <a className="cursor-pointer py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
                       Socials
                     </a>
                   </Link>
@@ -65,19 +66,19 @@ export default function Header() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <span className="cursor-pointer px-3 py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
+                    <span className="cursor-pointer py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
                       Merch
                     </span>
                   </a>
                 </li>
                 <li>
                   <button
-                    className="px-3 pl-4 pt-3 font-black light:text-knut-light-header dark:text-knut-dark-header cursor-pointer flex text-sm uppercase leading-snug hover:opacity-75"
+                    className="py-4 font-black light:text-knut-light-header dark:text-knut-dark-header cursor-pointer flex text-sm uppercase leading-snug hover:opacity-75"
                     onClick={() => {
                       setTheme(theme === "light" ? "dark" : "light");
                     }}
                   >
-                    <FaMoon size={20}></FaMoon>
+                    {theme === "light" ?  <FaSun size={19} /> : <FaMoon size={19} /> }
                   </button>
                 </li>
               </ul>
