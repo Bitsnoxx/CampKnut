@@ -4,6 +4,8 @@ import { NextSeo } from "next-seo";
 import { useState } from "react";
 import clsx from "clsx";
 import Link from "next/link";
+import { useTheme } from "next-themes";
+import { FaMoon } from "react-icons/fa";
 
 export default function Header() {
   const [active, setActive] = useState(false);
@@ -16,6 +18,9 @@ export default function Header() {
    * Z- index set to 10 as header should always show no matter content behind
    *
    */
+
+  const { theme, setTheme } = useTheme();
+
   return (
     <header className="sticky top-0 z-10 text-knut-light-text dark:text-knut-dark-text bg-knut-light-bg dark:bg-knut-dark-bg w-full">
       <NextSeo title={introduction.title} description={seo.description} />
@@ -61,6 +66,16 @@ export default function Header() {
                       Merch
                     </span>
                   </a>
+                </li>
+                <li>
+                  <button
+                    className="px-3 pl-4 pt-3 font-black light:text-knut-light-header dark:text-knut-dark-header cursor-pointer flex text-sm uppercase leading-snug hover:opacity-75"
+                    onClick={() => {
+                      setTheme(theme === "light" ? "dark" : "light");
+                    }}
+                  >
+                    <FaMoon size={20}></FaMoon>
+                  </button>
                 </li>
               </ul>
             </div>
