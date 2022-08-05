@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       colors: {
         knut: {
-          light: {
+          dark: {
             bg: "#121212",
             "bg-info": "#242424",
             text: "#d4d4d4",
@@ -17,7 +17,7 @@ module.exports = {
             primary: "#5762D5",
             header: "#ffffff",
           },
-          dark: {
+          light: {
             bg: "#ffffff",
             "bg-info": "#f0f8ff",
             text: "#495057",
