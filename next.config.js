@@ -7,7 +7,7 @@ const nextConfig = {
   swcMinify: true,
   images: {
     formats: ["image/avif", "image/webp"],
-    domains: ["images.ctfassets.net"],
+    domains: ["ctfassets.net"],
   },
   productionBrowserSourceMaps: true,
   i18n: {
