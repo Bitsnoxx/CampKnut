@@ -1,7 +1,7 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next";
-import Link from "next/link";
 import { useState } from "react";
 import ExercisePreview from "../../components/exercise/ExercisePreview";
+import PageLayout from "../../components/layout/PageLayout";
 import { IExercise } from "../../model/exercise";
 import { getExercises } from "../../utils/contentful";
 import slugify from "../../utils/slugify";
@@ -22,7 +22,7 @@ export default function ExerciseListPage({
   };
 
   return (
-    <>
+    <PageLayout widthClassName="max-w-none">
       <h1 className="text-3xl font-bold">Exercises</h1>
       <div>
         <input
@@ -33,12 +33,17 @@ export default function ExerciseListPage({
           onChange={(e) => setSearchTerm(e.target.value)}
         />
       </div>
-      <div className="grid auto-rows-max gap-4 grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
+      <div
+        className="grid auto-rows-max gap-4"
+        style={{
+          gridTemplateColumns: "repeat(auto-fill,minmax(260px,1fr))",
+        }}
+      >
         {visibleExercises.filter(filterLogic).map((exercise: IExercise) => (
           <ExercisePreview key={exercise.slug} {...exercise} />
         ))}
       </div>
-    </>
+    </PageLayout>
   );
 }
 
