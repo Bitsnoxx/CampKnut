@@ -2,12 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: Inter;
-  src: url(../public/Inter-Regular.otf);
-  font-display: swap;
-}
-
-body {
-  font-family: Inter, sans-serif;
-}
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
