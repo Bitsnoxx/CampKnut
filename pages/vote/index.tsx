@@ -88,4 +88,4 @@ const Vote = () => {
   }
 };
 
-export default vote;
+export default Vote;
