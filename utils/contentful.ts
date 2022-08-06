@@ -4,7 +4,8 @@ import type {
   IContentfulQuery,
   IExerciseFields,
   IWorkoutPostFields,
-} from "./../model/contentful";
+} from "../model/contentful";
+
 const client = createClient({
   space: process.env.NEXT_CONTENTFUL_SPACE_ID ?? "ErrorNoSpaceID",
   accessToken: process.env.NEXT_CONTENTFUL_ACCESS_TOKEN ?? "ErrorNoAccesToken",
