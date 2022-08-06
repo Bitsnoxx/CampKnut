@@ -9,73 +9,73 @@ export default function Participants() {
   const chefs = participants.find((e) => e.category === "chefs");
 
   return (
-    <div className="grid grid-cols-2 gap-16 my-10 w-full">
+    <div className="grid grid-cols-2 md:grid-cols-5 gap-4 my-10 w-full">
       <div>
-        <div>
-          <h1 className="text-2xl font-bold mt-4">Trainers</h1>
-          <ul>
-            {trainers?.members.map((e) => (
-              <li key={e.name}>
-                <CustomLink href={e.url} type="a">
-                  {e.name}
-                </CustomLink>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          <h1 className="text-2xl font-bold mt-4">Judges</h1>
-          <ul>
-            {judges?.members.map((e) => (
-              <li key={e.name}>
-                <CustomLink href={e.url} type="a">
-                  {e.name}
-                </CustomLink>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          <h1 className="text-2xl font-bold mt-4">Guests</h1>
-          <ul>
-            {guests?.members.map((e) => (
-              <li key={e.name}>
-                <CustomLink href={e.url} type="a">
-                  {e.name}
-                </CustomLink>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <h1 className="text-2xl font-bold mt-4 md:text-center">Trainers</h1>
+        <ul className="flex flex-col items-start md:items-center">
+          {trainers?.members.map((e) => (
+            <li key={e.name}>
+              <CustomLink href={e.url} type="a">
+                {e.name}
+              </CustomLink>
+            </li>
+          ))}
+        </ul>
       </div>
-      <div className="flex flex-col items-end">
-        <div>
-          <h1 className="text-2xl font-bold mt-4">Streamers</h1>
-          <ul className="items-end flex flex-col">
-            {streamers?.members.map((e) => (
-              <li key={e.name}>
-                <CustomLink href={e.url} type="a">
-                  {e.name}
-                </CustomLink>
-              </li>
-            ))}
-          </ul>
-        </div>
 
-        <div>
-          <h1 className="text-2xl font-bold mt-4">Chefs</h1>
-          <ul>
-            {chefs?.members.map((e) => (
-              <li key={e.name}>
-                <CustomLink href={e.url} type="a">
-                  {e.name}
-                </CustomLink>
-              </li>
-            ))}
-          </ul>
-        </div>
+      <div>
+        <h1 className="text-2xl font-bold mt-4 text-right md:text-center">
+          Judges
+        </h1>
+        <ul className="flex flex-col items-end md:items-center">
+          {judges?.members.map((e) => (
+            <li key={e.name}>
+              <CustomLink href={e.url} type="a">
+                {e.name}
+              </CustomLink>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="md:order-5">
+        <h1 className="text-2xl font-bold mt-4 md:text-center">Guests</h1>
+        <ul>
+          {guests?.members.map((e) => (
+            <li key={e.name} className="md:flex md:flex-col md:items-center">
+              <CustomLink href={e.url} type="a">
+                {e.name}
+              </CustomLink>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h1 className="text-2xl font-bold mt-4 text-right md:text-center">
+          Streamers
+        </h1>
+        <ul className="items-end flex flex-col md:items-center">
+          {streamers?.members.map((e) => (
+            <li key={e.name}>
+              <CustomLink href={e.url} type="a">
+                {e.name}
+              </CustomLink>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h1 className="text-2xl font-bold mt-4 md:text-center">Chefs</h1>
+        <ul className="md:flex md:flex-col md:items-center">
+          {chefs?.members.map((e) => (
+            <li key={e.name}>
+              <CustomLink href={e.url} type="a">
+                {e.name}
+              </CustomLink>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
