@@ -1,13 +1,13 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 import Image from "next/image";
-import { IExercise } from "../../model/exercise";
 import { getExercises, getOneExercise } from "../../utils/contentful";
 import CustomLink from "../../components/ui/CustomLink";
+import { IExerciseFields } from "../../model/contentful";
 
 export default function ExercisePage({
   exerciseElement,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const { imageUrl, name, tags, youtubeLink } = exerciseElement;
+  const { image, name, tags, youtubeLink } = exerciseElement;
 
   return (
     <div>
@@ -16,17 +16,22 @@ export default function ExercisePage({
       </h1>
       <div className="flex flex-col md:flex-row gap-16 my-16">
         <div className="col-span-2 relative w-full aspect-video">
-          <Image src={imageUrl} layout="fill" alt={name} objectFit="cover" />
+          <Image
+            src={`https:${image.fields.file.url}`}
+            layout="fill"
+            alt={name}
+            objectFit="cover"
+          />
         </div>
         <div>
           <h2 className="text-2xl font-medium dark:text-knut-dark-header light:text-knut-light-header pb-4">
             Muscle groups:
           </h2>
-          <p className="light:text-knut-light-header dark:text-knut-dark-header hover:font-black">
+          <p className="light:text-knut-light-header dark:text-knut-dark-header ">
             {tags?.map((e) => (
               <span
                 key={e}
-                className="dark:bg-knut-dark-tag bg-sky-200 p-1 rounded-xl px-3 mr-2"
+                className="dark:bg-knut-dark-tag bg-sky-200 p-1 rounded-xl px-3 mr-2 hover:font-black"
               >
                 <CustomLink href={`/exercises/${e}`} type="a">
                   {e}
@@ -52,14 +57,13 @@ export default function ExercisePage({
 }
 
 export const getStaticProps: GetStaticProps<{
-  exerciseElement: IExercise;
+  exerciseElement: IExerciseFields;
 }> = async ({ params }) => {
   const exerciseElement = await getOneExercise(params?.slug);
   return {
     props: {
       exerciseElement: {
         ...exerciseElement.fields,
-        imageUrl: `https:${exerciseElement.fields.image.fields.file.url}`,
         tags: exerciseElement.fields.tags ?? [],
       },
     },

@@ -1,9 +1,8 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next";
-import Link from "next/link";
+import React from "react";
 import { useState } from "react";
 import ExercisePreview from "../../components/exercise/ExercisePreview";
 import { IExerciseFields } from "../../model/contentful";
-import { IExercise } from "../../model/exercise";
 import { getExercises } from "../../utils/contentful";
 import slugify from "../../utils/slugify";
 
@@ -11,15 +10,15 @@ export default function ExerciseListPage({
   exercises,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const [visibleExercises, setVisibleExercises] =
-    useState<IExercise[]>(exercises);
+    useState<IExerciseFields[]>(exercises);
 
   const [searchTerm, setSearchTerm] = useState<string>("");
 
-  const filterLogic = (e: IExercise) => {
+  const filterLogic = (e: IExerciseFields) => {
     const term = slugify(searchTerm.toLowerCase());
     const name = slugify(e.name.toLowerCase());
     const t = e.tags?.map((e) => slugify(e.toLowerCase()));
-    return name.includes(term) || t.some((x) => x.includes(term));
+    return name.includes(term) || (t && t.some((x) => x.includes(term)));
   };
 
   return (
@@ -44,7 +43,7 @@ export default function ExerciseListPage({
 }
 
 export const getStaticProps: GetStaticProps<{
-  exercises: IExercise[];
+  exercises: IExerciseFields[];
 }> = async () => {
   const exercises = await getExercises();
   return {
@@ -52,7 +51,6 @@ export const getStaticProps: GetStaticProps<{
       exercises: exercises.items.map(({ fields }) => {
         return {
           ...fields,
-          imageUrl: `https:${fields.image.fields.file.url}`,
           tags: fields.tags ?? [],
         };
       }),

@@ -1,14 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import { IExercise } from "../../model/exercise";
+import React from "react";
+import { IExerciseFields } from "../../model/contentful";
 import ExerciseTag from "./ExerciseTag";
 
 export default function ExercisePreview({
-  imageUrl,
+  image,
   name,
   slug,
   tags,
-}: IExercise) {
+}: IExerciseFields) {
   return (
     <Link href={`/exercises/${slug}`}>
       <a>
@@ -17,7 +18,7 @@ export default function ExercisePreview({
             <Image
               priority
               objectFit="cover"
-              src={imageUrl}
+              src={`https:${image.fields.file.url}`}
               layout="fill"
               alt={name}
             />
