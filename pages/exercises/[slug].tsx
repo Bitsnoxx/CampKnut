@@ -10,14 +10,6 @@ import CustomLink from "../../components/ui/CustomLink";
 export default function ExercisePage({
   exerciseElement,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-
-
-export default function ExercisePage({
-  exerciseElement,
-}: {
-  exerciseElement: IExercise;
-}) {
-
   const { imageUrl, name, tags, youtubeLink } = exerciseElement;
 
   return (
@@ -62,14 +54,18 @@ export default function ExercisePage({
   );
 }
 
-export const getStaticProps: GetStaticProps<{exerciseElement: IExercise}> = async ({ params }) => {
+export const getStaticProps: GetStaticProps<{
+  exerciseElement: IExercise;
+}> = async ({ params }) => {
   const exerciseElement = await getOneExercise(params?.slug);
   return { props: { exerciseElement: mapToExerciseType(exerciseElement) } };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const exercises = await getExercises()
-  const allExercisePaths = exercises.items?.map(exercise => `/exercises/${exercise.fields.slug}`) ?? []
+  const exercises = await getExercises();
+  const allExercisePaths =
+    exercises.items?.map((exercise) => `/exercises/${exercise.fields.slug}`) ??
+    [];
   return {
     paths: allExercisePaths,
     fallback: false,
