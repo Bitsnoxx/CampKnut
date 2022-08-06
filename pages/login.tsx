@@ -1,8 +1,7 @@
 import React from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
-import LoginButton from "../components/login-btn";
 
-const login = () => {
+const Login = () => {
   const { data: session } = useSession();
 
   if (session) {

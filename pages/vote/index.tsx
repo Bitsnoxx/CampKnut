@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { signIn, signOut, useSession } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 import { participants } from "../../content/streamers";
 import React from "react";
 
-const vote = () => {
+const Vote = () => {
   const { data: session } = useSession();
   const streamers = participants.find((e) => e.category === "streamers");
 
