@@ -1,4 +1,3 @@
-import PageLayout from "./layout/PageLayout";
 import Important from "./ui/Important";
 
 export const components = {
@@ -44,9 +43,4 @@ export const components = {
   },
   Important: Important,
   Info: (props: any) => null,
-  wrapper: ({ components, ...rest }) => (
-    <PageLayout>
-      <main {...rest} />
-    </PageLayout>
-  ),
 };
