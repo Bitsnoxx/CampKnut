@@ -1,8 +1,9 @@
+import PageLayout from "../components/layout/PageLayout";
 import { socials } from "./../content/links";
 
 export default function SocialsPage() {
   return (
-    <>
+    <PageLayout>
       <h1 className="text-3xl mb-4 font-bold">Knut&apos;s socials</h1>
       <div className="grid md:grid-cols-3 gap-4">
         {socials.map((e) => {
@@ -18,6 +19,6 @@ export default function SocialsPage() {
           );
         })}
       </div>
-    </>
+    </PageLayout>
   );
 }
