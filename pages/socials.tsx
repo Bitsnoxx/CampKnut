@@ -5,7 +5,7 @@ export default function SocialsPage() {
   return (
     <PageLayout>
       <h1 className="text-3xl mb-4 font-bold">Knut&apos;s socials</h1>
-      <div className="grid md:grid-cols-3 gap-4">
+      <div className="grid md:grid-cols-3 gap-4 rounded-lg">
         {socials.map((e) => {
           return (
             <a key={e.url} href={e.url} target="_blank" rel="noreferrer">
