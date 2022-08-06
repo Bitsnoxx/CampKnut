@@ -49,7 +49,7 @@ const Vote = () => {
                     <h3 className="pb-2">{e.name}</h3>
                     <section className="hero container mx-auto flex justify-center">
                       <Image
-                        src={`/streamers/${e.twitchName}.webp`}
+                        src={`/participants/${e.twitchName}.webp`}
                         className="mx-auto rounded-md"
                         height={250}
                         width={250}
