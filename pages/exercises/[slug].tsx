@@ -1,10 +1,7 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 import Image from "next/image";
-import { IExerciseFields } from "../../model/contentful";
 import { IExercise } from "../../model/exercise";
-import { getAllExercises, getExercise } from "../../utils/cms";
 import { getExercises, getOneExercise } from "../../utils/contentful";
-import { mapToExerciseType } from "../../utils/mappers";
 import CustomLink from "../../components/ui/CustomLink";
 
 export default function ExercisePage({
