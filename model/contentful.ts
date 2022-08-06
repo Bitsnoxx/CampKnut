@@ -29,7 +29,7 @@ export interface IExerciseFields {
   name: string;
   slug: string;
   youtubeLink: string;
-  tags: any;
+  tags?: string[] | null;
   image: Asset;
 }
 
