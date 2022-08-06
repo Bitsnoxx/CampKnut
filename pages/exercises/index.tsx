@@ -47,5 +47,8 @@ export const getStaticProps: GetStaticProps<{
   exercises: IExercise[];
 }> = async () => {
   const exercises = await getExercises();
-  return { props: { exercises: exercises.items.map(mapToExerciseType) } };
+  return {
+    props: { exercises: exercises.items.map(mapToExerciseType) },
+    revalidate: 60,
+  };
 };
