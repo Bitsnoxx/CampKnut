@@ -16,6 +16,7 @@ module.exports = {
             "post-link": "#9b9b9b",
             primary: "#5762D5",
             header: "#ffffff",
+            tag: "#0369A1",
           },
           light: {
             bg: "#ffffff",
@@ -24,6 +25,7 @@ module.exports = {
             header: "#121212",
             "post-link": "#43484d",
             primary: "#5762D5",
+            tag: "#5762D5",
           },
           other: {
             twitch: "#6441A5",
