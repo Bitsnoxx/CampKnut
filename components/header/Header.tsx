@@ -112,7 +112,7 @@ export default function Header() {
                 )}
                 <li>
                   <button
-                    className="py-4 font-black light:text-knut-light-header dark:text-knut-dark-header cursor-pointer flex text-sm uppercase leading-snug hover:opacity-75"
+                    className="py-4 font-black text-knut-light-header dark:text-knut-dark-header cursor-pointer flex text-sm uppercase leading-snug hover:opacity-75"
                     onClick={() => {
                       setTheme(theme === "light" ? "dark" : "light");
                     }}
