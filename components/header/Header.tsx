@@ -8,6 +8,7 @@ import { useTheme } from "next-themes";
 import { FaMoon } from "react-icons/fa";
 import { FaSun } from "react-icons/fa";
 import Router, { useRouter } from "next/router";
+import React from "react";
 
 export default function Header() {
   const [active, setActive] = useState(false);
@@ -58,9 +59,23 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/socials">
+                  <Link href="/workout">
                     <a className="cursor-pointer py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
-                      Socials
+                      Workout
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/vote">
+                    <a className="cursor-pointer py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
+                      Vote
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/exercises">
+                    <a className="cursor-pointer py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
+                      Exercises
                     </a>
                   </Link>
                 </li>
@@ -83,9 +98,9 @@ export default function Header() {
                     }}
                   >
                     {theme === "dark" ? (
-                      <FaSun size={19} title="Switch to light theme"/>
+                      <FaSun size={19} title="Switch to light theme" />
                     ) : (
-                      <FaMoon size={19} title="Switch to gamer mode"/>
+                      <FaMoon size={19} title="Switch to gamer mode" />
                     )}
                   </button>
                 </li>
