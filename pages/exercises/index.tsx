@@ -2,13 +2,16 @@ import { GetStaticProps, InferGetStaticPropsType } from "next";
 import Link from "next/link";
 import { useState } from "react";
 import ExercisePreview from "../../components/exercise/ExercisePreview";
+import { IExerciseFields } from "../../model/contentful";
 import { IExercise } from "../../model/exercise";
-import { getAllExercises } from "../../utils/cms";
+import { getExercises } from "../../utils/contentful";
+import { mapToExerciseType } from "../../utils/mappers";
 import slugify from "../../utils/slugify";
 
 export default function ExerciseListPage({
   exercises,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+
   const [visibleExercises, setVisibleExercises] =
     useState<IExercise[]>(exercises);
 
@@ -42,7 +45,7 @@ export default function ExerciseListPage({
   );
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-  const exercises = getAllExercises();
-  return { props: { exercises } };
+export const getStaticProps: GetStaticProps<{exercises: IExercise[]}> = async () => {
+  const exercises = await getExercises();
+  return { props: { exercises: exercises.items.map(mapToExerciseType) } };
 };

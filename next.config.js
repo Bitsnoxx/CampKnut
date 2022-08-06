@@ -7,7 +7,7 @@ const nextConfig = {
   swcMinify: true,
   images: {
     formats: ["image/avif", "image/webp"],
-    domains: ["i.redd.it"],
+    domains: ["images.ctfassets.net"],
   },
   productionBrowserSourceMaps: true,
   i18n: {
@@ -32,3 +32,4 @@ const withMDX = require("@next/mdx")({
 });
 
 module.exports = withPlugins([withMDX], nextConfig);
+
