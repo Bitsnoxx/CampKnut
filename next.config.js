@@ -1,3 +1,4 @@
+const { default: next } = require("next");
 const withPlugins = require("next-compose-plugins");
 
 /** @type {import('next').NextConfig} */
@@ -6,7 +7,7 @@ const nextConfig = {
   swcMinify: true,
   images: {
     formats: ["image/avif", "image/webp"],
-    domains: ["placekitten.com"],
+    domains: ["i.redd.it"],
   },
   productionBrowserSourceMaps: true,
   i18n: {
@@ -24,11 +25,10 @@ const withMDX = require("@next/mdx")({
     remarkPlugins: [],
     rehypePlugins: [],
     providerImportSource: "@mdx-js/react",
+    pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
     // If you use `MDXProvider`, uncomment the following line.
     // providerImportSource: "@mdx-js/react",
   },
 });
 
-module.exports = withMDX({
-  pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
-});
+module.exports = withPlugins([withMDX], nextConfig);
