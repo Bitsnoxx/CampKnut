@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -36,6 +38,9 @@ module.exports = {
             merch: "#5E8E3E",
           },
         },
+      },
+      fontFamily: {
+        inter: ["Inter", ...defaultTheme.fontFamily.sans],
       },
     },
   },
