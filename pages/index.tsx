@@ -40,6 +40,7 @@ const Home: NextPage = () => {
             </h1>
             <p>
               <CustomLink
+
                   href={"https://docs.google.com/spreadsheets/d/1Fto6sArnx-lBoxXyFEC3cLCbVQkJdwT9-JsPD9Agra8/edit?usp=sharing"}
                   type={"a"}
                   darkColor={"dark:text-knut-dark-header"}
@@ -169,8 +170,8 @@ const Home: NextPage = () => {
                   lightColor={"text-knut-light-header"}
               >
                 iOS
-              </CustomLink>
-              {" "}/{" "}
+              </CustomLink>{" "}
+              /{" "}
               <CustomLink
                   href={"https://play.google.com/store/apps/details?id=com.myfitnesspal.android&amp;hl=en&amp;gl=US"}
                   type={"a"}
@@ -219,7 +220,6 @@ const Home: NextPage = () => {
                 Weekly results
               </CustomLink>
             </p>
-
           </div>
           <div className="w-1/2">
             <h1 className="text-2xl font-black mt-4 text-knut-light-header dark:text-knut-dark-header mb-2">

@@ -8,9 +8,12 @@ import { useTheme } from "next-themes";
 import { FaMoon } from "react-icons/fa";
 import { FaSun } from "react-icons/fa";
 import Router, { useRouter } from "next/router";
+import React from "react";
+import { signOut, useSession } from "next-auth/react";
 
 export default function Header() {
   const [active, setActive] = useState(false);
+  const { data: session } = useSession();
 
   const handleClick = () => {
     setActive(!active);
@@ -58,6 +61,27 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/workout">
+                    <a className="cursor-pointer py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
+                      Workout
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/vote">
+                    <a className="cursor-pointer py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
+                      Vote
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/exercises">
+                    <a className="cursor-pointer py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
+                      Exercises
+                    </a>
+                  </Link>
+                </li>
+                <li>
                   <Link href="/socials">
                     <a className="cursor-pointer py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
                       Socials
@@ -75,6 +99,17 @@ export default function Header() {
                     </span>
                   </a>
                 </li>
+                {session && (
+                  <>
+                    <li>
+                      <span className="cursor-pointer py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
+                        <button className="uppercase" onClick={() => signOut()}>
+                          Sign out
+                        </button>
+                      </span>
+                    </li>
+                  </>
+                )}
                 <li>
                   <button
                     className="py-4 font-black text-knut-light-header dark:text-knut-dark-header cursor-pointer flex text-sm uppercase leading-snug hover:opacity-75"
@@ -83,9 +118,9 @@ export default function Header() {
                     }}
                   >
                     {theme === "dark" ? (
-                      <FaSun size={19} title="Switch to light theme"/>
+                      <FaSun size={19} title="Switch to light theme" />
                     ) : (
-                      <FaMoon size={19} title="Switch to gamer mode"/>
+                      <FaMoon size={19} title="Switch to gamer mode" />
                     )}
                   </button>
                 </li>

@@ -2,7 +2,6 @@ import { GetStaticProps, InferGetStaticPropsType } from "next";
 import Link from "next/link";
 import { useState } from "react";
 import ExercisePreview from "../../components/exercise/ExercisePreview";
-import { IExerciseFields } from "../../model/contentful";
 import { IExercise } from "../../model/exercise";
 import { getExercises } from "../../utils/contentful";
 import slugify from "../../utils/slugify";
