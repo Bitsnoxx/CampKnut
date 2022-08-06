@@ -246,8 +246,8 @@ const Home: NextPage = () => {
             <CustomLink
                 href={"https://github.com/Bitsnoxx/CampKnut/issues"}
                 type={"a"}
-                darkColor={"dark:text-knut-dark-header"}
                 lightColor={"text-knut-light-header"}
+                darkColor={"dark:text-knut-dark-header"}
             >
               Roadmap
             </CustomLink>

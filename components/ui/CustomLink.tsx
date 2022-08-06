@@ -6,9 +6,9 @@ type CustomLinkType = {
   children: string | JSX.Element | JSX.Element[];
   type: "a" | "Link";
   className?: string;
-  lightColor?: string;
-  darkColor?: string;
-  hover?: string;
+  lightColor?: string | null;
+  darkColor?: string | null;
+  hover?: string | null;
 };
 
 export default function CustomLink({
@@ -27,9 +27,9 @@ export default function CustomLink({
   };
 
   const style = clsx(
-      lightColor !== undefined ? lightColor : defaultStyle.lightColor,
-      darkColor !== undefined ? `dark:${darkColor?.replace("dark:", "")}` : defaultStyle.darkColor,
-      hover !== undefined ? `hover:${hover?.replace("hover:", "")}` : defaultStyle.hover
+      lightColor !== null ?  (lightColor !== undefined ? lightColor : defaultStyle.lightColor) : "",
+      darkColor !== null ? (darkColor !== undefined ? `dark:${darkColor?.replace("dark:", "")}` : defaultStyle.darkColor) : "",
+      hover !== null ? (hover !== undefined ? `hover:${hover?.replace("hover:", "")}` : defaultStyle.hover) : ""
   );
 
   if (type === "a") {
