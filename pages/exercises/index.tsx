@@ -34,9 +34,11 @@ export default function ExerciseListPage({
         />
       </div>
       <div className="grid auto-rows-max gap-4 grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
-        {visibleExercises.filter(filterLogic).map((exercise: IExercise) => (
-          <ExercisePreview key={exercise.slug} {...exercise} />
-        ))}
+        {visibleExercises
+          .filter(filterLogic)
+          .map((exercise: IExerciseFields) => (
+            <ExercisePreview key={exercise.slug} {...exercise} />
+          ))}
       </div>
     </>
   );
