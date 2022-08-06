@@ -2,35 +2,30 @@ import clsx from "clsx";
 import Link from "next/link";
 
 type CustomLinkType = {
-  href: string;
-  children: string | JSX.Element | JSX.Element[];
-  type: "a" | "Link";
-  className?: string;
-  lightColor?: string | null;
-  darkColor?: string | null;
-  hover?: string | null;
+    href: string;
+    children: string | JSX.Element | JSX.Element[];
+    type: "a" | "Link";
+    className?: string;
+    lightColor?: string | null;
+    darkColor?: string | null;
+    hover?: string | null;
 };
 
-export default function CustomLink({
-  children,
-  type,
-  href,
-  lightColor,
-  darkColor,
-  hover,
-  className,
-}: CustomLinkType) {
-  const defaultStyle = {
+const defaultStyle = {
     lightColor: "text-knut-light-text",
     darkColor: "dark:text-knut-dark-text",
     hover: "hover:font-black",
-  };
+};
 
-  const style = clsx(
-      lightColor !== null ?  (lightColor !== undefined ? lightColor : defaultStyle.lightColor) : "",
-      darkColor !== null ? (darkColor !== undefined ? `dark:${darkColor?.replace("dark:", "")}` : defaultStyle.darkColor) : "",
-      hover !== null ? (hover !== undefined ? `hover:${hover?.replace("hover:", "")}` : defaultStyle.hover) : ""
-  );
+export default function CustomLink({
+    children,
+    type,
+    href,
+    lightColor = defaultStyle.lightColor,
+    darkColor = defaultStyle.darkColor,
+    hover = defaultStyle.hover,
+    className,
+}: CustomLinkType) {
 
   if (type === "a") {
     return (
@@ -38,7 +33,7 @@ export default function CustomLink({
         href={href}
         target="_blank"
         rel="noreferrer"
-        className={clsx(style, className)}
+        className={clsx(className, lightColor, darkColor, hover)}
       >
         {children}
       </a>
@@ -48,7 +43,7 @@ export default function CustomLink({
   if (type === "Link")
     return (
       <Link href={href}>
-        <a className={clsx(style, className)}>{children}</a>
+        <a className={clsx(className, lightColor, darkColor, hover)}>{children}</a>
       </Link>
     );
 
