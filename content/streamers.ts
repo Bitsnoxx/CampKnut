@@ -62,7 +62,7 @@ export const participants: ParticipantsType[] = [
       {
         name: "EsfandTV",
         url: "https://www.twitch.tv/esfandtv",
-        twitchName: "esfandTV",
+        twitchName: "esfandtv",
       },
       {
         name: "Lacari",
@@ -104,7 +104,7 @@ export const participants: ParticipantsType[] = [
       {
         name: "Asmongold",
         url: "https://www.twitch.tv/asmongold",
-        twitchName: "Asmongold",
+        twitchName: "asmongold",
       },
     ],
   },
