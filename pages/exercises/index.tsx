@@ -4,7 +4,6 @@ import { useState } from "react";
 import ExercisePreview from "../../components/exercise/ExercisePreview";
 import { IExercise } from "../../model/exercise";
 import { getExercises } from "../../utils/contentful";
-import { mapToExerciseType } from "../../utils/mappers";
 import slugify from "../../utils/slugify";
 
 export default function ExerciseListPage({
@@ -18,7 +17,7 @@ export default function ExerciseListPage({
   const filterLogic = (e: IExercise) => {
     const term = slugify(searchTerm.toLowerCase());
     const name = slugify(e.name.toLowerCase());
-    const t = e.tags.map((e) => slugify(e.toLowerCase()));
+    const t = e.tags?.map((e) => slugify(e.toLowerCase()));
     return name.includes(term) || t.some((x) => x.includes(term));
   };
 
@@ -48,7 +47,15 @@ export const getStaticProps: GetStaticProps<{
 }> = async () => {
   const exercises = await getExercises();
   return {
-    props: { exercises: exercises.items.map(mapToExerciseType) },
-    revalidate: 60,
+    props: {
+      exercises: exercises.items.map(({ fields }) => {
+        return {
+          ...fields,
+          imageUrl: `https:${fields.image.fields.file.url}`,
+          tags: fields.tags ?? [],
+        };
+      }),
+    },
+    revalidate: 600,
   };
 };

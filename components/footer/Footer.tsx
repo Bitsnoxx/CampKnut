@@ -7,10 +7,11 @@ import {
   FaShoppingBag,
   FaHeart,
 } from "react-icons/fa";
+
 import Image from "next/image";
 import FooterIconLink from "./FooterIconLink";
-import { socials } from "../../content/links";
 import { useState } from "react";
+import CustomLink from "../ui/CustomLink";
 
 export default function Footer() {
   const [counter, setCounter] = useState(0);
@@ -50,9 +51,9 @@ export default function Footer() {
       </div>
       <span className="flex flex-row items-center gap-1 justify-center pb-0.5">
         Made with <FaHeart className="hover:text-red-600 mx-0.5" /> on{" "}
-        <a className="font-bold" href="https://github.com/Bitsnoxx/CampKnut">
+        <CustomLink href={"https://github.com/Bitsnoxx/CampKnut"} type={"a"} className={"light:text-knut-light-header dark:text-knut-dark-header hover:font-black"}>
           Github
-        </a>
+        </CustomLink>
       </span>
     </footer>
   );

@@ -6,31 +6,49 @@ type CustomLinkType = {
   children: string | JSX.Element | JSX.Element[];
   type: "a" | "Link";
   className?: string;
+  lightColor?: string;
+  darkColor?: string;
+  hover?: string;
 };
 
 export default function CustomLink({
   children,
   type,
   href,
+  lightColor,
+  darkColor,
+  hover,
   className,
 }: CustomLinkType) {
-  const style = `dark:text-knut-dark-text text-knut-light-text hover:font-black`;
-  if (type === "a")
+  const defaultStyle = {
+    lightColor: "text-knut-light-text",
+    darkColor: "dark:text-knut-dark-text",
+    hover: "hover:font-black",
+  };
+
+  const style = clsx(
+    lightColor ?? defaultStyle.lightColor,
+    `dark:${darkColor?.replace("dark:", "")}` ?? defaultStyle.darkColor,
+    `hover:${hover?.replace("hover:", "")}` ?? defaultStyle.hover
+  );
+
+  if (type === "a") {
     return (
       <a
         href={href}
         target="_blank"
         rel="noreferrer"
-        className={clsx(className, style)}
+        className={clsx(style, className)}
       >
         {children}
       </a>
     );
+  }
 
   if (type === "Link")
     return (
       <Link href={href}>
-        <a className={clsx(className, style)}>{children}</a>
+        <a className={clsx(style, className)}>{children}</a>
       </Link>
     );
 

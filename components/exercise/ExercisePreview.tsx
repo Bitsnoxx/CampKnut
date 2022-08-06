@@ -24,7 +24,7 @@ export default function ExercisePreview({
           </div>
           <h1 className="text-2xl font-bold">{name}</h1>
           <div className="my-2">
-            {tags.map((t) => (
+            {tags?.map((t) => (
               <ExerciseTag key={t} className="mx-1">
                 {t}
               </ExerciseTag>
