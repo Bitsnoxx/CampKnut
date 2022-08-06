@@ -51,7 +51,12 @@ export default function Footer() {
       </div>
       <span className="flex flex-row items-center gap-1 justify-center pb-0.5">
         Made with <FaHeart className="hover:text-red-600 mx-0.5" /> on{" "}
-        <CustomLink href={"https://github.com/Bitsnoxx/CampKnut"} type={"a"} className={"light:text-knut-light-header dark:text-knut-dark-header hover:font-black"}>
+        <CustomLink
+            href={"https://github.com/Bitsnoxx/CampKnut"}
+            type={"a"}
+            darkColor={"dark:text-knut-dark-header"}
+            lightColor={"text-knut-light-header"}
+        >
           Github
         </CustomLink>
       </span>

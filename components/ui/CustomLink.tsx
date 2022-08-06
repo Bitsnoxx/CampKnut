@@ -27,9 +27,9 @@ export default function CustomLink({
   };
 
   const style = clsx(
-    lightColor ?? defaultStyle.lightColor,
-    `dark:${darkColor?.replace("dark:", "")}` ?? defaultStyle.darkColor,
-    `hover:${hover?.replace("hover:", "")}` ?? defaultStyle.hover
+      lightColor !== undefined ? lightColor : defaultStyle.lightColor,
+      darkColor !== undefined ? `dark:${darkColor?.replace("dark:", "")}` : defaultStyle.darkColor,
+      hover !== undefined ? `hover:${hover?.replace("hover:", "")}` : defaultStyle.hover
   );
 
   if (type === "a") {
