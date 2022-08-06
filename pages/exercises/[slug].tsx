@@ -1,14 +1,14 @@
-import { GetStaticPaths, GetStaticProps } from "next";
+import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 import Image from "next/image";
+import { IExerciseFields } from "../../model/contentful";
 import { IExercise } from "../../model/exercise";
 import { getAllExercises, getExercise } from "../../utils/cms";
+import { getExercises, getOneExercise } from "../../utils/contentful";
+import { mapToExerciseType } from "../../utils/mappers";
 
 export default function ExercisePage({
   exerciseElement,
-}: {
-  exerciseElement: IExercise;
-}) {
-  console.log(exerciseElement);
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   const { imageUrl, name, tags, youtubeLink } = exerciseElement;
   return (
     <div>
@@ -30,16 +30,16 @@ export default function ExercisePage({
   );
 }
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  // magic cms
-  const exerciseElement = getExercise(params?.slug);
-
-  return { props: { exerciseElement } };
+export const getStaticProps: GetStaticProps<{exerciseElement: IExercise}> = async ({ params }) => {
+  const exerciseElement = await getOneExercise(params?.slug);
+  return { props: { exerciseElement: mapToExerciseType(exerciseElement) } };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  const exercises = await getExercises()
+  const allExercisePaths = exercises.items?.map(exercise => `/exercises/${exercise.fields.slug}`) ?? []
   return {
-    paths: getAllExercises().map(({ slug }) => `/exercises/${slug}`) ?? [],
+    paths: allExercisePaths,
     fallback: false,
   };
 };
