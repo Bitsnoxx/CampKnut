@@ -26,7 +26,7 @@ export default function ExercisePage({
             Muscle groups:
           </h2>
           <p className="light:text-knut-light-header dark:text-knut-dark-header hover:font-black">
-            {exerciseElement.tags.map((e) => (
+            {tags?.map((e) => (
               <span
                 key={e}
                 className="dark:bg-knut-dark-tag bg-sky-200 p-1 rounded-xl px-3 mr-2"
@@ -58,7 +58,15 @@ export const getStaticProps: GetStaticProps<{
   exerciseElement: IExercise;
 }> = async ({ params }) => {
   const exerciseElement = await getOneExercise(params?.slug);
-  return { props: { exerciseElement: mapToExerciseType(exerciseElement) } };
+  return {
+    props: {
+      exerciseElement: {
+        ...exerciseElement.fields,
+        imageUrl: `https:${exerciseElement.fields.image.fields.file.url}`,
+        tags: exerciseElement.fields.tags ?? [],
+      },
+    },
+  };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {

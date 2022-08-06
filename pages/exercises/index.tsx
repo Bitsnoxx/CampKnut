@@ -5,13 +5,11 @@ import ExercisePreview from "../../components/exercise/ExercisePreview";
 import { IExerciseFields } from "../../model/contentful";
 import { IExercise } from "../../model/exercise";
 import { getExercises } from "../../utils/contentful";
-import { mapToExerciseType } from "../../utils/mappers";
 import slugify from "../../utils/slugify";
 
 export default function ExerciseListPage({
   exercises,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-
   const [visibleExercises, setVisibleExercises] =
     useState<IExercise[]>(exercises);
 
@@ -20,7 +18,7 @@ export default function ExerciseListPage({
   const filterLogic = (e: IExercise) => {
     const term = slugify(searchTerm.toLowerCase());
     const name = slugify(e.name.toLowerCase());
-    const t = e.tags.map((e) => slugify(e.toLowerCase()));
+    const t = e.tags?.map((e) => slugify(e.toLowerCase()));
     return name.includes(term) || t.some((x) => x.includes(term));
   };
 
@@ -45,10 +43,20 @@ export default function ExerciseListPage({
   );
 }
 
-export const getStaticProps: GetStaticProps<{exercises: IExercise[]}> = async () => {
+export const getStaticProps: GetStaticProps<{
+  exercises: IExercise[];
+}> = async () => {
   const exercises = await getExercises();
-  return {   props: { exercises: exercises.items.map(mapToExerciseType) },
+  return {
+    props: {
+      exercises: exercises.items.map(({ fields }) => {
+        return {
+          ...fields,
+          imageUrl: `https:${fields.image.fields.file.url}`,
+          tags: fields.tags ?? [],
+        };
+      }),
+    },
     revalidate: 600,
   };
 };
-
