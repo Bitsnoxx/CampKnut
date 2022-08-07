@@ -90,9 +90,12 @@ export default function ExerciseListPage({
           gridTemplateColumns: "repeat(auto-fill,minmax(260px,1fr))",
         }}
       >
-        {filteredExercises.filter(filterLogic).map((exercise) => (
-          <ExercisePreview key={exercise.slug} {...exercise} />
-        ))}
+        {filteredExercises
+          .sort((a, b) => a.name.localeCompare(b.name))
+          .filter(filterLogic)
+          .map((exercise) => (
+            <ExercisePreview key={exercise.slug} {...exercise} />
+          ))}
       </div>
     </PageLayout>
   );
