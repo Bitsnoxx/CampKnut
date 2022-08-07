@@ -2,7 +2,6 @@ import { GetStaticProps, InferGetStaticPropsType } from "next";
 import Link from "next/link";
 import PageLayout from "../../components/layout/PageLayout";
 import { IWorkoutPost } from "../../model/contentful";
-import { IWorkoutData } from "../../model/workout";
 import { getWorkoutPosts } from "../../utils/contentful";
 
 export default function WorkoutListPage({

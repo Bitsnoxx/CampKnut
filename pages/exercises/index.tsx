@@ -1,11 +1,13 @@
 import clsx from "clsx";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ExercisePreview from "../../components/exercise/ExercisePreview";
 import PageLayout from "../../components/layout/PageLayout";
 import { getExercises } from "../../utils/contentful";
 import slugify from "../../utils/slugify";
 import ScrollContainer from "react-indiana-drag-scroll";
+import { IUIExercise } from "../../model/ui";
+import { placeHolderImage } from "../../content/links";
 
 export default function ExerciseListPage({
   exercises,
@@ -29,10 +31,10 @@ export default function ExerciseListPage({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchTags, searchTerm]);
 
-  const filterLogic = (e: IExerciseFields) => {
+  const filterLogic = (e: IUIExercise) => {
     const term = slugify(searchTerm.toLowerCase());
     const name = slugify(e.name.toLowerCase());
-    const tags = (e.tags ?? []) as string[];
+    const tags = e.tags;
 
     const activeTags = searchTags.filter((x) => x.active);
     const tagIntersection = activeTags.filter((x) => tags.includes(x.tag));
@@ -88,7 +90,7 @@ export default function ExerciseListPage({
           gridTemplateColumns: "repeat(auto-fill,minmax(260px,1fr))",
         }}
       >
-        {visibleExercises.filter(filterLogic).map((exercise: IExercise) => (
+        {filteredExercises.filter(filterLogic).map((exercise) => (
           <ExercisePreview key={exercise.slug} {...exercise} />
         ))}
       </div>
@@ -97,7 +99,7 @@ export default function ExerciseListPage({
 }
 
 export const getStaticProps: GetStaticProps<{
-  exercises: IExerciseFields[];
+  exercises: IUIExercise[];
 }> = async () => {
   const exercises = await getExercises();
   return {
@@ -105,6 +107,9 @@ export const getStaticProps: GetStaticProps<{
       exercises: exercises.items.map(({ fields }) => {
         return {
           ...fields,
+          image: fields.image.fields.file
+            ? `https:${fields.image.fields.file.url}`
+            : placeHolderImage,
           tags: fields.tags ?? [],
         };
       }),
