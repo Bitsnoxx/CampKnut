@@ -1,23 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
-import { IExercise } from "../../model/exercise";
+import React from "react";
+import { IExerciseFields } from "../../model/contentful";
+import { IUIExercise } from "../../model/ui";
 import ExerciseTag from "./ExerciseTag";
 
 export default function ExercisePreview({
-  imageUrl,
+  image,
   name,
   slug,
   tags,
-}: IExercise) {
+}: IUIExercise) {
   return (
     <Link href={`/exercises/${slug}`}>
       <a>
-        <div className="h-full flex flex-col rounded-sm px-2 py-4 bg-knut bg-knut-light-bg-info dark:bg-knut-dark-bg-info hover:bg-knut-light-bg hover:dark:bg-knut-dark-bg transition duration-300">
+        <div className="h-full rounded-sm px-2 py-4 bg-knut bg-knut-light-bg-info dark:bg-knut-dark-bg-info hover:bg-knut-light-bg hover:dark:bg-knut-dark-bg transition duration-300">
           <div className="inline-block relative w-full aspect-video">
             <Image
               priority
               objectFit="cover"
-              src={imageUrl}
+              src={image}
               layout="fill"
               alt={name}
             />
