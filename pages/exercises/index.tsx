@@ -8,6 +8,7 @@ import slugify from "../../utils/slugify";
 import ScrollContainer from "react-indiana-drag-scroll";
 import { IUIExercise } from "../../model/ui";
 import { placeHolderImage } from "../../content/links";
+import { CgClose } from "react-icons/cg";
 
 export default function ExerciseListPage({
   exercises,
@@ -42,14 +43,19 @@ export default function ExerciseListPage({
     return name.includes(term) && tagIntersection.length === activeTags.length;
   };
 
+  const clearFilters = () => {
+    setSearchTags(searchTags.map((x) => ({ ...x, active: false })));
+    setSearchTerm("");
+  };
+
   return (
     <PageLayout widthClassName="max-w-none">
       <h1 className="text-3xl font-bold">Exercises</h1>
-      <div className="my-8">
+      <div className="my-8 flex flex-col md:flex-row md:items-center gap-4 md:gap-16 w-full">
         <ScrollContainer
           hideScrollbars
           nativeMobileScroll
-          className="flex flex-row gap-4 cursor-grab"
+          className="flex flex-row gap-4 cursor-grab md:order-2"
           horizontal
         >
           {searchTags
@@ -74,15 +80,30 @@ export default function ExerciseListPage({
               </div>
             ))}
         </ScrollContainer>
-        <input
-          className="px-4 py-1 w-full text-knut-light-text rounded-xl  my-4 border-black border-2"
-          type={"text"}
-          value={searchTerm}
-          placeholder={"zinc exercise"}
-          onChange={(e) => {
-            setSearchTerm(e.target.value);
-          }}
-        />
+        <div className="flex flex-row gap-4 items-center w-full max-w-2xl">
+          <div className="relative w-full">
+            <input
+              className="placeholder-slate-400 dark:placeholder:-slate-500 px-4 py-[6px] w-full text-knut-light-text dark:text-knut-dark-text rounded-xl border-black border-2"
+              type={"text"}
+              value={searchTerm}
+              placeholder={"zinc exercise"}
+              onChange={(e) => {
+                setSearchTerm(e.target.value);
+              }}
+            />
+            <button
+              className={clsx(
+                "absolute top-1/2 right-0 transform -translate-x-1/2 -translate-y-1/2",
+                "p-1 bg-gray-200 text-black dark:text-slate-600 dark:bg-knut-dark-text rounded-xl select-none"
+              )}
+              onClick={clearFilters}
+              aria-label="Clear filters"
+              title="Clear filters"
+            >
+              <CgClose />
+            </button>
+          </div>
+        </div>
       </div>
       <div
         className="grid auto-rows-max gap-4"
