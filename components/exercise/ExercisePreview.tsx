@@ -13,7 +13,7 @@ export default function ExercisePreview({
   return (
     <Link href={`/exercises/${slug}`}>
       <a>
-        <div className="h-full rounded-sm px-2 py-4 bg-knut bg-knut-light-bg-info dark:bg-knut-dark-bg-info hover:bg-knut-light-bg hover:dark:bg-knut-dark-bg transition duration-300">
+        <div className="h-full rounded-sm px-2 py-4 bg-knut hover:bg-knut-light-bg-info hover:dark:bg-knut-dark-bg-info bg-knut-light-bg dark:bg-knut-dark-bg transition duration-300">
           <div className="inline-block relative w-full aspect-video">
             <Image
               priority
