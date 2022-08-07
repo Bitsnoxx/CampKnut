@@ -37,7 +37,7 @@ export const participants: ParticipantsType[] = [
       {
         name: "Nmplol",
         url: "https://www.twitch.tv/Nmplol",
-        twitchName: "Nmplol",
+        twitchName: "nmplol",
       },
       {
         name: "Cyr",
@@ -52,7 +52,7 @@ export const participants: ParticipantsType[] = [
       {
         name: "Tectone",
         url: "https://www.twitch.tv/tectone",
-        twitchName: "Tectone",
+        twitchName: "tectone",
       },
       {
         name: "Erobb221",
@@ -62,12 +62,12 @@ export const participants: ParticipantsType[] = [
       {
         name: "EsfandTV",
         url: "https://www.twitch.tv/esfandtv",
-        twitchName: "EsfandTV",
+        twitchName: "esfandtv",
       },
       {
         name: "Lacari",
         url: "https://www.twitch.tv/Lacari",
-        twitchName: "Lacari",
+        twitchName: "lacari",
       },
     ],
   },
@@ -104,7 +104,7 @@ export const participants: ParticipantsType[] = [
       {
         name: "Asmongold",
         url: "https://www.twitch.tv/asmongold",
-        twitchName: "Asmongold",
+        twitchName: "asmongold",
       },
     ],
   },

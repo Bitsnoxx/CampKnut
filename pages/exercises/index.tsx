@@ -1,9 +1,8 @@
 import clsx from "clsx";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
-import React, { useEffect } from "react";
 import { useState } from "react";
 import ExercisePreview from "../../components/exercise/ExercisePreview";
-import { IExerciseFields } from "../../model/contentful";
+import PageLayout from "../../components/layout/PageLayout";
 import { getExercises } from "../../utils/contentful";
 import slugify from "../../utils/slugify";
 import ScrollContainer from "react-indiana-drag-scroll";
@@ -42,7 +41,7 @@ export default function ExerciseListPage({
   };
 
   return (
-    <>
+    <PageLayout widthClassName="max-w-none">
       <h1 className="text-3xl font-bold">Exercises</h1>
       <div className="my-8">
         <ScrollContainer
@@ -83,12 +82,17 @@ export default function ExerciseListPage({
           }}
         />
       </div>
-      <div className="grid auto-rows-max gap-4 grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
-        {filteredExercises.map((exercise: IExerciseFields) => (
+      <div
+        className="grid auto-rows-max gap-4"
+        style={{
+          gridTemplateColumns: "repeat(auto-fill,minmax(260px,1fr))",
+        }}
+      >
+        {visibleExercises.filter(filterLogic).map((exercise: IExercise) => (
           <ExercisePreview key={exercise.slug} {...exercise} />
         ))}
       </div>
-    </>
+    </PageLayout>
   );
 }
 
