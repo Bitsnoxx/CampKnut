@@ -1,6 +1,5 @@
 import a from "next/link";
 import { introduction, seo } from "../../content/text";
-import { NextSeo } from "next-seo";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
 import Link from "next/link";
@@ -34,7 +33,6 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-10 text-knut-light-text dark:text-knut-dark-text bg-knut-light-bg dark:bg-knut-dark-bg w-full">
-      <NextSeo title={introduction.title} description={seo.description} />
       <nav className="relative flex flex-wrap items-center">
         <div className="container flex-1 mx-auto max-w-5xl">
           <div>

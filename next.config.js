@@ -19,6 +19,8 @@ const nextConfig = {
   },
 };
 
+/* module.exports = nextConfig; */
+
 const withMDX = require("@next/mdx")({
   extension: /\.mdx?$/,
   options: {
@@ -26,9 +28,7 @@ const withMDX = require("@next/mdx")({
     rehypePlugins: [],
     providerImportSource: "@mdx-js/react",
     pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
-    // If you use `MDXProvider`, uncomment the following line.
-    // providerImportSource: "@mdx-js/react",
   },
 });
 
-module.exports = withPlugins([withMDX], nextConfig);
+module.exports = withMDX(nextConfig);
