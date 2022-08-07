@@ -89,6 +89,16 @@ export const participants: ParticipantsType[] = [
         url: "https://www.twitch.tv/mitchjones",
         twitchName: "mitchjones",
       },
+      {
+        name: "Malena",
+        url: "https://www.twitch.tv/malena",
+        twitchName: "mitchjones",
+      },
+      {
+        name: "Jeanette",
+        url: "https://www.instagram.com/jeanette_lu/",
+        twitchName: "jeanette_is_watching",
+      },
     ],
   },
   {

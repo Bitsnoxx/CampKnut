@@ -1,39 +1,35 @@
+import { useState, useEffect } from "react";
 import Image from "next/image";
-import { signIn, useSession } from "next-auth/react";
 import { participants } from "../../content/streamers";
 import React from "react";
 import PageLayout from "../../components/layout/PageLayout";
+import { supabase, loginTwitch } from "../../utils/supabaseClient";
+const session = supabase.auth.session();
 
-const Vote = () => {
-  const { data: session } = useSession();
+export default function Vote() {
   const streamers = participants.find((e) => e.category === "streamers");
+  const session = supabase.auth.session();
 
-  if (session && session.user?.image) {
-    return (
-      <PageLayout>
-        <article>
-          <div>
+  return (
+    <PageLayout>
+      <article>
+        {session ? (
+          <>
             <h1 className="text-3xl mb-4 mt-5 text-center mr-4 font-black light:text-knut-light-header dark:text-knut-dark-header">
-              Vote on your favourite streamer, {session.user?.name}
+              Vote on your favourite streamer{" "}
+              {session?.user?.user_metadata.nickname}
               <span className="pl-4">
-                {session.user?.image && (
-                  <>
-                    {
-                      <Image
-                        src={session.user.image}
-                        alt="Camp Knut"
-                        width={64}
-                        height={64}
-                        priority={true}
-                        decoding="async"
-                        className="aspect-auto"
-                      />
-                    }
-                  </>
-                )}
+                <Image
+                  src={session?.user?.user_metadata.picture}
+                  alt="Camp Knut"
+                  width={64}
+                  height={64}
+                  priority={true}
+                  decoding="async"
+                  className="aspect-auto"
+                ></Image>
               </span>
             </h1>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
               {streamers?.members.map((e) => (
                 <div
@@ -63,40 +59,37 @@ const Vote = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </article>
-      </PageLayout>
-    );
-  } else {
-    return (
-      <PageLayout>
-        <article>
-          <div>
-            <h1 className="text-3xl mb-4 font-bold mt-5 text-center mr-4 light:text-knut-light-header dark:text-knut-dark-header">
-              You need to login to vote
-            </h1>
-            <section className="hero container mx-auto flex justify-center">
-              <Image
-                src={`/HUHH.webp`}
-                className="mx-auto"
-                height={128}
-                width={128}
-                alt="HUHH"
-              ></Image>
-            </section>
-            <div className="text-3xl mb-4 font-bold mt-5 text-center mr-4">
-              <button
-                onClick={() => signIn()}
-                className="text-2xl text-center bg:bg-other-twitch rounded-xl py-2.5 px-2.5 bg-knut-other-twitch text-knut-dark-header"
-              >
-                Sign in
-              </button>
-            </div>
-          </div>
-        </article>
-      </PageLayout>
-    );
-  }
-};
+          </>
+        ) : (
+          <>
+            <div>
+              <h1 className="text-3xl mb-4 font-bold mt-5 text-center mr-4 light:text-knut-light-header dark:text-knut-dark-header">
+                {" "}
+                You need to login to vote
+              </h1>
 
-export default Vote;
+              <section className="hero container mx-auto flex justify-center">
+                <Image
+                  src={`/HUHH.webp`}
+                  className="mx-auto"
+                  height={128}
+                  width={128}
+                  alt="HUHH"
+                ></Image>
+              </section>
+
+              <div className="text-3xl mb-4 font-bold mt-5 text-center mr-4">
+                <button
+                  onClick={() => loginTwitch()}
+                  className="text-2xl text-center bg:bg-other-twitch rounded-xl py-2.5 px-2.5 bg-knut-other-twitch text-knut-dark-header"
+                >
+                  Sign in
+                </button>
+              </div>
+            </div>
+          </>
+        )}
+      </article>
+    </PageLayout>
+  );
+}

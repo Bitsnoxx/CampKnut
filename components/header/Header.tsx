@@ -8,11 +8,11 @@ import { FaMoon } from "react-icons/fa";
 import { FaSun } from "react-icons/fa";
 import Router, { useRouter } from "next/router";
 import React from "react";
-import { signOut, useSession } from "next-auth/react";
+import { loginTwitch, supabase, signOut } from "../../utils/supabaseClient";
+const session = supabase.auth.session();
 
 export default function Header() {
   const [active, setActive] = useState(false);
-  const { data: session } = useSession();
 
   const handleClick = () => {
     setActive(!active);
@@ -97,16 +97,22 @@ export default function Header() {
                     </span>
                   </a>
                 </li>
-                {session && (
-                  <>
-                    <li>
-                      <span className="cursor-pointer py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
-                        <button className="uppercase" onClick={() => signOut()}>
-                          Sign out
-                        </button>
-                      </span>
-                    </li>
-                  </>
+                {session ? (
+                  <li>
+                    <span className="cursor-pointer py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
+                      <Link href="/">
+                        <a onClick={(e) => signOut()}>Sign out</a>
+                      </Link>
+                    </span>
+                  </li>
+                ) : (
+                  <li>
+                    <span className="cursor-pointer py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
+                      <Link href="/">
+                        <a onClick={(e) => loginTwitch()}>Login</a>
+                      </Link>
+                    </span>
+                  </li>
                 )}
                 <li>
                   <button

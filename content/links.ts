@@ -39,3 +39,5 @@ export const socials: SocialLinksType[] = [
     url: "https://www.instagram.com/knutspild/",
   },
 ];
+
+export const placeHolderImage = "/404.webp";

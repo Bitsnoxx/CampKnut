@@ -1,14 +1,15 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 import Image from "next/image";
-import { IExercise } from "../../model/exercise";
 import { getExercises, getOneExercise } from "../../utils/contentful";
 import CustomLink from "../../components/ui/CustomLink";
 import PageLayout from "../../components/layout/PageLayout";
+import { placeHolderImage } from "../../content/links";
+import { IUIExercise } from "../../model/ui";
 
 export default function ExercisePage({
   exerciseElement,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const { imageUrl, name, tags, youtubeLink } = exerciseElement;
+  const { image, name, tags, youtubeLink } = exerciseElement;
 
   return (
     <PageLayout>
@@ -18,7 +19,7 @@ export default function ExercisePage({
         </h1>
         <div className="flex flex-col md:flex-row gap-16 my-16">
           <div className="col-span-2 relative w-full aspect-video">
-            <Image src={imageUrl} layout="fill" alt={name} objectFit="cover" />
+            <Image src={image} layout="fill" alt={name} objectFit="cover" />
           </div>
           <div>
             <h2 className="text-2xl font-medium dark:text-knut-dark-header light:text-knut-light-header pb-4">
@@ -55,14 +56,16 @@ export default function ExercisePage({
 }
 
 export const getStaticProps: GetStaticProps<{
-  exerciseElement: IExercise;
+  exerciseElement: IUIExercise;
 }> = async ({ params }) => {
   const exerciseElement = await getOneExercise(params?.slug);
   return {
     props: {
       exerciseElement: {
         ...exerciseElement.fields,
-        imageUrl: `https:${exerciseElement.fields.image.fields.file.url}`,
+        image: exerciseElement.fields.image.fields.file
+          ? `https:${exerciseElement.fields.image.fields.file.url}`
+          : placeHolderImage,
         tags: exerciseElement.fields.tags ?? [],
       },
     },
