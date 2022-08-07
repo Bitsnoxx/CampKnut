@@ -100,20 +100,17 @@ export default function Header() {
                 {session ? (
                   <li>
                     <span className="cursor-pointer py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
-                      <button className="uppercase" onClick={() => signOut()}>
-                        Sign out
-                      </button>
+                      <Link href="/">
+                        <a onClick={(e) => signOut()}>Sign out</a>
+                      </Link>
                     </span>
                   </li>
                 ) : (
                   <li>
                     <span className="cursor-pointer py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
-                      <button
-                        className="uppercase"
-                        onClick={() => loginTwitch()}
-                      >
-                        Sign in
-                      </button>
+                      <Link href="/">
+                        <a onClick={(e) => loginTwitch()}>Login</a>
+                      </Link>
                     </span>
                   </li>
                 )}

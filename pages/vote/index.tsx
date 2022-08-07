@@ -1,15 +1,14 @@
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { participants } from "../../content/streamers";
 import React from "react";
 import PageLayout from "../../components/layout/PageLayout";
 import { supabase, loginTwitch } from "../../utils/supabaseClient";
-import Account from "../../components/Account";
 const session = supabase.auth.session();
 
 export default function Vote() {
   const streamers = participants.find((e) => e.category === "streamers");
-
-  const user = supabase.auth.user();
+  const session = supabase.auth.session();
 
   return (
     <PageLayout>
@@ -17,10 +16,11 @@ export default function Vote() {
         {session ? (
           <>
             <h1 className="text-3xl mb-4 mt-5 text-center mr-4 font-black light:text-knut-light-header dark:text-knut-dark-header">
-              Vote on your favourite streamer {user?.username}
+              Vote on your favourite streamer{" "}
+              {session?.user?.user_metadata.nickname}
               <span className="pl-4">
                 <Image
-                  src={user?.user_metadata.avatar_url}
+                  src={session?.user?.user_metadata.picture}
                   alt="Camp Knut"
                   width={64}
                   height={64}
