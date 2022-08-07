@@ -44,58 +44,61 @@ export default function ExerciseListPage({
 
   return (
     <PageLayout widthClassName="max-w-none">
-      <h1 className="text-3xl font-bold">Exercises</h1>
-      <div className="my-8">
-        <ScrollContainer
-          hideScrollbars
-          nativeMobileScroll
-          className="flex flex-row gap-4 cursor-grab"
-          horizontal
-        >
-          {searchTags
-            .sort((a, b) => a.tag.localeCompare(b.tag))
-            .map((e) => (
-              <div
-                key={e.tag}
-                className={clsx(
-                  e.active
-                    ? "bg-sky-200 dark:bg-knut-dark-tag"
-                    : "bg-gray-200 dark:bg-slate-600",
-                  "select-none dark:text-knut-dark-text text-knut-light-text rounded-xl py-1 px-3 cursor-pointer"
-                )}
-                onClick={() => {
-                  setSearchTags([
-                    ...searchTags.filter((x) => x.tag !== e.tag),
-                    { ...e, active: !e.active },
-                  ]);
-                }}
-              >
-                {e.tag}
-              </div>
-            ))}
-        </ScrollContainer>
-        <input
-          className="px-4 py-1 w-full text-knut-light-text rounded-xl  my-4 border-black border-2"
-          type={"text"}
-          value={searchTerm}
-          placeholder={"zinc exercise"}
-          onChange={(e) => {
-            setSearchTerm(e.target.value);
+      <div className="w-11/12 mx-auto">
+        <h1 className="text-3xl font-bold">Exercises</h1>
+        <div className="mt-5 mb-2">
+          <ScrollContainer
+            hideScrollbars
+            nativeMobileScroll
+            className="flex flex-row gap-4 cursor-grab"
+            horizontal
+          >
+            {searchTags
+              .sort((a, b) => a.tag.localeCompare(b.tag))
+              .map((e) => (
+                <div
+                  key={e.tag}
+                  className={clsx(
+                    e.active
+                      ? "bg-sky-200 dark:bg-knut-dark-tag"
+                      : "bg-gray-200 dark:bg-slate-600",
+                    "select-none dark:text-knut-dark-text text-knut-light-text rounded-xl py-1 px-3 cursor-pointer"
+                  )}
+                  onClick={() => {
+                    setSearchTags([
+                      ...searchTags.filter((x) => x.tag !== e.tag),
+                      { ...e, active: !e.active },
+                    ]);
+                  }}
+                >
+                  {e.tag}
+                </div>
+              ))}
+          </ScrollContainer>
+          <input
+            className="px-4 py-1 w-full text-knut-light-text rounded-xl  my-4 border-black border-2"
+            type={"text"}
+            value={searchTerm}
+            placeholder={"zinc exercise"}
+            onChange={(e) => {
+              setSearchTerm(e.target.value);
+            }}
+          />
+        </div>
+
+        <div
+          className="grid auto-rows-max gap-4"
+          style={{
+            gridTemplateColumns: "repeat(auto-fill,minmax(260px,1fr))",
           }}
-        />
-      </div>
-      <div
-        className="grid auto-rows-max gap-4"
-        style={{
-          gridTemplateColumns: "repeat(auto-fill,minmax(260px,1fr))",
-        }}
-      >
-        {filteredExercises
-          .sort((a, b) => a.name.localeCompare(b.name))
-          .filter(filterLogic)
-          .map((exercise) => (
-            <ExercisePreview key={exercise.slug} {...exercise} />
-          ))}
+        >
+          {filteredExercises
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .filter(filterLogic)
+            .map((exercise) => (
+              <ExercisePreview key={exercise.slug} {...exercise} />
+            ))}
+        </div>
       </div>
     </PageLayout>
   );

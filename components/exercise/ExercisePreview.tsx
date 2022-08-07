@@ -14,20 +14,21 @@ export default function ExercisePreview({
   return (
     <Link href={`/exercises/${slug}`}>
       <a>
-        <div className="h-full rounded-sm px-2 py-4 bg-knut bg-knut-light-bg-info dark:bg-knut-dark-bg-info hover:bg-knut-light-bg hover:dark:bg-knut-dark-bg transition duration-300">
-          <div className="inline-block relative w-full aspect-video">
+        <div className="h-full rounded-xl  bg-knut bg-knut-light-bg-info dark:bg-knut-dark-bg-info hover:bg-knut-light-bg hover:dark:bg-knut-dark-bg transition duration-300 ">
+          <div className="inline-block relative w-full aspect-video ">
             <Image
               priority
               objectFit="cover"
               src={image}
               layout="fill"
               alt={name}
+              className=" rounded-t-md"
             />
           </div>
-          <h1 className="text-2xl font-bold">{name}</h1>
+          <h1 className="text-xl font-bold pl-2">{name}</h1>
           <div className="py-2 mt-auto">
             {tags?.map((t) => (
-              <ExerciseTag key={t} className="mx-1 inline-block">
+              <ExerciseTag key={t} className="mx-1 inline-block ml-2 ">
                 {t}
               </ExerciseTag>
             ))}
