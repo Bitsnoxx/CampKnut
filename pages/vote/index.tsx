@@ -1,9 +1,8 @@
-import { useState, useEffect } from "react";
 import Image from "next/image";
 import { participants } from "../../content/streamers";
 import React from "react";
 import PageLayout from "../../components/layout/PageLayout";
-import { supabase, loginTwitch } from "../../utils/supabaseClient";
+import {supabase, signInTwitch, signOutTwitch} from "../../utils/supabaseClient";
 const session = supabase.auth.session();
 
 export default function Vote() {
@@ -30,6 +29,14 @@ export default function Vote() {
                 ></Image>
               </span>
             </h1>
+              <div className="text-3xl mb-4 font-bold mt-5 text-center mr-4">
+                  <button
+                      onClick={() => signOutTwitch()}
+                      className="text-2xl text-center bg:bg-other-twitch rounded-xl py-2.5 px-2.5 bg-knut-other-twitch text-knut-dark-header"
+                  >
+                      Sign Out
+                  </button>
+              </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
               {streamers?.members.map((e) => (
                 <div
@@ -80,7 +87,7 @@ export default function Vote() {
 
               <div className="text-3xl mb-4 font-bold mt-5 text-center mr-4">
                 <button
-                  onClick={() => loginTwitch()}
+                  onClick={() => signInTwitch()}
                   className="text-2xl text-center bg:bg-other-twitch rounded-xl py-2.5 px-2.5 bg-knut-other-twitch text-knut-dark-header"
                 >
                   Sign in

@@ -1,5 +1,4 @@
 import a from "next/link";
-import { introduction, seo } from "../../content/text";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
 import Link from "next/link";
@@ -8,7 +7,7 @@ import { FaMoon } from "react-icons/fa";
 import { FaSun } from "react-icons/fa";
 import Router, { useRouter } from "next/router";
 import React from "react";
-import { loginTwitch, supabase, signOut } from "../../utils/supabaseClient";
+import {supabase, signOutTwitch, signInTwitch} from "../../utils/supabaseClient";
 const session = supabase.auth.session();
 
 export default function Header() {
@@ -80,13 +79,6 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/socials">
-                    <a className="cursor-pointer py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
-                      Socials
-                    </a>
-                  </Link>
-                </li>
-                <li>
                   <a
                     href="https://store.streamelements.com/knut"
                     target="_blank"
@@ -97,23 +89,6 @@ export default function Header() {
                     </span>
                   </a>
                 </li>
-                {session ? (
-                  <li>
-                    <span className="cursor-pointer py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
-                      <Link href="/">
-                        <a onClick={(e) => signOut()}>Sign out</a>
-                      </Link>
-                    </span>
-                  </li>
-                ) : (
-                  <li>
-                    <span className="cursor-pointer py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
-                      <Link href="/">
-                        <a onClick={(e) => loginTwitch()}>Login</a>
-                      </Link>
-                    </span>
-                  </li>
-                )}
                 <li>
                   <button
                     className="py-4 font-black text-knut-light-header dark:text-knut-dark-header cursor-pointer flex text-sm uppercase leading-snug hover:opacity-75"
@@ -122,7 +97,7 @@ export default function Header() {
                     }}
                   >
                     {theme === "dark" ? (
-                      <FaSun size={19} title="Switch to light theme" />
+                      <FaSun size={19} title="Get flash-banged" />
                     ) : (
                       <FaMoon size={19} title="Switch to gamer mode" />
                     )}
