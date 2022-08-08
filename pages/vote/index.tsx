@@ -65,6 +65,8 @@ export default function Vote() {
 
     if (user) {
       hasUserVoted(user.id);
+    } else {
+      setIsLoading(false);
     }
 
     const { data: listener } = supabase.auth.onAuthStateChange(
