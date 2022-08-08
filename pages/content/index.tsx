@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import PageLayout from "../../components/layout/PageLayout";
-import { Playlist, PlaylistItem } from "../../model/youtube";
+import PageLayout from "components/layout/PageLayout";
+import { Playlist, PlaylistItem } from "model/youtube";
 
 export async function getStaticProps() {
   const res = await fetch(
@@ -10,7 +10,6 @@ export async function getStaticProps() {
 
   const data: Playlist = await res.json();
 
-  console.log(data);
   return {
     props: {
       playlist: data.items,
@@ -24,7 +23,6 @@ export default function ContentPage({
 }: {
   playlist: PlaylistItem[];
 }) {
-  console.log(playlist);
   return (
     <PageLayout widthClassName="container flex-1 mx-auto p-4 max-w-none">
       <div className="w-11/12 mx-auto">
