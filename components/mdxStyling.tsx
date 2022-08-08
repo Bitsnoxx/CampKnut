@@ -41,6 +41,6 @@ export const components = {
       />
     );
   },
-  Important: Important,
+  Important: (props: any) => <Important>{props.children}</Important>,
   Info: (props: any) => null,
 };

@@ -1,13 +1,12 @@
-import a from "next/link";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
 import Link from "next/link";
 import { useTheme } from "next-themes";
-import { FaMoon } from "react-icons/fa";
-import { FaSun } from "react-icons/fa";
-import Router, { useRouter } from "next/router";
+import { FaMoon, FaSun } from "react-icons/fa";
+import { FiLoader } from "react-icons/fi";
+import Router from "next/router";
 import React from "react";
-import {supabase, signOutTwitch, signInTwitch} from "../../utils/supabaseClient";
+import { supabase } from "../../utils/supabaseClient";
 const session = supabase.auth.session();
 
 export default function Header() {
@@ -25,10 +24,6 @@ export default function Header() {
   }, []);
 
   Router.events.on("routeChangeStart", () => setActive(false));
-
-  if (!isMounted) {
-    return null;
-  }
 
   return (
     <header className="sticky top-0 z-10 text-knut-light-text dark:text-knut-dark-text bg-knut-light-bg dark:bg-knut-dark-bg w-full">
@@ -90,18 +85,30 @@ export default function Header() {
                   </a>
                 </li>
                 <li>
-                  <button
-                    className="py-4 font-black text-knut-light-header dark:text-knut-dark-header cursor-pointer flex text-sm uppercase leading-snug hover:opacity-75"
-                    onClick={() => {
-                      setTheme(theme === "light" ? "dark" : "light");
-                    }}
-                  >
-                    {theme === "dark" ? (
-                      <FaSun size={19} title="Get flash-banged" />
-                    ) : (
-                      <FaMoon size={19} title="Switch to gamer mode" />
-                    )}
-                  </button>
+                  {isMounted && (
+                    <button
+                      className="py-4 font-black text-knut-light-header dark:text-knut-dark-header cursor-pointer flex text-sm uppercase leading-snug hover:opacity-75"
+                      onClick={() => {
+                        setTheme(theme === "light" ? "dark" : "light");
+                      }}
+                    >
+                      {theme && theme === "dark" ? (
+                        <FaSun size={19} title="Get flash-banged" />
+                      ) : (
+                        <FaMoon size={19} title="Switch to gamer mode" />
+                      )}
+                    </button>
+                  )}
+                  {!isMounted && (
+                    <button
+                      className="py-4 font-black text-knut-light-header dark:text-knut-dark-header cursor-pointer flex text-sm uppercase leading-snug hover:opacity-75"
+                      onClick={() =>
+                        console.log("theme changer havent loaded yet :(")
+                      }
+                    >
+                      <FiLoader size={19} />
+                    </button>
+                  )}
                 </li>
               </ul>
             </div>
