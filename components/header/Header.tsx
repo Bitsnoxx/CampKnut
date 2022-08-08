@@ -6,7 +6,7 @@ import { FaMoon, FaSun } from "react-icons/fa";
 import { FiLoader } from "react-icons/fi";
 import Router from "next/router";
 import React from "react";
-import { supabase } from "../../utils/supabaseClient";
+import { supabase } from "utils/supabaseClient";
 const session = supabase.auth.session();
 
 export default function Header() {

@@ -1,10 +1,10 @@
 import { GetStaticProps } from "next";
-import { IWorkoutPostFields } from "../../model/contentful";
-import { getWorkoutPosts, getOneWorkoutPost } from "../../utils/contentful";
+import { IWorkoutPostFields } from "model/contentful";
+import { getWorkoutPosts, getOneWorkoutPost } from "utils/contentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import renderOptions from "../../components/richTextStyling";
+import renderOptions from "components/richTextStyling";
 import { BLOCKS, MARKS } from "@contentful/rich-text-types";
-import PageLayout from "../../components/layout/PageLayout";
+import PageLayout from "components/layout/PageLayout";
 
 export default function WorkoutPage({
   post: { text, title },

@@ -23,7 +23,6 @@ export default function ContentPage({
 }: {
   playlist: PlaylistItem[];
 }) {
-
   return (
     <PageLayout widthClassName="container flex-1 mx-auto p-4 max-w-none">
       <div className="w-11/12 mx-auto">

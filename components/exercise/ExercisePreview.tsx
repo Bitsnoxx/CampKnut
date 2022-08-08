@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { IExerciseFields } from "../../model/contentful";
-import { IUIExercise } from "../../model/ui";
+import { IExerciseFields } from "model/contentful";
+import { IUIExercise } from "model/ui";
 import ExerciseTag from "./ExerciseTag";
 
 export default function ExercisePreview({

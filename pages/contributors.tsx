@@ -1,8 +1,8 @@
-import Header from "../components/header/Header";
-import { contributors } from "../content/contributors";
-import CustomLink from "../components/ui/CustomLink";
-import Important from "../components/ui/Important";
-import PageLayout from "../components/layout/PageLayout";
+import Header from "components/header/Header";
+import { contributors } from "content/contributors";
+import CustomLink from "components/ui/CustomLink";
+import Important from "components/ui/Important";
+import PageLayout from "components/layout/PageLayout";
 
 const HallOfFame = () => {
   return (

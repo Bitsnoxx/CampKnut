@@ -1,4 +1,4 @@
-import { introduction } from "./../../content/text";
+import { introduction } from "content/text";
 
 export default function Introduction() {
   return (

@@ -1,13 +1,13 @@
 import clsx from "clsx";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import { useEffect, useState } from "react";
-import ExercisePreview from "../../components/exercise/ExercisePreview";
-import PageLayout from "../../components/layout/PageLayout";
-import { getExercises } from "../../utils/contentful";
-import slugify from "../../utils/slugify";
+import ExercisePreview from "components/exercise/ExercisePreview";
+import PageLayout from "components/layout/PageLayout";
+import { getExercises } from "utils/contentful";
+import slugify from "utils/slugify";
 import ScrollContainer from "react-indiana-drag-scroll";
-import { IUIExercise } from "../../model/ui";
-import { placeHolderImage } from "../../content/links";
+import { IUIExercise } from "model/ui";
+import { placeHolderImage } from "content/links";
 import { CgClose } from "react-icons/cg";
 
 export default function ExerciseListPage({

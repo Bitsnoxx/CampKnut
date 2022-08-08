@@ -9,9 +9,9 @@ import {
 } from "react-icons/fa";
 
 import Image from "next/image";
-import FooterIconLink from "./FooterIconLink";
+import FooterIconLink from "components/footer/FooterIconLink";
 import { useState } from "react";
-import CustomLink from "../ui/CustomLink";
+import CustomLink from "components/ui/CustomLink";
 
 export default function Footer() {
   const [counter, setCounter] = useState(0);

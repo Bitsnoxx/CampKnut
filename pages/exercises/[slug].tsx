@@ -1,10 +1,10 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 import Image from "next/image";
-import { getExercises, getOneExercise } from "../../utils/contentful";
-import CustomLink from "../../components/ui/CustomLink";
-import PageLayout from "../../components/layout/PageLayout";
-import { placeHolderImage } from "../../content/links";
-import { IUIExercise } from "../../model/ui";
+import { getExercises, getOneExercise } from "utils/contentful";
+import CustomLink from "components/ui/CustomLink";
+import PageLayout from "components/layout/PageLayout";
+import { placeHolderImage } from "content/links";
+import { IUIExercise } from "model/ui";
 
 export default function ExercisePage({
   exerciseElement,

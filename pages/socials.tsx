@@ -1,5 +1,5 @@
-import PageLayout from "../components/layout/PageLayout";
-import { socials } from "../content/links";
+import PageLayout from "components/layout/PageLayout";
+import { socials } from "content/links";
 
 export default function SocialsPage() {
   return (

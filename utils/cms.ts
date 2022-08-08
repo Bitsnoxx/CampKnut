@@ -1,7 +1,7 @@
-import exercises from "../content/exercises.json";
+import exercises from "content/exercises.json";
 import fs from "fs";
 import matter from "gray-matter";
-import { IWorkoutData } from "../model/workout";
+import { IWorkoutData } from "model/workout";
 
 export const getExercise = (slug: string | string[] | undefined) => {
   return exercises.items.find((exercise) => exercise.slug === slug);

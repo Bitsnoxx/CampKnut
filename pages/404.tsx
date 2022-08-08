@@ -1,6 +1,6 @@
 import Image from "next/image";
-import PageLayout from "../components/layout/PageLayout";
-import { errors } from "../content/text";
+import PageLayout from "components/layout/PageLayout";
+import { errors } from "content/text";
 
 export default function Custom404() {
   return (

@@ -1,5 +1,5 @@
-import { participants } from "../../content/streamers";
-import CustomLink from "../ui/CustomLink";
+import { participants } from "content/streamers";
+import CustomLink from "components/ui/CustomLink";
 
 export default function Participants() {
   const trainers = participants.find((e) => e.category === "trainers");
