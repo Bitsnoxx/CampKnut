@@ -37,7 +37,7 @@ const Home: NextPage = () => {
 
           <div className="flex">
             <div className="w-1/2">
-              <h1 className="text-2xl font-black mt-4 text-knut-light-header dark:text-knut-dark-header mb-2">
+              <h1 className="mt-4 mb-2 text-2xl font-black text-knut-light-header dark:text-knut-dark-header">
                 🥩 Meal Plans
               </h1>
               <p>
@@ -75,7 +75,7 @@ const Home: NextPage = () => {
             </div>
 
             <div className="w-1/2">
-              <h1 className="text-2xl font-black mt-4 text-knut-light-header dark:text-knut-dark-header">
+              <h1 className="mt-4 text-2xl font-black text-knut-light-header dark:text-knut-dark-header">
                 💖 Community
               </h1>
               <p>
@@ -130,7 +130,7 @@ const Home: NextPage = () => {
 
           <div className="flex">
             <div className="w-1/2">
-              <h1 className="text-2xl font-black mt-4 text-knut-light-header dark:text-knut-dark-header mb-2">
+              <h1 className="mt-4 mb-2 text-2xl font-black text-knut-light-header dark:text-knut-dark-header">
                 📕 Plans
               </h1>
               <p>
@@ -175,7 +175,7 @@ const Home: NextPage = () => {
               </p>
             </div>
             <div className="w-1/2">
-              <h1 className="text-2xl font-black mt-4 text-knut-light-header dark:text-knut-dark-header mb-2">
+              <h1 className="mt-4 mb-2 text-2xl font-black text-knut-light-header dark:text-knut-dark-header">
                 🛠️ Tools
               </h1>
               <p className="text-knut-light-header dark:text-knut-dark-header">
@@ -217,7 +217,7 @@ const Home: NextPage = () => {
 
           <div className="flex">
             <div className="w-1/2">
-              <h1 className="text-2xl font-black mt-4 text-knut-light-header dark:text-knut-dark-header mb-2">
+              <h1 className="mt-4 mb-2 text-2xl font-black text-knut-light-header dark:text-knut-dark-header">
                 📈 Progress
               </h1>
               <p>
@@ -243,7 +243,7 @@ const Home: NextPage = () => {
               </p>
             </div>
             <div className="w-1/2">
-              <h1 className="text-2xl font-black mt-4 text-knut-light-header dark:text-knut-dark-header mb-2">
+              <h1 className="mt-4 mb-2 text-2xl font-black text-knut-light-header dark:text-knut-dark-header">
                 📃 Articles
               </h1>
               <p>
@@ -259,8 +259,8 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <div className="text-center my-20">
-            <h3 className="text-xl font-black text-knut-light-header dark:text-knut-dark-header hover:font-black mt-4">
+          <div className="my-20 text-center">
+            <h3 className="mt-4 text-xl font-black text-knut-light-header hover:font-black dark:text-knut-dark-header">
               Want to help out?
             </h3>
             <p>

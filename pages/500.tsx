@@ -7,7 +7,7 @@ export default function Custom500() {
   return (
     <PageLayout>
       <div className="flex flex-col items-center">
-        <div className="font-bold text-2xl pb-5">{errors.serverError}</div>
+        <div className="pb-5 text-2xl font-bold">{errors.serverError}</div>
         <div className="my-2">
           <Image
             src={"/500.webp"}

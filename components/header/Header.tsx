@@ -26,49 +26,49 @@ export default function Header() {
   Router.events.on("routeChangeStart", () => setActive(false));
 
   return (
-    <header className="sticky top-0 z-10 text-knut-light-text dark:text-knut-dark-text bg-knut-light-bg dark:bg-knut-dark-bg w-full">
+    <header className="sticky top-0 z-10 w-full bg-knut-light-bg text-knut-light-text dark:bg-knut-dark-bg dark:text-knut-dark-text">
       <nav className="relative flex flex-wrap items-center">
-        <div className="container flex-1 mx-auto max-w-5xl">
+        <div className="container mx-auto max-w-5xl flex-1">
           <div>
             <div className="w-full">
               <button
                 onClick={handleClick}
-                className="cursor-pointer text-xl leading-none px-3 py-5 lg:hidden"
+                className="cursor-pointer px-3 py-5 text-xl leading-none lg:hidden"
                 type="button"
               >
-                <span className="block relative w-6 h-px rounded-sm bg-knut-dark-bg dark:bg-knut-light-bg "></span>
-                <span className="block relative w-6 h-px rounded-sm bg-knut-dark-bg dark:bg-knut-light-bg mt-1"></span>
-                <span className="block relative w-6 h-px rounded-sm bg-knut-dark-bg dark:bg-knut-light-bg mt-1"></span>
+                <span className="relative block h-px w-6 rounded-sm bg-knut-dark-bg dark:bg-knut-light-bg "></span>
+                <span className="relative mt-1 block h-px w-6 rounded-sm bg-knut-dark-bg dark:bg-knut-light-bg"></span>
+                <span className="relative mt-1 block h-px w-6 rounded-sm bg-knut-dark-bg dark:bg-knut-light-bg"></span>
               </button>
             </div>
             <div
-              className={clsx(active ? "flex" : "hidden", "lg:flex flex-grow")}
+              className={clsx(active ? "flex" : "hidden", "flex-grow lg:flex")}
             >
-              <ul className="flex flex-col lg:flex-row px-4 lg:gap-8 list-none lg:mx-auto lg:justify-center">
+              <ul className="flex list-none flex-col px-4 lg:mx-auto lg:flex-row lg:justify-center lg:gap-8">
                 <li>
                   <Link href="/">
-                    <a className="cursor-pointer py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
+                    <a className="flex cursor-pointer items-center py-4 text-sm font-bold uppercase leading-snug hover:opacity-75">
                       Home
                     </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/workout">
-                    <a className="cursor-pointer py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
+                    <a className="flex cursor-pointer items-center py-4 text-sm font-bold uppercase leading-snug hover:opacity-75">
                       Workout
                     </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/vote">
-                    <a className="cursor-pointer py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
+                    <a className="flex cursor-pointer items-center py-4 text-sm font-bold uppercase leading-snug hover:opacity-75">
                       Vote
                     </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/exercises">
-                    <a className="cursor-pointer py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
+                    <a className="flex cursor-pointer items-center py-4 text-sm font-bold uppercase leading-snug hover:opacity-75">
                       Exercises
                     </a>
                   </Link>
@@ -79,7 +79,7 @@ export default function Header() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <span className="cursor-pointer py-4 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
+                    <span className="flex cursor-pointer items-center py-4 text-sm font-bold uppercase leading-snug hover:opacity-75">
                       Merch
                     </span>
                   </a>
@@ -87,7 +87,7 @@ export default function Header() {
                 <li>
                   {isMounted && (
                     <button
-                      className="py-4 font-black text-knut-light-header dark:text-knut-dark-header cursor-pointer flex text-sm uppercase leading-snug hover:opacity-75"
+                      className="flex cursor-pointer py-4 text-sm font-black uppercase leading-snug text-knut-light-header hover:opacity-75 dark:text-knut-dark-header"
                       onClick={() => {
                         setTheme(theme === "light" ? "dark" : "light");
                       }}
@@ -101,7 +101,7 @@ export default function Header() {
                   )}
                   {!isMounted && (
                     <button
-                      className="py-4 font-black text-knut-light-header dark:text-knut-dark-header cursor-pointer flex text-sm uppercase leading-snug hover:opacity-75"
+                      className="flex cursor-pointer py-4 text-sm font-black uppercase leading-snug text-knut-light-header hover:opacity-75 dark:text-knut-dark-header"
                       onClick={() =>
                         console.log("theme changer havent loaded yet :(")
                       }

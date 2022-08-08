@@ -10,7 +10,7 @@ export default function ExerciseTag({ children, className }: ExerciseTagProps) {
     <span
       className={clsx(
         className,
-        "dark:text-knut-dark-text light:text-knut-light-text dark:bg-knut-dark-tag bg-sky-200 p-1 rounded-xl px-3"
+        "rounded-xl bg-sky-200 p-1 px-3 text-knut-light-text dark:bg-knut-dark-tag dark:text-knut-dark-text"
       )}
     >
       {children}
