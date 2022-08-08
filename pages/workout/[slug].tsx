@@ -17,7 +17,7 @@ export default function WorkoutPage({
         <h1 className="text-3xl mb-8 font-black light:text-knut-light-header dark:text-knut-dark-header text-center mt-2.5 pb-8">
           {title}
         </h1>
-        <div className="lg:prose-lg xl:prose-xl font-black light:text-knut-light-header dark:text-knut-dark-header">
+        <div className="lg:prose-lg xl:prose-xl light:text-knut-light-header dark:text-knut-dark-header">
           {documentToReactComponents(text, renderOptions)}
         </div>
       </article>
