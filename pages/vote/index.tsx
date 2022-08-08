@@ -203,8 +203,9 @@ export default function Vote() {
                     className="mx-auto rounded-md"
                     height={250}
                     width={250}
+                    objectFit="cover"
                     alt={name}
-                  ></Image>
+                  />
                 </section>
               </button>
             );
