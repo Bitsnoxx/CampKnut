@@ -14,8 +14,8 @@ export default function ExercisePreview({
   return (
     <Link href={`/exercises/${slug}`}>
       <a>
-        <div className="h-full rounded-xl  bg-knut bg-knut-light-bg-info dark:bg-knut-dark-bg-info hover:bg-knut-light-bg hover:dark:bg-knut-dark-bg transition duration-300 ">
-          <div className="inline-block relative aspect-video ">
+        <div className="h-full rounded-xl bg-knut-light-bg-info transition duration-300 hover:bg-knut-light-bg dark:bg-knut-dark-bg-info hover:dark:bg-knut-dark-bg ">
+          <div className="relative inline-block aspect-video ">
             <Image
               objectFit="cover"
               src={image}
@@ -27,10 +27,10 @@ export default function ExercisePreview({
               loading="lazy"
             />
           </div>
-          <h1 className="text-xl font-bold pl-2">{name}</h1>
-          <div className="py-2 mt-auto">
+          <h1 className="pl-2 text-xl font-bold">{name}</h1>
+          <div className="mt-auto py-2">
             {tags?.map((t) => (
-              <ExerciseTag key={t} className="mx-1 inline-block ml-2">
+              <ExerciseTag key={t} className="mx-1 ml-2 inline-block">
                 {t}
               </ExerciseTag>
             ))}

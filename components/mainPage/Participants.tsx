@@ -9,9 +9,9 @@ export default function Participants() {
   const chefs = participants.find((e) => e.category === "chefs");
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-5 gap-4 my-10 w-full">
+    <div className="my-10 grid w-full grid-cols-2 gap-4 md:grid-cols-5">
       <div>
-        <h1 className="text-2xl font-black mt-4 md:text-center ">Trainers</h1>
+        <h1 className="mt-4 text-2xl font-black md:text-center ">Trainers</h1>
         <ul className="flex flex-col items-start md:items-center">
           {trainers?.members.map((e) => (
             <li key={e.name}>
@@ -24,7 +24,7 @@ export default function Participants() {
       </div>
 
       <div>
-        <h1 className="text-2xl font-bold mt-4 text-right md:text-center">
+        <h1 className="mt-4 text-right text-2xl font-bold md:text-center">
           Judges
         </h1>
         <ul className="flex flex-col items-end md:items-center">
@@ -39,7 +39,7 @@ export default function Participants() {
       </div>
 
       <div className="md:order-5">
-        <h1 className="text-2xl font-bold mt-4 md:text-center">Guests</h1>
+        <h1 className="mt-4 text-2xl font-bold md:text-center">Guests</h1>
         <ul>
           {guests?.members.map((e) => (
             <li key={e.name} className="md:flex md:flex-col md:items-center">
@@ -51,10 +51,10 @@ export default function Participants() {
         </ul>
       </div>
       <div>
-        <h1 className="text-2xl font-bold mt-4 text-right md:text-center">
+        <h1 className="mt-4 text-right text-2xl font-bold md:text-center">
           Streamers
         </h1>
-        <ul className="items-end flex flex-col md:items-center">
+        <ul className="flex flex-col items-end md:items-center">
           {streamers?.members.map((e) => (
             <li key={e.name}>
               <CustomLink href={e.url} type="a">
@@ -66,7 +66,7 @@ export default function Participants() {
       </div>
 
       <div>
-        <h1 className="text-2xl font-bold mt-4 md:text-center">Chefs</h1>
+        <h1 className="mt-4 text-2xl font-bold md:text-center">Chefs</h1>
         <ul className="md:flex md:flex-col md:items-center">
           {chefs?.members.map((e) => (
             <li key={e.name}>

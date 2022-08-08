@@ -4,12 +4,12 @@ import { socials } from "content/links";
 export default function SocialsPage() {
   return (
     <PageLayout>
-      <h1 className="text-3xl mb-4 font-bold">Knut&apos;s socials</h1>
-      <div className="grid md:grid-cols-3 gap-4 rounded-lg">
+      <h1 className="mb-4 text-3xl font-bold">Knut&apos;s socials</h1>
+      <div className="grid gap-4 rounded-lg md:grid-cols-3">
         {socials.map((e) => {
           return (
             <a key={e.url} href={e.url} target="_blank" rel="noreferrer">
-              <div className="p-4 bg-knut-light-bg-info dark:bg-knut-dark-bg-info hover:dark:bg-knut-dark-bg hover:bg-knut-light-bg">
+              <div className="bg-knut-light-bg-info p-4 hover:bg-knut-light-bg dark:bg-knut-dark-bg-info hover:dark:bg-knut-dark-bg">
                 <h1 className="text-xl">{e.name}</h1>
                 <span className="font-light">
                   {e.url.replace("https://", "").replace("www.", "")}
