@@ -20,7 +20,9 @@ export default function ExercisePreview({
               priority
               objectFit="cover"
               src={image}
-              layout="fill"
+              /* layout="fill" */
+              width={320}
+              height={250}
               alt={name}
               className=" rounded-t-md"
             />
@@ -28,7 +30,7 @@ export default function ExercisePreview({
           <h1 className="text-xl font-bold pl-2">{name}</h1>
           <div className="py-2 mt-auto">
             {tags?.map((t) => (
-              <ExerciseTag key={t} className="mx-1 inline-block ml-2 ">
+              <ExerciseTag key={t} className="mx-1 inline-block ml-2">
                 {t}
               </ExerciseTag>
             ))}
