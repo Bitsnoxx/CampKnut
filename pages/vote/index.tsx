@@ -78,15 +78,16 @@ export default function Vote() {
     return () => {
       listener?.unsubscribe();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (isLoading) {
     return (
       <PageLayout>
-        <div role="status" className="w-14 h-14 mx-auto">
+        <div role="status" className="mx-auto h-14 w-14">
           <svg
             aria-hidden="true"
-            className="mr-2 w-full h-full text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+            className="mr-2 h-full w-full animate-spin fill-blue-600 text-gray-200 dark:text-gray-600"
             viewBox="0 0 100 101"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -110,12 +111,12 @@ export default function Vote() {
     return (
       <PageLayout>
         <article>
-          <h1 className="text-3xl mb-4 font-bold mt-5 text-center mr-4 light:text-knut-light-header dark:text-knut-dark-header">
+          <h1 className="mb-4 mt-5 mr-4 text-center text-3xl font-bold text-knut-light-header dark:text-knut-dark-header">
             {" "}
             You need to login to vote
           </h1>
 
-          <section className="hero container mx-auto flex justify-center">
+          <section className="container mx-auto flex justify-center">
             <Image
               src={`/HUHH.webp`}
               className="mx-auto"
@@ -125,10 +126,10 @@ export default function Vote() {
             ></Image>
           </section>
 
-          <div className="text-3xl mb-4 font-bold mt-5 text-center mr-4">
+          <div className="mb-4 mt-5 mr-4 text-center text-3xl font-bold">
             <button
               onClick={() => signInTwitch()}
-              className="text-2xl text-center bg:bg-other-twitch rounded-xl py-2.5 px-2.5 bg-knut-other-twitch text-knut-dark-header"
+              className="rounded-xl bg-knut-other-twitch p-2.5 text-center text-2xl text-knut-dark-header"
             >
               Sign in
             </button>
@@ -141,9 +142,9 @@ export default function Vote() {
   return (
     <PageLayout>
       <article>
-        <h1 className="text-3xl text-center mb-4 mt-5 mr-4 font-black light:text-knut-light-header dark:text-knut-dark-header">
+        <h1 className="mb-4 mt-5 mr-4 text-center text-3xl font-black text-knut-light-header dark:text-knut-dark-header">
           Vote on your favourite streamer{" "}
-          <span className="inline-flex justify-center items-center">
+          <span className="inline-flex items-center justify-center">
             {user?.user_metadata.nickname}
             <Image
               src={user?.user_metadata.picture}
@@ -152,7 +153,7 @@ export default function Vote() {
               height={25}
               priority={true}
               decoding="async"
-              className="aspect-auto inline-block pl-3"
+              className="inline-block aspect-auto pl-3"
             />
           </span>
         </h1>
@@ -167,15 +168,15 @@ export default function Vote() {
             . You can change your vote below.
           </h2>
         )}
-        <div className="text-3xl mb-4 font-bold mt-5 text-center mr-4">
+        <div className="mb-4 mt-5 mr-4 text-center text-3xl font-bold">
           <button
             onClick={() => signOutTwitch()}
-            className="text-2xl text-center bg:bg-other-twitch rounded-xl py-2.5 px-2.5 bg-knut-other-twitch text-knut-dark-header"
+            className="rounded-xl bg-knut-other-twitch p-2.5 text-center text-2xl text-knut-dark-header"
           >
             Sign Out
           </button>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+        <div className="grid grid-cols-1 gap-6 p-6 md:grid-cols-2 lg:grid-cols-3">
           {streamers?.map(({ twitchName, name }) => {
             const selected = vote === twitchName;
             return (
@@ -197,7 +198,7 @@ export default function Vote() {
                 >
                   {name}
                 </h3>
-                <section className="hero container mx-auto flex justify-center">
+                <section className="container mx-auto flex justify-center">
                   <Image
                     src={`/participants/${twitchName}.webp`}
                     className="mx-auto rounded-md"
@@ -216,8 +217,8 @@ export default function Vote() {
           <button
             type="button"
             onClick={submitVote}
-            className={clsx(" font-bold py-3 px-6 rounded", {
-              "bg-gray-300 text-gray-500 cursor-not-allowed": !!!vote,
+            className={clsx(" rounded py-3 px-6 font-bold", {
+              "cursor-not-allowed bg-gray-300 text-gray-500": !!!vote,
               "bg-knut-dark-tag text-white": !!vote,
             })}
             disabled={!!!vote}

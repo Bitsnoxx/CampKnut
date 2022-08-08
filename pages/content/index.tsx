@@ -25,8 +25,8 @@ export default function ContentPage({
 }) {
   return (
     <PageLayout widthClassName="container flex-1 mx-auto p-4 max-w-none">
-      <div className="w-11/12 mx-auto">
-        <h1 className="text-3xl font-bold pb-5">Content</h1>
+      <div className="mx-auto w-11/12">
+        <h1 className="pb-5 text-3xl font-bold">Content</h1>
         <div
           className="grid auto-rows-max gap-4"
           style={{
@@ -47,17 +47,17 @@ export default function ContentPage({
               >
                 <div
                   key={id}
-                  className="h-full bg-knut rounded-lg bg-knut-light-bg-info dark:bg-knut-dark-bg-info hover:bg-knut-light-bg hover:dark:bg-knut-dark-bg transition duration-300 "
+                  className="h-full rounded-lg bg-knut-light-bg-info transition duration-300 hover:bg-knut-light-bg dark:bg-knut-dark-bg-info hover:dark:bg-knut-dark-bg "
                 >
                   <Image
                     src={medium.url}
                     height={300}
                     width={500}
                     alt="Pag"
-                    className="inline-block relative w-full aspect-video rounded-xl cursor-pointer"
+                    className="relative inline-block aspect-video w-full cursor-pointer rounded-xl"
                     priority
                   />
-                  <span className="ml-2 text-l mt-4 text-knut-light-header dark:text-knut-dark-header">
+                  <span className="ml-2 mt-4 text-lg text-knut-light-header dark:text-knut-dark-header">
                     {title}
                   </span>
                 </div>
