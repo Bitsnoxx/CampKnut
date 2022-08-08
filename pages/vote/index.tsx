@@ -5,7 +5,14 @@ import clsx from "clsx";
 
 import { participants } from "content/streamers";
 import PageLayout from "components/layout/PageLayout";
-import { supabase, signInTwitch, signOutTwitch } from "utils/supabaseClient";
+import {
+  supabase,
+  signInTwitch,
+  signOutTwitch,
+  updateVoteForUser,
+  insertVoteForUser,
+  getUsersVote,
+} from "utils/supabaseClient";
 
 const streamers = participants.find((e) => e.category === "streamers")?.members;
 
@@ -15,9 +22,12 @@ export default function Vote() {
   const [vote, setVote] = useState<string>();
   const [previousVote, setPreviousVote] = useState<string>();
   const [hasVoted, setHasVoted] = useState(false);
-  const [showVoteError, setShowVoteError] = useState(false);
 
   const submitVote = useCallback(async () => {
+    if (!user || !vote) {
+      return;
+    }
+
     setPreviousVote(vote);
     window.scrollTo({
       top: 0,
@@ -25,30 +35,21 @@ export default function Vote() {
     });
 
     if (hasVoted) {
-      const { data, error } = await supabase
-        .from("votes")
-        .update({ vote: vote })
-        .eq("user_id", user?.id);
-
       // TODO: handle errors
+      updateVoteForUser(user.id, vote);
       return;
     }
 
-    const { data, error } = await supabase
-      .from("votes")
-      .insert({ user_id: user?.id, vote: vote }, { returning: "minimal" });
-
     // TODO: handle errors
+    const data = await insertVoteForUser(user.id, vote);
+
     setHasVoted(true);
   }, [vote, user, hasVoted]);
 
   const hasUserVoted = useCallback(async (userId: User["id"]) => {
-    const { data, error } = await supabase
-      .from("votes")
-      .select("vote")
-      .filter("user_id", "eq", userId);
-
     // TODO: handle errors
+    const data = await getUsersVote(userId);
+
     setHasVoted(!!data?.length);
     if (data?.length) {
       setVote(data[0].vote);
