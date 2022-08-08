@@ -15,6 +15,7 @@ export const tips = {
 
 export const errors = {
   missingPage: `We couldn't find that page`,
+  serverError: "Server error, that's awkward. That wasn't supposed to happen",
 };
 
 export const seo = {

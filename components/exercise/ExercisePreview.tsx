@@ -15,9 +15,8 @@ export default function ExercisePreview({
     <Link href={`/exercises/${slug}`}>
       <a>
         <div className="h-full rounded-xl  bg-knut bg-knut-light-bg-info dark:bg-knut-dark-bg-info hover:bg-knut-light-bg hover:dark:bg-knut-dark-bg transition duration-300 ">
-          <div className="inline-block relative w-full aspect-video ">
+          <div className="inline-block relative aspect-video ">
             <Image
-              priority
               objectFit="cover"
               src={image}
               /* layout="fill" */
@@ -25,6 +24,7 @@ export default function ExercisePreview({
               height={250}
               alt={name}
               className=" rounded-t-md"
+              loading="lazy"
             />
           </div>
           <h1 className="text-xl font-bold pl-2">{name}</h1>

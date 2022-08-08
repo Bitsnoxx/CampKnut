@@ -11,14 +11,11 @@ export default function Participants() {
   return (
     <div className="grid grid-cols-2 md:grid-cols-5 gap-4 my-10 w-full">
       <div>
-        <h1 className="text-2xl font-bold mt-4 md:text-center">Trainers</h1>
+        <h1 className="text-2xl font-black mt-4 md:text-center ">Trainers</h1>
         <ul className="flex flex-col items-start md:items-center">
           {trainers?.members.map((e) => (
             <li key={e.name}>
-              <CustomLink
-                  href={e.url}
-                  type="a"
-              >
+              <CustomLink href={e.url} type="a">
                 {e.name}
               </CustomLink>
             </li>
@@ -33,10 +30,7 @@ export default function Participants() {
         <ul className="flex flex-col items-end md:items-center">
           {judges?.members.map((e) => (
             <li key={e.name}>
-              <CustomLink
-                  href={e.url}
-                  type="a"
-              >
+              <CustomLink href={e.url} type="a">
                 {e.name}
               </CustomLink>
             </li>
@@ -49,10 +43,7 @@ export default function Participants() {
         <ul>
           {guests?.members.map((e) => (
             <li key={e.name} className="md:flex md:flex-col md:items-center">
-              <CustomLink
-                  href={e.url}
-                  type="a"
-              >
+              <CustomLink href={e.url} type="a">
                 {e.name}
               </CustomLink>
             </li>
@@ -66,10 +57,7 @@ export default function Participants() {
         <ul className="items-end flex flex-col md:items-center">
           {streamers?.members.map((e) => (
             <li key={e.name}>
-              <CustomLink
-                  href={e.url}
-                  type="a"
-              >
+              <CustomLink href={e.url} type="a">
                 {e.name}
               </CustomLink>
             </li>
@@ -82,10 +70,7 @@ export default function Participants() {
         <ul className="md:flex md:flex-col md:items-center">
           {chefs?.members.map((e) => (
             <li key={e.name}>
-              <CustomLink
-                  href={e.url}
-                  type="a"
-              >
+              <CustomLink href={e.url} type="a">
                 {e.name}
               </CustomLink>
             </li>

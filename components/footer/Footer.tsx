@@ -27,6 +27,16 @@ export default function Footer() {
       <div className="w-full ">
         <div className="flex flex-col items-center justify-center mt-4">
           <span className="text-xl font-bold">Camp Knut 2022</span>
+          <p>
+            <CustomLink
+              href="/contributors"
+              type="Link"
+              lightColor={"text-knut-light-header"}
+              darkColor={"dark:text-knut-dark-header"}
+            >
+              Contributors
+            </CustomLink>
+          </p>
           <div className="flex flex-row justify-center items-center text-4xl gap-4 my-2">
             <FooterIconLink platform="Twitch">
               <FaTwitch className="hover:text-knut-other-twitch transition duration-300" />
@@ -52,10 +62,10 @@ export default function Footer() {
       <span className="flex flex-row items-center gap-1 justify-center pb-0.5">
         Made with <FaHeart className="hover:text-red-600 mx-0.5" /> on{" "}
         <CustomLink
-            href={"https://github.com/Bitsnoxx/CampKnut"}
-            type={"a"}
-            darkColor={"dark:text-knut-dark-header"}
-            lightColor={"text-knut-light-header"}
+          href={"https://github.com/Bitsnoxx/CampKnut"}
+          type={"a"}
+          darkColor={"dark:text-knut-dark-header"}
+          lightColor={"text-knut-light-header"}
         >
           Github
         </CustomLink>
