@@ -28,11 +28,7 @@ const renderOptions: Options = {
       return <p className="">{children}</p>;
     },
     [BLOCKS.QUOTE]: (node, children) => {
-      return (
-        <blockquote className="p-4 my-4 bg-knut-light-bg-info dark:bg-knut-dark-bg-info">
-          {children}
-        </blockquote>
-      );
+      return <Important elementType="blockquote">{children}</Important>;
     },
   },
 };
