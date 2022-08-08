@@ -1,13 +1,16 @@
 const { default: next } = require("next");
 const withPlugins = require("next-compose-plugins");
 
-/** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
     formats: ["image/avif", "image/webp"],
-    domains: ["static-cdn.jtvnw.net", "images.ctfassets.net"],
+    // Twitch / Contentful / Youtube
+    domains: ["static-cdn.jtvnw.net", "images.ctfassets.net", "i.ytimg.com"],
+    minimumCacheTTL: 600,
   },
   productionBrowserSourceMaps: true,
   i18n: {
@@ -15,7 +18,7 @@ const nextConfig = {
     defaultLocale: "en",
   },
   compiler: {
-    /* removeConsole: true, */
+    removeConsole: isProd,
   },
 };
 

@@ -22,7 +22,7 @@ module.exports = {
           },
           light: {
             bg: "#ffffff",
-            "bg-info": "#f0f8ff",
+            "bg-info": "#cad9eb",
             text: "#495057",
             header: "#121212",
             "post-link": "#43484d",

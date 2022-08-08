@@ -273,16 +273,6 @@ const Home: NextPage = () => {
                 Roadmap
               </CustomLink>
             </p>
-            <p>
-              <CustomLink
-                href="/hall-of-fame"
-                type="Link"
-                lightColor={"text-knut-light-header"}
-                darkColor={"dark:text-knut-dark-header"}
-              >
-                Hall of Fame
-              </CustomLink>
-            </p>
           </div>
 
           <Important>

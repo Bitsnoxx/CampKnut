@@ -11,21 +11,36 @@ export default function ExercisePage({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const { image, name, tags, youtubeLink } = exerciseElement;
 
+  /*   let embedLink = youtubeLink.split("/");
+  console.log(embedLink[3]); */
+  console.log(youtubeLink);
+
+  const newUrl = new URL(youtubeLink);
+  const videoId = newUrl.pathname.substring(1);
+  const timestamp = newUrl.searchParams.get("t");
+
+  console.log(timestamp);
+
+  let id = "ZGpesmRXeB4";
+
   return (
     <PageLayout>
       <div>
         <h1 className="text-3xl font-bold dark:text-knut-dark-text light:text-knut-light-text">
           {name}
         </h1>
-        <div className="flex flex-col md:flex-row gap-16 my-5">
-          <div className="col-span-2 relative w-full aspect-video">
-            <Image
-              src={image}
-              layout="fill"
-              alt={name}
-              objectFit="cover"
-              className="rounded-t-lg"
-            />
+        <div className="flex flex-col md:flex-row gap-16 mt-5">
+          <div className="col-span-2 relative w-full aspect-w-16 aspect-h-9">
+            <iframe
+              width="690"
+              height="390"
+              src={`https://www.youtube.com/embed/${videoId}?start=${timestamp}`}
+              title={name}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="mt-10 mx-auto mb-5"
+            ></iframe>
           </div>
         </div>
         <div>
