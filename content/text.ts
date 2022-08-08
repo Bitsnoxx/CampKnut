@@ -17,7 +17,6 @@ export const errors = {
   missingPage: `We couldn't find that page`,
   serverError: "Server error, that's awkward. That wasn't supposed to happen",
 };
-
 export const seo = {
   description: `Camp Knut is a 30-day long training camp where Knut will take Mizkif, Nmplol, Lacari, Tectone, Erobb221 through a full bodybuilding experience. By the end of the
   training camp, they will go on a bodybuilding show. They will also be judged by their performance by Knut, WakeWilder, Malena and Asmongold.`,
