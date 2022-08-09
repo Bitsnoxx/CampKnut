@@ -1,30 +1,26 @@
-import clsx from "clsx";
-import { GetStaticProps, InferGetStaticPropsType } from "next";
-import { useEffect, useState } from "react";
-import ExercisePreview from "components/exercise/ExercisePreview";
-import PageLayout from "components/layout/PageLayout";
-import { getExercises } from "utils/contentful";
-import slugify from "utils/slugify";
-import ScrollContainer from "react-indiana-drag-scroll";
-import { IUIExercise } from "model/ui";
-import { placeHolderImage } from "content/links";
-import { CgClose } from "react-icons/cg";
+import clsx from 'clsx';
+import { GetStaticProps, InferGetStaticPropsType } from 'next';
+import { useEffect, useState } from 'react';
+import ExercisePreview from 'components/exercise/ExercisePreview';
+import PageLayout from 'components/layout/PageLayout';
+import { getExercises } from 'utils/contentful';
+import slugify from 'utils/slugify';
+import ScrollContainer from 'react-indiana-drag-scroll';
+import { IUIExercise } from 'model/ui';
+import { placeHolderImage } from 'content/links';
+import { CgClose } from 'react-icons/cg';
 
 export default function ExerciseListPage({
   exercises,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [searchTerm, setSearchTerm] = useState<string>('');
   const [filteredExercises, setFilteredExercises] = useState(exercises);
 
   const tags = [
-    ...new Set(
-      exercises.flatMap((e) => e.tags).filter((x) => typeof x === "string" && x)
-    ),
+    ...new Set(exercises.flatMap((e) => e.tags).filter((x) => typeof x === 'string' && x)),
   ] as string[];
 
-  const [searchTags, setSearchTags] = useState(
-    tags.map((e) => ({ tag: e, active: false }))
-  );
+  const [searchTags, setSearchTags] = useState(tags.map((e) => ({ tag: e, active: false })));
 
   useEffect(() => {
     const e = exercises.filter(filterLogic);
@@ -45,7 +41,7 @@ export default function ExerciseListPage({
 
   const clearFilters = () => {
     setSearchTags(searchTags.map((x) => ({ ...x, active: false })));
-    setSearchTerm("");
+    setSearchTerm('');
   };
 
   return (
@@ -56,18 +52,18 @@ export default function ExerciseListPage({
           <div className="flex w-full max-w-2xl flex-row items-center gap-4">
             <div className="relative w-full">
               <input
-                className="mt-5 w-full rounded-xl border-2 border-black px-4 py-[6px] text-knut-light-text placeholder-slate-400 dark:text-knut-dark-text dark:placeholder-slate-500"
-                type={"text"}
+                className="mt-5 w-full rounded-xl border-2 border-black px-4 py-[6px] text-knut-light-text placeholder:text-slate-400 dark:text-knut-dark-text dark:placeholder:text-slate-500"
+                type={'text'}
                 value={searchTerm}
-                placeholder={"zinc exercise"}
+                placeholder={'zinc exercise'}
                 onChange={(e) => {
                   setSearchTerm(e.target.value);
                 }}
               />
               <button
                 className={clsx(
-                  "absolute top-1/2 right-0 -translate-x-1/2 -translate-y-1/2 transform",
-                  "mt-2.5 select-none rounded-xl bg-gray-200 p-1 text-black dark:bg-knut-dark-text dark:text-slate-600"
+                  'absolute top-1/2 right-0 -translate-x-1/2 -translate-y-1/2',
+                  'mt-2.5 select-none rounded-xl bg-gray-200 p-1 text-black dark:bg-knut-dark-text dark:text-slate-600',
                 )}
                 onClick={clearFilters}
                 aria-label="Clear filters"
@@ -89,10 +85,8 @@ export default function ExerciseListPage({
                 <div
                   key={e.tag}
                   className={clsx(
-                    e.active
-                      ? "bg-sky-200 dark:bg-knut-dark-tag"
-                      : "bg-gray-200 dark:bg-slate-600",
-                    "cursor-pointer select-none rounded-xl py-1 px-3 text-knut-light-text dark:text-knut-dark-text"
+                    e.active ? 'bg-sky-200 dark:bg-knut-dark-tag' : 'bg-gray-200 dark:bg-slate-600',
+                    'cursor-pointer select-none rounded-xl py-1 px-3 text-knut-light-text dark:text-knut-dark-text',
                   )}
                   onClick={() => {
                     setSearchTags([
@@ -109,7 +103,7 @@ export default function ExerciseListPage({
         <div
           className="grid auto-rows-max gap-4"
           style={{
-            gridTemplateColumns: "repeat(auto-fill,minmax(260px,1fr))",
+            gridTemplateColumns: 'repeat(auto-fill,minmax(260px,1fr))',
           }}
         >
           {filteredExercises

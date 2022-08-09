@@ -41,7 +41,7 @@ export default function Header() {
                 <span className="relative mt-1 block h-px w-6 rounded-sm bg-knut-dark-bg dark:bg-knut-light-bg"></span>
               </button>
             </div>
-            <div className={clsx(active ? 'flex' : 'hidden', 'flex-grow lg:flex')}>
+            <div className={clsx(active ? 'flex' : 'hidden', 'grow lg:flex')}>
               <ul className="flex list-none flex-col px-4 lg:mx-auto lg:flex-row lg:justify-center lg:gap-8">
                 <li>
                   <Link href="/">
