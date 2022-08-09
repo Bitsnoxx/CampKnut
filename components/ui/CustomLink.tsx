@@ -14,7 +14,7 @@ type CustomLinkType = {
 const defaultStyle = {
   lightColor: "text-knut-light-text",
   darkColor: "dark:text-knut-dark-text",
-  hover: "hover:font-black",
+  hover: "hover:underline",
 };
 
 export default function CustomLink({

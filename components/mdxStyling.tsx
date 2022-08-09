@@ -1,32 +1,30 @@
-import Important from "./ui/Important";
+import Important from './ui/Important';
 
 export const components = {
   h1: (props: any) => {
-    return <h1 className="mb-6 text-3xl font-bold" {...props} />;
+    return <h1 className="text-3xl mb-6 font-bold" {...props} />;
   },
   h2: (props: any) => {
-    return <h2 className="mb-4 text-2xl font-bold" {...props} />;
+    return <h2 className="text-2xl mb-4 font-bold" {...props} />;
   },
   h3: (props: any) => {
-    return <h3 className="mb-2 text-xl font-bold" {...props} />;
+    return <h3 className="text-xl mb-2 font-bold" {...props} />;
   },
   h4: (props: any) => {
-    return <h4 className="mb-2 text-xl font-bold" {...props} />;
+    return <h4 className="text-xl mb-2 font-bold" {...props} />;
   },
   h5: (props: any) => {
-    return <h5 className="mb-2 text-xl font-bold" {...props} />;
+    return <h5 className="text-xl mb-2 font-bold" {...props} />;
   },
   h6: (props: any) => {
-    return <h6 className="mb-2 text-xl font-bold" {...props} />;
+    return <h6 className="text-xl mb-2 font-bold" {...props} />;
   },
 
   p: (props: any) => {
     return <p className="list-inside list-disc" {...props} />;
   },
   li: (props: any) => {
-    return (
-      <li className="not-prose list-inside list-disc text-red-600" {...props} />
-    );
+    return <li className="not-prose list-inside list-disc text-red-600" {...props} />;
   },
   ul: (props: any) => {
     return <ul className="list-inside list-disc text-red-600" {...props} />;
@@ -34,7 +32,7 @@ export const components = {
   a: (props: any) => {
     return (
       <a
-        target={"_blank"}
+        target={'_blank'}
         rel="noreferrer"
         className="text-knut-light-header hover:font-black dark:text-knut-dark-header"
         {...props}

@@ -1,29 +1,23 @@
-import PageLayout from "components/layout/PageLayout";
-import CustomLink from "components/ui/CustomLink";
-import { placeHolderImage } from "content/links";
-import { IUIExercise } from "model/ui";
-import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
-import { getExercises, getOneExercise } from "utils/contentful";
+import PageLayout from 'components/layout/PageLayout';
+import CustomLink from 'components/ui/CustomLink';
+import { placeHolderImage } from 'content/links';
+import { IUIExercise } from 'model/ui';
+import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next';
+import { getExercises, getOneExercise } from 'utils/contentful';
 
 export default function ExercisePage({
   exerciseElement,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const { name, tags, youtubeLink } = exerciseElement;
 
-  /*   let embedLink = youtubeLink.split("/");
-  console.log(embedLink[3]); */
-  console.log(youtubeLink);
-
   const newUrl = new URL(youtubeLink);
   const videoId = newUrl.pathname.substring(1);
-  const timestamp = newUrl.searchParams.get("t");
+  const timestamp = newUrl.searchParams.get('t');
 
   return (
     <PageLayout>
       <div>
-        <h1 className="text-3xl font-bold text-knut-light-text dark:text-knut-dark-text">
-          {name}
-        </h1>
+        <h1 className="text-3xl font-bold text-knut-light-text dark:text-knut-dark-text">{name}</h1>
         <div className="mt-5 flex flex-col gap-16 md:flex-row">
           <div className="relative col-span-2 aspect-video w-full">
             <iframe
@@ -39,22 +33,19 @@ export default function ExercisePage({
           </div>
         </div>
         <div>
-          <h2 className="pb-4 text-2xl font-medium text-knut-light-header dark:text-knut-dark-header">
+          <h2 className="text-2xl pb-4 font-medium text-knut-light-header dark:text-knut-dark-header">
             Muscle groups:
           </h2>
           <p className="text-knut-light-header hover:font-black dark:text-knut-dark-header">
             {tags?.map((e) => (
-              <span
-                key={e}
-                className="mr-2 rounded-xl bg-sky-200 p-1 px-3 dark:bg-knut-dark-tag"
-              >
+              <span key={e} className="mr-2 rounded-xl bg-sky-200 p-1 px-3 dark:bg-knut-dark-tag">
                 <CustomLink href={`/exercises/${e}`} type="a">
                   {e}
                 </CustomLink>
               </span>
             ))}
           </p>
-          <h2 className="pt-5 text-2xl font-medium text-knut-light-header dark:text-knut-dark-header">
+          <h2 className="text-2xl pt-5 font-medium text-knut-light-header dark:text-knut-dark-header">
             Youtube link:
           </h2>
           <a
@@ -91,8 +82,7 @@ export const getStaticProps: GetStaticProps<{
 export const getStaticPaths: GetStaticPaths = async () => {
   const exercises = await getExercises();
   const allExercisePaths =
-    exercises.items?.map((exercise) => `/exercises/${exercise.fields.slug}`) ??
-    [];
+    exercises.items?.map((exercise) => `/exercises/${exercise.fields.slug}`) ?? [];
   return {
     paths: allExercisePaths,
     fallback: false,

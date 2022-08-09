@@ -1,4 +1,5 @@
 export type StreamerInfoType = {
+  twitchId: number;
   name: string;
   url: string;
   twitchName?: string;
@@ -10,12 +11,14 @@ export type ParticipantsType = {
 };
 
 const knut: StreamerInfoType = {
+  twitchId: 43494917,
   name: "Knut",
   url: "https://www.twitch.tv/knut",
   twitchName: "knut",
 };
 
 const wakewilder: StreamerInfoType = {
+  twitchId: 526832402,
   name: "WakeWilder",
   url: "https://www.twitch.tv/wakewilder",
   twitchName: "wakewilder",
@@ -30,41 +33,49 @@ export const participants: ParticipantsType[] = [
     category: "streamers",
     members: [
       {
+        twitchId: 94753024,
         name: "Mizkif",
         url: "https://www.twitch.tv/mizkif",
         twitchName: "mizkif",
       },
       {
+        twitchId: 21841789,
         name: "Nmplol",
         url: "https://www.twitch.tv/Nmplol",
         twitchName: "nmplol",
       },
       {
+        twitchId: 37522866,
         name: "Cyr",
         url: "https://twitch.tv/cyr",
         twitchName: "cyr",
       },
       {
+        twitchId: 127463427,
         name: "RichwCampbell",
         url: "https://www.twitch.tv/richwcampbell",
         twitchName: "richwcampbell",
       },
       {
+        twitchId: 27717340,
         name: "Tectone",
         url: "https://www.twitch.tv/tectone",
         twitchName: "tectone",
       },
       {
+        twitchId: 96858382,
         name: "Erobb221",
         url: "https://www.twitch.tv/erobb221",
         twitchName: "erobb221",
       },
       {
+        twitchId: 38746172,
         name: "EsfandTV",
         url: "https://www.twitch.tv/esfandtv",
         twitchName: "esfandtv",
       },
       {
+        twitchId: 29400754,
         name: "Lacari",
         url: "https://www.twitch.tv/Lacari",
         twitchName: "lacari",
@@ -75,6 +86,7 @@ export const participants: ParticipantsType[] = [
     category: "chefs",
     members: [
       {
+        twitchId: 68090599,
         name: "Exxzy",
         url: "https://www.twitch.tv/exxzy",
         twitchName: "exxzy",
@@ -85,19 +97,22 @@ export const participants: ParticipantsType[] = [
     category: "guests",
     members: [
       {
+        twitchId: 26194208,
         name: "MitchJones",
         url: "https://www.twitch.tv/mitchjones",
         twitchName: "mitchjones",
       },
       {
+        twitchId: 32491081,
         name: "Malena",
         url: "https://www.twitch.tv/malena",
-        twitchName: "mitchjones",
+        twitchName: "malena",
       },
       {
+        twitchId: 192133946,
         name: "Jeanette",
         url: "https://www.instagram.com/jeanette_lu/",
-        twitchName: "jeanette_is_watching",
+        twitchName: "jeanetteiswatching",
       },
     ],
   },
@@ -107,11 +122,13 @@ export const participants: ParticipantsType[] = [
       knut,
       wakewilder,
       {
+        twitchId: 32491081,
         name: "Malena",
         url: "https://www.twitch.tv/malena",
         twitchName: "malena",
       },
       {
+        twitchId: 26261471,
         name: "Asmongold",
         url: "https://www.twitch.tv/asmongold",
         twitchName: "asmongold",

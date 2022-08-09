@@ -1,3 +1,6 @@
+import { useState } from 'react';
+import Image from 'next/image';
+
 import {
   FaTwitch,
   FaYoutube,
@@ -6,12 +9,11 @@ import {
   FaReddit,
   FaShoppingBag,
   FaHeart,
-} from "react-icons/fa";
+} from 'react-icons/fa';
 
-import Image from "next/image";
-import FooterIconLink from "components/footer/FooterIconLink";
-import { useState } from "react";
-import CustomLink from "components/ui/CustomLink";
+import FooterIconLink from 'components/footer/FooterIconLink';
+
+import CustomLink from 'components/ui/CustomLink';
 
 export default function Footer() {
   const [counter, setCounter] = useState(0);
@@ -31,13 +33,13 @@ export default function Footer() {
             <CustomLink
               href="/contributors"
               type="Link"
-              lightColor={"text-knut-light-header"}
-              darkColor={"dark:text-knut-dark-header"}
+              lightColor={'text-knut-light-header'}
+              darkColor={'dark:text-knut-dark-header'}
             >
               Contributors
             </CustomLink>
           </p>
-          <div className="my-2 flex flex-row items-center justify-center gap-4 text-4xl">
+          <div className="text-4xl my-2 flex flex-row items-center justify-center gap-4">
             <FooterIconLink platform="Twitch">
               <FaTwitch className="transition duration-300 hover:text-knut-other-twitch" />
             </FooterIconLink>
@@ -60,12 +62,12 @@ export default function Footer() {
         </div>
       </div>
       <span className="flex flex-row items-center justify-center gap-1 pb-0.5">
-        Made with <FaHeart className="mx-0.5 hover:text-red-600" /> on{" "}
+        Made with <FaHeart className="mx-0.5 hover:text-red-600" /> on{' '}
         <CustomLink
-          href={"https://github.com/Bitsnoxx/CampKnut"}
-          type={"a"}
-          darkColor={"dark:text-knut-dark-header"}
-          lightColor={"text-knut-light-header"}
+          href={'https://github.com/Bitsnoxx/CampKnut'}
+          type={'a'}
+          darkColor={'dark:text-knut-dark-header'}
+          lightColor={'text-knut-light-header'}
         >
           Github
         </CustomLink>

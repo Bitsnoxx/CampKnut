@@ -1,12 +1,12 @@
-import PageLayout from "components/layout/PageLayout";
-import Important from "components/ui/Important";
-import { contributors } from "content/contributors";
+import PageLayout from 'components/layout/PageLayout';
+import Important from 'components/ui/Important';
+import { contributors } from 'content/contributors';
 
 const HallOfFame = () => {
   return (
     <>
       <PageLayout>
-        <h1 className="mb-4 text-center text-3xl font-bold">Contributors 🥇</h1>
+        <h1 className="text-3xl mb-4 text-center font-bold">Contributors 🥇</h1>
         <div className="flex justify-center">
           <div className="p-4">
             <table className="w-96">
@@ -21,9 +21,7 @@ const HallOfFame = () => {
                   <tr
                     key={`halloffame-${contributor.username}`}
                     className={
-                      index % 2 === 0
-                        ? "bg-knut-light-bg-info dark:bg-knut-dark-bg-info"
-                        : ""
+                      index % 2 === 0 ? 'bg-knut-light-bg-info dark:bg-knut-dark-bg-info' : ''
                     }
                   >
                     <td className="p-2">{contributor.username}</td>

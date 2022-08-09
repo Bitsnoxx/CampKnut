@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useCallback } from "react";
-import Image from "next/image";
-import { User } from "@supabase/supabase-js";
-import clsx from "clsx";
+import React, { useState, useEffect, useCallback } from 'react';
+import Image from 'next/image';
+import { User } from '@supabase/supabase-js';
+import clsx from 'clsx';
 
-import { participants } from "content/streamers";
-import PageLayout from "components/layout/PageLayout";
+import { participants } from 'content/streamers';
+import PageLayout from 'components/layout/PageLayout';
 import {
   supabase,
   signInTwitch,
@@ -12,9 +12,9 @@ import {
   updateVoteForUser,
   insertVoteForUser,
   getUsersVote,
-} from "utils/supabaseClient";
+} from 'utils/supabaseClient';
 
-const streamers = participants.find((e) => e.category === "streamers")?.members;
+const streamers = participants.find((e) => e.category === 'streamers')?.members;
 
 export default function Vote() {
   const [isLoading, setIsLoading] = useState(true);
@@ -31,7 +31,7 @@ export default function Vote() {
     setPreviousVote(vote);
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
 
     if (hasVoted) {
@@ -46,7 +46,7 @@ export default function Vote() {
     setHasVoted(true);
   }, [vote, user, hasVoted]);
 
-  const hasUserVoted = useCallback(async (userId: User["id"]) => {
+  const hasUserVoted = useCallback(async (userId: User['id']) => {
     // TODO: handle errors
     const data = await getUsersVote(userId);
 
@@ -69,11 +69,9 @@ export default function Vote() {
       setIsLoading(false);
     }
 
-    const { data: listener } = supabase.auth.onAuthStateChange(
-      async (event, session) => {
-        setUser(session?.user ?? null);
-      }
-    );
+    const { data: listener } = supabase.auth.onAuthStateChange(async (event, session) => {
+      setUser(session?.user ?? null);
+    });
 
     return () => {
       listener?.unsubscribe();
@@ -111,8 +109,8 @@ export default function Vote() {
     return (
       <PageLayout>
         <article>
-          <h1 className="mt-5 mb-4 mr-4 text-center text-3xl font-bold text-knut-light-header dark:text-knut-dark-header">
-            {" "}
+          <h1 className="text-3xl mt-5 mb-4 mr-4 text-center font-bold text-knut-light-header dark:text-knut-dark-header">
+            {' '}
             You need to login to vote
           </h1>
 
@@ -126,10 +124,10 @@ export default function Vote() {
             ></Image>
           </section>
 
-          <div className="mt-5 mb-4 mr-4 text-center text-3xl font-bold">
+          <div className="text-3xl mt-5 mb-4 mr-4 text-center font-bold">
             <button
               onClick={() => signInTwitch()}
-              className="rounded-xl bg-knut-other-twitch p-2.5 text-center text-2xl text-knut-dark-header"
+              className="text-2xl rounded-xl bg-knut-other-twitch p-2.5 text-center text-knut-dark-header"
             >
               Sign in
             </button>
@@ -142,8 +140,8 @@ export default function Vote() {
   return (
     <PageLayout>
       <article>
-        <h1 className="mt-5 mb-4 mr-4 text-center text-3xl font-black text-knut-light-header dark:text-knut-dark-header">
-          Vote on your favourite streamer{" "}
+        <h1 className="text-3xl mt-5 mb-4 mr-4 text-center font-black text-knut-light-header dark:text-knut-dark-header">
+          Vote on your favourite streamer{' '}
           <span className="inline-flex items-center justify-center">
             {user?.user_metadata.nickname}
             <Image
@@ -159,19 +157,17 @@ export default function Vote() {
         </h1>
         {hasVoted && (
           <h2 className="text-center">
-            You have voted for{" "}
+            You have voted for{' '}
             <strong>
-              <em>
-                {streamers?.find((s) => s.twitchName === previousVote)?.name}
-              </em>
+              <em>{streamers?.find((s) => s.twitchName === previousVote)?.name}</em>
             </strong>
             . You can change your vote below.
           </h2>
         )}
-        <div className="mt-5 mb-4 mr-4 text-center text-3xl font-bold">
+        <div className="text-3xl mt-5 mb-4 mr-4 text-center font-bold">
           <button
             onClick={() => signOutTwitch()}
-            className="rounded-xl bg-knut-other-twitch p-2.5 text-center text-2xl text-knut-dark-header"
+            className="text-2xl rounded-xl bg-knut-other-twitch p-2.5 text-center text-knut-dark-header"
           >
             Sign Out
           </button>
@@ -184,16 +180,15 @@ export default function Vote() {
                 type="button"
                 key={twitchName}
                 onClick={() => setVote(twitchName)}
-                className={clsx("rounded-xl p-3  transition duration-300", {
-                  ["bg-knut-light-bg-info dark:bg-knut-dark-bg-info"]:
-                    !selected,
-                  ["bg-knut-dark-bg-info dark:bg-knut-light-bg-info"]: selected,
+                className={clsx('rounded-xl p-3  transition duration-300', {
+                  ['bg-knut-light-bg-info dark:bg-knut-dark-bg-info']: !selected,
+                  ['bg-knut-dark-bg-info dark:bg-knut-light-bg-info']: selected,
                 })}
               >
                 <h3
-                  className={clsx("pb-2 text-2xl font-black", {
-                    ["text-black dark:text-white"]: !selected,
-                    ["text-white dark:text-black"]: selected,
+                  className={clsx('text-2xl pb-2 font-black', {
+                    ['text-black dark:text-white']: !selected,
+                    ['text-white dark:text-black']: selected,
                   })}
                 >
                   {name}
@@ -217,9 +212,9 @@ export default function Vote() {
           <button
             type="button"
             onClick={submitVote}
-            className={clsx(" rounded py-3 px-6 font-bold", {
-              "cursor-not-allowed bg-gray-300 text-gray-500": !!!vote,
-              "bg-knut-dark-tag text-white": !!vote,
+            className={clsx(' rounded py-3 px-6 font-bold', {
+              'cursor-not-allowed bg-gray-300 text-gray-500': !!!vote,
+              'bg-knut-dark-tag text-white': !!vote,
             })}
             disabled={!!!vote}
           >

@@ -1,12 +1,12 @@
-import type { NextPage } from "next";
-import Image from "next/image";
+import type { NextPage } from 'next';
+import Image from 'next/image';
 
-import PageLayout from "components/layout/PageLayout";
-import Introduction from "components/mainPage/Introduction";
-import Participants from "components/mainPage/Participants";
-import CustomLink from "components/ui/CustomLink";
-import Important from "components/ui/Important";
-import { tips } from "content/text";
+import PageLayout from 'components/layout/PageLayout';
+import Introduction from 'components/mainPage/Introduction';
+import Participants from 'components/mainPage/Participants';
+import CustomLink from 'components/ui/CustomLink';
+import Important from 'components/ui/Important';
+import { tips } from 'content/text';
 
 const Home: NextPage = () => {
   return (
@@ -37,37 +37,37 @@ const Home: NextPage = () => {
 
           <div className="flex">
             <div className="w-1/2">
-              <h1 className="mt-4 mb-2 text-2xl font-black text-knut-light-header dark:text-knut-dark-header">
+              <h1 className="text-2xl mt-4 mb-2 font-black text-knut-light-header dark:text-knut-dark-header">
                 🥩 Meal Plans
               </h1>
               <p>
                 <CustomLink
                   href={
-                    "https://docs.google.com/spreadsheets/d/1Fto6sArnx-lBoxXyFEC3cLCbVQkJdwT9-JsPD9Agra8/edit?usp=sharing"
+                    'https://docs.google.com/spreadsheets/d/1Fto6sArnx-lBoxXyFEC3cLCbVQkJdwT9-JsPD9Agra8/edit?usp=sharing'
                   }
-                  type={"a"}
-                  darkColor={"dark:text-knut-dark-header"}
-                  lightColor={"text-knut-light-header"}
+                  type={'a'}
+                  darkColor={'dark:text-knut-dark-header'}
+                  lightColor={'text-knut-light-header'}
                 >
                   OTK Meal plans
                 </CustomLink>
               </p>
               <p>
                 <CustomLink
-                  href={"https://bit.ly/3vil5en"}
-                  type={"a"}
-                  darkColor={"dark:text-knut-dark-header"}
-                  lightColor={"text-knut-light-header"}
+                  href={'https://bit.ly/3vil5en'}
+                  type={'a'}
+                  darkColor={'dark:text-knut-dark-header'}
+                  lightColor={'text-knut-light-header'}
                 >
                   Mizkif meal plan with supplements
                 </CustomLink>
               </p>
               <p>
                 <CustomLink
-                  href={"https://bit.ly/3cReLVb"}
-                  type={"a"}
-                  darkColor={"dark:text-knut-dark-header"}
-                  lightColor={"text-knut-light-header"}
+                  href={'https://bit.ly/3cReLVb'}
+                  type={'a'}
+                  darkColor={'dark:text-knut-dark-header'}
+                  lightColor={'text-knut-light-header'}
                 >
                   Mizkif meal plan without eggs and supplements
                 </CustomLink>
@@ -75,53 +75,50 @@ const Home: NextPage = () => {
             </div>
 
             <div className="w-1/2">
-              <h1 className="mt-4 text-2xl font-black text-knut-light-header dark:text-knut-dark-header">
+              <h1 className="text-2xl mt-4 font-black text-knut-light-header dark:text-knut-dark-header">
                 💖 Community
               </h1>
               <p>
                 <CustomLink
-                  href={""}
-                  type={"Link"}
-                  darkColor={"dark:text-knut-dark-header"}
-                  lightColor={"text-knut-light-header"}
+                  href={''}
+                  type={'Link'}
+                  darkColor={'dark:text-knut-dark-header'}
+                  lightColor={'text-knut-light-header'}
                 >
                   <>
-                    {" "}
-                    Amazon Supplements by <strong>WakeWilder</strong>{" "}
+                    {' '}
+                    Amazon Supplements by <strong>WakeWilder</strong>{' '}
                   </>
                 </CustomLink>
               </p>
 
               <p>
                 <CustomLink
-                  href={""}
-                  type={"Link"}
-                  darkColor={"dark:text-knut-dark-header"}
-                  lightColor={"text-knut-light-header"}
+                  href={''}
+                  type={'Link'}
+                  darkColor={'dark:text-knut-dark-header'}
+                  lightColor={'text-knut-light-header'}
                 >
                   <>
-                    {" "}
-                    Stream workout log - Maintained by <strong>
-                      DrStone
-                    </strong>{" "}
+                    {' '}
+                    Stream workout log - Maintained by <strong>DrStone</strong>{' '}
                   </>
                 </CustomLink>
               </p>
 
               <p>
-                📀{" "}
+                📀{' '}
                 <CustomLink
                   href={
-                    "https://open.spotify.com/playlist/0bNUdcAFj5Un6XNKZ5Xora?si=e5e3832466244996"
+                    'https://open.spotify.com/playlist/0bNUdcAFj5Un6XNKZ5Xora?si=e5e3832466244996'
                   }
-                  type={"a"}
-                  darkColor={"dark:text-knut-dark-header"}
-                  lightColor={"text-knut-light-header"}
+                  type={'a'}
+                  darkColor={'dark:text-knut-dark-header'}
+                  lightColor={'text-knut-light-header'}
                 >
                   <>
-                    {" "}
-                    Camp Knut Gym Playlist - Maintained by{" "}
-                    <strong>Tahtooz</strong>{" "}
+                    {' '}
+                    Camp Knut Gym Playlist - Maintained by <strong>Tahtooz</strong>{' '}
                   </>
                 </CustomLink>
               </p>
@@ -130,84 +127,82 @@ const Home: NextPage = () => {
 
           <div className="flex">
             <div className="w-1/2">
-              <h1 className="mt-4 mb-2 text-2xl font-black text-knut-light-header dark:text-knut-dark-header">
+              <h1 className="text-2xl mt-4 mb-2 font-black text-knut-light-header dark:text-knut-dark-header">
                 📕 Plans
               </h1>
               <p>
                 <CustomLink
-                  href={""}
-                  type={"Link"}
-                  darkColor={"dark:text-knut-dark-header"}
-                  lightColor={"text-knut-light-header"}
+                  href={''}
+                  type={'Link'}
+                  darkColor={'dark:text-knut-dark-header'}
+                  lightColor={'text-knut-light-header'}
                 >
                   Workout Beginner
                 </CustomLink>
               </p>
               <p>
                 <CustomLink
-                  href={""}
-                  type={"Link"}
-                  darkColor={"dark:text-knut-dark-header"}
-                  lightColor={"text-knut-light-header"}
+                  href={''}
+                  type={'Link'}
+                  darkColor={'dark:text-knut-dark-header'}
+                  lightColor={'text-knut-light-header'}
                 >
                   Workout plan Week 1
                 </CustomLink>
               </p>
               <p>
                 <CustomLink
-                  href={""}
-                  type={"Link"}
-                  darkColor={"dark:text-knut-dark-header"}
-                  lightColor={"text-knut-light-header"}
+                  href={''}
+                  type={'Link'}
+                  darkColor={'dark:text-knut-dark-header'}
+                  lightColor={'text-knut-light-header'}
                 >
                   Workout plan Week 2
                 </CustomLink>
               </p>
               <p>
                 <CustomLink
-                  href={"/exercises"}
-                  type={"Link"}
-                  darkColor={"dark:text-knut-dark-header"}
-                  lightColor={"text-knut-light-header"}
+                  href={'/exercises'}
+                  type={'Link'}
+                  darkColor={'dark:text-knut-dark-header'}
+                  lightColor={'text-knut-light-header'}
                 >
                   Exercises
                 </CustomLink>
               </p>
             </div>
             <div className="w-1/2">
-              <h1 className="mt-4 mb-2 text-2xl font-black text-knut-light-header dark:text-knut-dark-header">
+              <h1 className="text-2xl mt-4 mb-2 font-black text-knut-light-header dark:text-knut-dark-header">
                 🛠️ Tools
               </h1>
               <p className="text-knut-light-header dark:text-knut-dark-header">
-                MyFitnessPal{" "}
+                MyFitnessPal{' '}
                 <CustomLink
-                  href={
-                    "https://apps.apple.com/us/app/myfitnesspal-calorie-counter/id341232718"
-                  }
-                  type={"a"}
-                  darkColor={"dark:text-knut-dark-header"}
-                  lightColor={"text-knut-light-header"}
+                  href={'https://apps.apple.com/us/app/myfitnesspal-calorie-counter/id341232718'}
+                  type={'a'}
+                  darkColor={'dark:text-knut-dark-header'}
+                  lightColor={'text-knut-light-header'}
                 >
                   iOS
-                </CustomLink>{" "}
-                /{" "}
+                </CustomLink>{' '}
+                /{' '}
                 <CustomLink
                   href={
-                    "https://play.google.com/store/apps/details?id=com.myfitnesspal.android&amp;hl=en&amp;gl=US"
+                    'https://play.google.com/store/apps/details?id=com.myfitnesspal.android&amp;hl=en&amp;gl=US'
                   }
-                  type={"a"}
-                  darkColor={"dark:text-knut-dark-header"}
-                  lightColor={"text-knut-light-header"}
+                  type={'a'}
+                  darkColor={'dark:text-knut-dark-header'}
+                  lightColor={'text-knut-light-header'}
                 >
                   Android
                 </CustomLink>
               </p>
               <p>
                 <CustomLink
-                  href={"https://www.bodybuilding.com/fun/bmr_calculator.htm"}
-                  type={"a"}
-                  darkColor={"dark:text-knut-dark-header"}
-                  lightColor={"text-knut-light-header"}
+                  href={'https://www.bodybuilding.com/fun/bmr_calculator.htm'}
+                  type={'a'}
+                  darkColor={'dark:text-knut-dark-header'}
+                  lightColor={'text-knut-light-header'}
                 >
                   BMR Calculator
                 </CustomLink>
@@ -217,15 +212,15 @@ const Home: NextPage = () => {
 
           <div className="flex">
             <div className="w-1/2">
-              <h1 className="mt-4 mb-2 text-2xl font-black text-knut-light-header dark:text-knut-dark-header">
+              <h1 className="text-2xl mt-4 mb-2 font-black text-knut-light-header dark:text-knut-dark-header">
                 📈 Progress
               </h1>
               <p>
                 <CustomLink
-                  href={""}
-                  type={"Link"}
-                  darkColor={"dark:text-knut-dark-header"}
-                  lightColor={"text-knut-light-header"}
+                  href={''}
+                  type={'Link'}
+                  darkColor={'dark:text-knut-dark-header'}
+                  lightColor={'text-knut-light-header'}
                 >
                   Camp Knut - Calendar
                 </CustomLink>
@@ -233,25 +228,25 @@ const Home: NextPage = () => {
 
               <p>
                 <CustomLink
-                  href={""}
-                  type={"Link"}
-                  darkColor={"dark:text-knut-dark-header"}
-                  lightColor={"text-knut-light-header"}
+                  href={''}
+                  type={'Link'}
+                  darkColor={'dark:text-knut-dark-header'}
+                  lightColor={'text-knut-light-header'}
                 >
                   Weekly results
                 </CustomLink>
               </p>
             </div>
             <div className="w-1/2">
-              <h1 className="mt-4 mb-2 text-2xl font-black text-knut-light-header dark:text-knut-dark-header">
+              <h1 className="text-2xl mt-4 mb-2 font-black text-knut-light-header dark:text-knut-dark-header">
                 📃 Articles
               </h1>
               <p>
                 <CustomLink
-                  href={"https://physiqonomics.com/fat-loss/"}
-                  type={"a"}
-                  darkColor={"dark:text-knut-dark-header"}
-                  lightColor={"text-knut-light-header"}
+                  href={'https://physiqonomics.com/fat-loss/'}
+                  type={'a'}
+                  darkColor={'dark:text-knut-dark-header'}
+                  lightColor={'text-knut-light-header'}
                 >
                   The Best Fat Loss Article on the Motherfuckin’ Internet
                 </CustomLink>
@@ -260,15 +255,15 @@ const Home: NextPage = () => {
           </div>
 
           <div className="my-20 text-center">
-            <h3 className="mt-4 text-xl font-black text-knut-light-header hover:font-black dark:text-knut-dark-header">
+            <h3 className="text-xl mt-4 font-black text-knut-light-header dark:text-knut-dark-header">
               Want to help out?
             </h3>
             <p>
               <CustomLink
-                href={"https://github.com/Bitsnoxx/CampKnut/issues"}
-                type={"a"}
-                lightColor={"text-knut-light-header"}
-                darkColor={"dark:text-knut-dark-header"}
+                href={'https://github.com/Bitsnoxx/CampKnut/issues'}
+                type={'a'}
+                lightColor={'text-knut-light-header'}
+                darkColor={'dark:text-knut-dark-header'}
               >
                 Roadmap
               </CustomLink>
@@ -277,20 +272,18 @@ const Home: NextPage = () => {
 
           <Important>
             <div className="text-center">
-              If you have questions about training - Post them in #camp-knut in
-              the{" "}
+              If you have questions about training - Post them in #camp-knut in the{' '}
               <CustomLink
-                href={"http://discord.gg/knut"}
-                type={"a"}
-                darkColor={"dark:text-knut-dark-header"}
-                lightColor={"text-knut-light-header"}
+                href={'http://discord.gg/knut'}
+                type={'a'}
+                darkColor={'dark:text-knut-dark-header'}
+                lightColor={'text-knut-light-header'}
               >
                 Discord
               </CustomLink>
             </div>
             <div className="text-center">
-              Feedback, issues or questions? Contact{" "}
-              <strong>Bitsnoxx#1337</strong> on Discord.
+              Feedback, issues or questions? Contact <strong>Bitsnoxx#1337</strong> on Discord.
             </div>
           </Important>
         </div>

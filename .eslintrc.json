@@ -1,22 +1,24 @@
 {
   "extends": [
-    "next/core-web-vitals"
+    "next/core-web-vitals", "next", "prettier"
   ],
   "plugins": [
     "tailwindcss"
   ],
   "rules": {
+    "constructor-super": "warn",
+    "no-console": "warn",
+    "no-const-assign": "warn",
+    "no-duplicate-imports": "warn",
+    "no-this-before-super": "warn",
+    "no-undef": "warn",
+    "no-unreachable": "warn",
+    "no-unused-vars": "warn",
     "tailwindcss/classnames-order": "warn",
     "tailwindcss/enforces-negative-arbitrary-values": "error",
     "tailwindcss/enforces-shorthand": "error",
-    "tailwindcss/no-custom-classname": "warn",
     "tailwindcss/no-contradicting-classname": "error",
-    "no-const-assign": "warn",
-		"no-this-before-super": "warn",
-		"no-undef": "warn",
-		"no-unreachable": "warn",
-		"no-unused-vars": "warn",
-		"constructor-super": "warn",
-		"valid-typeof": "warn"
+    "tailwindcss/no-custom-classname": "off",
+    "valid-typeof": "warn"
   }
 }

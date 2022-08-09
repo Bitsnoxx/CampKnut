@@ -1,16 +1,11 @@
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
-import { IExerciseFields } from "model/contentful";
-import { IUIExercise } from "model/ui";
-import ExerciseTag from "./ExerciseTag";
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
 
-export default function ExercisePreview({
-  image,
-  name,
-  slug,
-  tags,
-}: IUIExercise) {
+import { IUIExercise } from 'model/ui';
+import ExerciseTag from './ExerciseTag';
+
+export default function ExercisePreview({ image, name, slug, tags }: IUIExercise) {
   return (
     <Link href={`/exercises/${slug}`}>
       <a>
@@ -27,7 +22,7 @@ export default function ExercisePreview({
               loading="lazy"
             />
           </div>
-          <h1 className="pl-2 text-xl font-bold">{name}</h1>
+          <h1 className="text-xl pl-2 font-bold">{name}</h1>
           <div className="mt-auto py-2">
             {tags?.map((t) => (
               <ExerciseTag key={t} className="mx-1 ml-2 inline-block">
