@@ -1,6 +1,3 @@
-const { default: next } = require("next");
-const withPlugins = require("next-compose-plugins");
-
 const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig = {

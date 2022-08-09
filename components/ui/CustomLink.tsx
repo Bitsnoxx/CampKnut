@@ -2,31 +2,30 @@ import clsx from "clsx";
 import Link from "next/link";
 
 type CustomLinkType = {
-    href: string;
-    children: string | JSX.Element | JSX.Element[];
-    type: "a" | "Link";
-    className?: string;
-    lightColor?: string | null;
-    darkColor?: string | null;
-    hover?: string | null;
+  href: string;
+  children: string | JSX.Element | JSX.Element[];
+  type: "a" | "Link";
+  className?: string;
+  lightColor?: string | null;
+  darkColor?: string | null;
+  hover?: string | null;
 };
 
 const defaultStyle = {
-    lightColor: "text-knut-light-text",
-    darkColor: "dark:text-knut-dark-text",
-    hover: "hover:font-black",
+  lightColor: "text-knut-light-text",
+  darkColor: "dark:text-knut-dark-text",
+  hover: "hover:font-black",
 };
 
 export default function CustomLink({
-    children,
-    type,
-    href,
-    lightColor = defaultStyle.lightColor,
-    darkColor = defaultStyle.darkColor,
-    hover = defaultStyle.hover,
-    className,
+  children,
+  type,
+  href,
+  lightColor = defaultStyle.lightColor,
+  darkColor = defaultStyle.darkColor,
+  hover = defaultStyle.hover,
+  className,
 }: CustomLinkType) {
-
   if (type === "a") {
     return (
       <a
@@ -43,7 +42,9 @@ export default function CustomLink({
   if (type === "Link")
     return (
       <Link href={href}>
-        <a className={clsx(className, lightColor, darkColor, hover)}>{children}</a>
+        <a className={clsx(className, lightColor, darkColor, hover)}>
+          {children}
+        </a>
       </Link>
     );
 

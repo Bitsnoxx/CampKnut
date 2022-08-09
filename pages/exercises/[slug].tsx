@@ -1,15 +1,14 @@
-import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
-import Image from "next/image";
-import { getExercises, getOneExercise } from "utils/contentful";
-import CustomLink from "components/ui/CustomLink";
 import PageLayout from "components/layout/PageLayout";
+import CustomLink from "components/ui/CustomLink";
 import { placeHolderImage } from "content/links";
 import { IUIExercise } from "model/ui";
+import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
+import { getExercises, getOneExercise } from "utils/contentful";
 
 export default function ExercisePage({
   exerciseElement,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const { image, name, tags, youtubeLink } = exerciseElement;
+  const { name, tags, youtubeLink } = exerciseElement;
 
   /*   let embedLink = youtubeLink.split("/");
   console.log(embedLink[3]); */
@@ -18,10 +17,6 @@ export default function ExercisePage({
   const newUrl = new URL(youtubeLink);
   const videoId = newUrl.pathname.substring(1);
   const timestamp = newUrl.searchParams.get("t");
-
-  console.log(timestamp);
-
-  let id = "ZGpesmRXeB4";
 
   return (
     <PageLayout>

@@ -1,12 +1,12 @@
 import type { NextPage } from "next";
 import Image from "next/image";
-import { tips } from "content/text";
-import Link from "next/link";
-import Important from "components/ui/Important";
-import Participants from "components/mainPage/Participants";
-import Introduction from "components/mainPage/Introduction";
-import CustomLink from "components/ui/CustomLink";
+
 import PageLayout from "components/layout/PageLayout";
+import Introduction from "components/mainPage/Introduction";
+import Participants from "components/mainPage/Participants";
+import CustomLink from "components/ui/CustomLink";
+import Important from "components/ui/Important";
+import { tips } from "content/text";
 
 const Home: NextPage = () => {
   return (

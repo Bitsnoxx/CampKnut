@@ -57,7 +57,7 @@ export default function ContentPage({
                     className="relative inline-block aspect-video w-full cursor-pointer rounded-xl"
                     priority
                   />
-                  <span className="ml-2 mt-4 text-lg text-knut-light-header dark:text-knut-dark-header">
+                  <span className="mt-4 ml-2 text-lg text-knut-light-header dark:text-knut-dark-header">
                     {title}
                   </span>
                 </div>

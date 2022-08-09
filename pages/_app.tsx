@@ -5,7 +5,7 @@ import { ThemeProvider } from "next-themes";
 
 import { components } from "components/mdxStyling";
 
-function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
+function MyApp({ Component, pageProps: { ...pageProps } }: AppProps) {
   return (
     <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={true}>
       <MDXProvider components={components}>

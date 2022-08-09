@@ -1,11 +1,12 @@
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
-import Link from "next/link";
+import Router from "next/router";
+import React from "react";
+
 import { useTheme } from "next-themes";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { FiLoader } from "react-icons/fi";
-import Router from "next/router";
-import React from "react";
 import { supabase } from "utils/supabaseClient";
 const session = supabase.auth.session();
 

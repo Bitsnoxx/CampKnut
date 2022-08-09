@@ -111,7 +111,7 @@ export default function Vote() {
     return (
       <PageLayout>
         <article>
-          <h1 className="mb-4 mt-5 mr-4 text-center text-3xl font-bold text-knut-light-header dark:text-knut-dark-header">
+          <h1 className="mt-5 mb-4 mr-4 text-center text-3xl font-bold text-knut-light-header dark:text-knut-dark-header">
             {" "}
             You need to login to vote
           </h1>
@@ -126,7 +126,7 @@ export default function Vote() {
             ></Image>
           </section>
 
-          <div className="mb-4 mt-5 mr-4 text-center text-3xl font-bold">
+          <div className="mt-5 mb-4 mr-4 text-center text-3xl font-bold">
             <button
               onClick={() => signInTwitch()}
               className="rounded-xl bg-knut-other-twitch p-2.5 text-center text-2xl text-knut-dark-header"
@@ -142,7 +142,7 @@ export default function Vote() {
   return (
     <PageLayout>
       <article>
-        <h1 className="mb-4 mt-5 mr-4 text-center text-3xl font-black text-knut-light-header dark:text-knut-dark-header">
+        <h1 className="mt-5 mb-4 mr-4 text-center text-3xl font-black text-knut-light-header dark:text-knut-dark-header">
           Vote on your favourite streamer{" "}
           <span className="inline-flex items-center justify-center">
             {user?.user_metadata.nickname}
@@ -168,7 +168,7 @@ export default function Vote() {
             . You can change your vote below.
           </h2>
         )}
-        <div className="mb-4 mt-5 mr-4 text-center text-3xl font-bold">
+        <div className="mt-5 mb-4 mr-4 text-center text-3xl font-bold">
           <button
             onClick={() => signOutTwitch()}
             className="rounded-xl bg-knut-other-twitch p-2.5 text-center text-2xl text-knut-dark-header"
