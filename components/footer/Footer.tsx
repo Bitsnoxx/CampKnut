@@ -16,7 +16,7 @@ import CustomLink from "components/ui/CustomLink";
 export default function Footer() {
   const [counter, setCounter] = useState(0);
   return (
-    <footer className="text-center text-knut-light-text dark:text-knut-dark-text my-8">
+    <footer className="my-8 text-center text-knut-light-text dark:text-knut-dark-text">
       <Image
         width={128 + (counter > 5 ? counter * 3 : 0)}
         height={128 + (counter > 5 ? counter * 3 : 0)}
@@ -25,7 +25,7 @@ export default function Footer() {
         onClick={() => setCounter(counter + 1)}
       />
       <div className="w-full ">
-        <div className="flex flex-col items-center justify-center mt-4">
+        <div className="mt-4 flex flex-col items-center justify-center">
           <span className="text-xl font-bold">Camp Knut 2022</span>
           <p>
             <CustomLink
@@ -37,30 +37,30 @@ export default function Footer() {
               Contributors
             </CustomLink>
           </p>
-          <div className="flex flex-row justify-center items-center text-4xl gap-4 my-2">
+          <div className="my-2 flex flex-row items-center justify-center gap-4 text-4xl">
             <FooterIconLink platform="Twitch">
-              <FaTwitch className="hover:text-knut-other-twitch transition duration-300" />
+              <FaTwitch className="transition duration-300 hover:text-knut-other-twitch" />
             </FooterIconLink>
             <FooterIconLink platform="Reddit">
-              <FaReddit className="hover:text-knut-other-reddit transition duration-300" />
+              <FaReddit className="transition duration-300 hover:text-knut-other-reddit" />
             </FooterIconLink>
             <FooterIconLink platform="Youtube">
-              <FaYoutube className="hover:text-knut-other-youtube transition duration-300" />
+              <FaYoutube className="transition duration-300 hover:text-knut-other-youtube" />
             </FooterIconLink>
             <FooterIconLink platform="Twitter">
-              <FaTwitter className="hover:text-knut-other-twitter transition duration-300" />
+              <FaTwitter className="transition duration-300 hover:text-knut-other-twitter" />
             </FooterIconLink>
             <FooterIconLink platform="Instagram">
-              <FaInstagram className="hover:text-knut-other-instagram transition duration-300" />
+              <FaInstagram className="transition duration-300 hover:text-knut-other-instagram" />
             </FooterIconLink>
             <FooterIconLink platform="Merch">
-              <FaShoppingBag className="hover:text-knut-other-merch transition duration-300" />
+              <FaShoppingBag className="transition duration-300 hover:text-knut-other-merch" />
             </FooterIconLink>
           </div>
         </div>
       </div>
-      <span className="flex flex-row items-center gap-1 justify-center pb-0.5">
-        Made with <FaHeart className="hover:text-red-600 mx-0.5" /> on{" "}
+      <span className="flex flex-row items-center justify-center gap-1 pb-0.5">
+        Made with <FaHeart className="mx-0.5 hover:text-red-600" /> on{" "}
         <CustomLink
           href={"https://github.com/Bitsnoxx/CampKnut"}
           type={"a"}

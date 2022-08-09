@@ -50,13 +50,13 @@ export default function ExerciseListPage({
 
   return (
     <PageLayout widthClassName="max-w-none">
-      <div className="w-11/12 mx-auto">
+      <div className="mx-auto w-11/12">
         <h1 className="text-3xl font-bold">Exercises</h1>
         <div className="pb-6">
-          <div className="flex flex-row gap-4 items-center w-full max-w-2xl">
+          <div className="flex w-full max-w-2xl flex-row items-center gap-4">
             <div className="relative w-full">
               <input
-                className="placeholder-slate-400 dark:placeholder:-slate-500 px-4 py-[6px] w-full text-knut-light-text dark:text-knut-dark-text rounded-xl border-black border-2 mt-5"
+                className="mt-5 w-full rounded-xl border-2 border-black px-4 py-[6px] text-knut-light-text placeholder-slate-400 dark:text-knut-dark-text dark:placeholder-slate-500"
                 type={"text"}
                 value={searchTerm}
                 placeholder={"zinc exercise"}
@@ -66,8 +66,8 @@ export default function ExerciseListPage({
               />
               <button
                 className={clsx(
-                  "absolute top-1/2 right-0 transform -translate-x-1/2 -translate-y-1/2",
-                  "p-1 bg-gray-200 text-black dark:text-slate-600 dark:bg-knut-dark-text rounded-xl select-none mt-2.5"
+                  "absolute top-1/2 right-0 -translate-x-1/2 -translate-y-1/2 transform",
+                  "mt-2.5 select-none rounded-xl bg-gray-200 p-1 text-black dark:bg-knut-dark-text dark:text-slate-600"
                 )}
                 onClick={clearFilters}
                 aria-label="Clear filters"
@@ -80,7 +80,7 @@ export default function ExerciseListPage({
           <ScrollContainer
             hideScrollbars
             nativeMobileScroll
-            className="flex flex-row gap-4 cursor-grab md:order-2 pt-5"
+            className="flex cursor-grab flex-row gap-4 pt-5 md:order-2"
             horizontal
           >
             {searchTags
@@ -92,7 +92,7 @@ export default function ExerciseListPage({
                     e.active
                       ? "bg-sky-200 dark:bg-knut-dark-tag"
                       : "bg-gray-200 dark:bg-slate-600",
-                    "select-none dark:text-knut-dark-text text-knut-light-text rounded-xl py-1 px-3 cursor-pointer"
+                    "cursor-pointer select-none rounded-xl py-1 px-3 text-knut-light-text dark:text-knut-dark-text"
                   )}
                   onClick={() => {
                     setSearchTags([

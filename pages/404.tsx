@@ -6,7 +6,7 @@ export default function Custom404() {
   return (
     <PageLayout>
       <div className="flex flex-col items-center">
-        <div className="font-bold text-2xl">{errors.missingPage}</div>
+        <div className="text-2xl font-bold">{errors.missingPage}</div>
         <div className="my-2">
           <Image
             src={"/modCheck.webp"}

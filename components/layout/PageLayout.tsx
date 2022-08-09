@@ -13,9 +13,9 @@ export default function PageLayout({
   widthClassName = "max-w-5xl",
 }: PageLayoutProps) {
   return (
-    <div className="font-inter flex flex-col min-h-screen text-knut-light-text dark:text-knut-dark-text bg-knut-light-bg dark:bg-knut-dark-bg">
+    <div className="flex min-h-screen flex-col bg-knut-light-bg font-inter text-knut-light-text dark:bg-knut-dark-bg dark:text-knut-dark-text">
       <Header />
-      <main className={clsx("container flex-1 mx-auto p-4", widthClassName)}>
+      <main className={clsx("container mx-auto flex-1 p-4", widthClassName)}>
         {children}
       </main>
       <Footer />

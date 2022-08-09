@@ -8,7 +8,7 @@ const HallOfFame = () => {
   return (
     <>
       <PageLayout>
-        <h1 className="text-center text-3xl mb-4 font-bold">Contributors 🥇</h1>
+        <h1 className="mb-4 text-center text-3xl font-bold">Contributors 🥇</h1>
         <div className="flex justify-center">
           <div className="p-4">
             <table className="w-96">

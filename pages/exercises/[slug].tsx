@@ -26,32 +26,32 @@ export default function ExercisePage({
   return (
     <PageLayout>
       <div>
-        <h1 className="text-3xl font-bold dark:text-knut-dark-text light:text-knut-light-text">
+        <h1 className="text-3xl font-bold text-knut-light-text dark:text-knut-dark-text">
           {name}
         </h1>
-        <div className="flex flex-col md:flex-row gap-16 mt-5">
-          <div className="col-span-2 relative w-full aspect-w-16 aspect-h-9">
+        <div className="mt-5 flex flex-col gap-16 md:flex-row">
+          <div className="relative col-span-2 aspect-video w-full">
             <iframe
-              width="690"
-              height="390"
+              width="100%"
+              height="100%"
               src={`https://www.youtube.com/embed/${videoId}?start=${timestamp}`}
               title={name}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-              className="mt-10 mx-auto mb-5"
+              className="mx-auto mt-10 mb-5"
             ></iframe>
           </div>
         </div>
         <div>
-          <h2 className="text-2xl font-medium dark:text-knut-dark-header light:text-knut-light-header pb-4">
+          <h2 className="pb-4 text-2xl font-medium text-knut-light-header dark:text-knut-dark-header">
             Muscle groups:
           </h2>
-          <p className="light:text-knut-light-header dark:text-knut-dark-header hover:font-black">
+          <p className="text-knut-light-header hover:font-black dark:text-knut-dark-header">
             {tags?.map((e) => (
               <span
                 key={e}
-                className="dark:bg-knut-dark-tag bg-sky-200 p-1 rounded-xl px-3 mr-2"
+                className="mr-2 rounded-xl bg-sky-200 p-1 px-3 dark:bg-knut-dark-tag"
               >
                 <CustomLink href={`/exercises/${e}`} type="a">
                   {e}
@@ -59,13 +59,13 @@ export default function ExercisePage({
               </span>
             ))}
           </p>
-          <h2 className="text-2xl font-medium dark:text-knut-dark-header light:text-knut-light-header pt-5">
+          <h2 className="pt-5 text-2xl font-medium text-knut-light-header dark:text-knut-dark-header">
             Youtube link:
           </h2>
           <a
             target="_blank"
             rel="noreferrer"
-            className="light:text-knut-light-header dark:text-knut-dark-header hover:font-black"
+            className="text-knut-light-header hover:font-black dark:text-knut-dark-header"
             href={youtubeLink}
           >
             {youtubeLink}

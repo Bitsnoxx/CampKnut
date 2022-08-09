@@ -14,10 +14,10 @@ export default function WorkoutPage({
   return (
     <PageLayout>
       <article className=" w-full">
-        <h1 className="text-3xl mb-8 font-black light:text-knut-light-header dark:text-knut-dark-header text-center mt-2.5 pb-8">
+        <h1 className="mb-8 mt-2.5 pb-8 text-center text-3xl font-black text-knut-light-header dark:text-knut-dark-header">
           {title}
         </h1>
-        <div className="lg:prose-lg xl:prose-xl light:text-knut-light-header dark:text-knut-dark-header">
+        <div className="text-knut-light-header dark:text-knut-dark-header lg:prose-lg xl:prose-xl">
           {documentToReactComponents(text, renderOptions)}
         </div>
       </article>

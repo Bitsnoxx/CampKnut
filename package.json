@@ -40,6 +40,7 @@
     "clsx": "^1.2.1",
     "eslint": "8.21.0",
     "eslint-config-next": "12.2.3",
+    "eslint-plugin-tailwindcss": "^3.6.0",
     "next-purgecss": "^3.1.2",
     "postcss": "^8.4.14",
     "tailwindcss": "^3.1.7",

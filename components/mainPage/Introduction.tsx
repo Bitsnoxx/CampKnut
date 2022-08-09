@@ -3,7 +3,7 @@ import { introduction } from "content/text";
 export default function Introduction() {
   return (
     <>
-      <h1 className="text-3xl font-bold text-center my-16 text-knut-light-header dark:text-knut-dark-header">
+      <h1 className="my-16 text-center text-3xl font-bold text-knut-light-header dark:text-knut-dark-header">
         Camp Knut
       </h1>
       <div className="my-5">
