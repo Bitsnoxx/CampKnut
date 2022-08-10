@@ -140,21 +140,20 @@ export default function Vote() {
   return (
     <PageLayout>
       <article>
-        <h2 className="text-3xl mt-5 mb-4 mr-4 text-center font-black text-knut-light-header dark:text-knut-dark-header">
-          Vote on your favourite streamer{' '}
-          <span className="inline-flex items-center justify-center">
-            {user?.user_metadata.nickname}
+        <h1 className="text-3xl mt-5 mb-4 mr-4 text-center font-black text-knut-light-header dark:text-knut-dark-header">
+          Who do you think will perform the best, {user?.user_metadata.nickname}
+          <h2 className="inline-flex items-center justify-center">
             <Image
               src={user?.user_metadata.picture}
               alt="Camp Knut"
-              width={25}
-              height={25}
+              width={64}
+              height={64}
               priority={true}
               decoding="async"
-              className="inline-block aspect-auto pl-3"
+              className="inline-block aspect-auto"
             />
-          </span>
-        </h2>
+          </h2>
+        </h1>
         {hasVoted && (
           <h2 className="text-center">
             You have voted for{' '}
@@ -191,7 +190,7 @@ export default function Vote() {
                     ['text-white dark:text-black']: selected,
                   })}
                 >
-                  {name}
+                  <h2>{name}</h2>
                 </h3>
                 <section className="container mx-auto flex justify-center">
                   <Image
