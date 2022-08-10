@@ -51,6 +51,20 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/content">
+                    <a className="flex cursor-pointer items-center py-4 font-bold uppercase leading-snug hover:opacity-75">
+                      Content
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/exercises">
+                    <a className="text-sm flex cursor-pointer items-center py-4 font-bold uppercase leading-snug hover:opacity-75">
+                      Exercises
+                    </a>
+                  </Link>
+                </li>
+                <li>
                   <Link href="/workout">
                     <a className="text-sm flex cursor-pointer items-center py-4 font-bold uppercase leading-snug hover:opacity-75">
                       Workout
@@ -65,23 +79,19 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/exercises">
-                    <a className="text-sm flex cursor-pointer items-center py-4 font-bold uppercase leading-snug hover:opacity-75">
-                      Exercises
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <a href="https://store.streamelements.com/knut" target="_blank" rel="noreferrer">
-                    <span className="text-sm flex cursor-pointer items-center py-4 font-bold uppercase leading-snug hover:opacity-75">
-                      Merch
-                    </span>
+                  <a
+                    href="https://store.streamelements.com/knut"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex cursor-pointer items-center py-4 font-bold uppercase leading-snug hover:opacity-75"
+                  >
+                    Merch
                   </a>
                 </li>
                 <li>
                   {isMounted && (
                     <button
-                      className="text-sm flex cursor-pointer py-4 font-black uppercase leading-snug text-knut-light-header hover:opacity-75 dark:text-knut-dark-header"
+                      className="text-sm flex cursor-pointer py-[1.15625rem] font-black uppercase leading-snug text-knut-light-header hover:opacity-75 dark:text-knut-dark-header"
                       onClick={() => {
                         setTheme(theme === 'light' ? 'dark' : 'light');
                       }}

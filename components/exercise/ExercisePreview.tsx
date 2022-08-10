@@ -22,8 +22,8 @@ export default function ExercisePreview({ image, name, slug, tags }: IUIExercise
               loading="lazy"
             />
           </div>
-          <h1 className="text-xl pl-2 font-bold">{name}</h1>
-          <div className="mt-auto py-2">
+          <h3 className="text-xl pl-2 font-bold">{name}</h3>
+          <div className="mt-auto py-2 ">
             {tags?.map((t) => (
               <ExerciseTag key={t} className="mx-1 ml-2 inline-block">
                 {t}

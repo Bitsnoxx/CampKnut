@@ -28,7 +28,7 @@ export default function Footer() {
       />
       <div className="w-full ">
         <div className="mt-4 flex flex-col items-center justify-center">
-          <span className="text-xl font-bold">Camp Knut 2022</span>
+          <span>Camp Knut 2022</span>
           <p>
             <CustomLink
               href="/contributors"
@@ -41,22 +41,40 @@ export default function Footer() {
           </p>
           <div className="text-4xl my-2 flex flex-row items-center justify-center gap-4">
             <FooterIconLink platform="Twitch">
-              <FaTwitch className="transition duration-300 hover:text-knut-other-twitch" />
+              <FaTwitch
+                size={26}
+                className="transition duration-300 hover:text-knut-other-twitch"
+              />
             </FooterIconLink>
             <FooterIconLink platform="Reddit">
-              <FaReddit className="transition duration-300 hover:text-knut-other-reddit" />
+              <FaReddit
+                size={26}
+                className="transition duration-300 hover:text-knut-other-reddit"
+              />
             </FooterIconLink>
             <FooterIconLink platform="Youtube">
-              <FaYoutube className="transition duration-300 hover:text-knut-other-youtube" />
+              <FaYoutube
+                size={26}
+                className="transition duration-300 hover:text-knut-other-youtube"
+              />
             </FooterIconLink>
             <FooterIconLink platform="Twitter">
-              <FaTwitter className="transition duration-300 hover:text-knut-other-twitter" />
+              <FaTwitter
+                size={26}
+                className="transition duration-300 hover:text-knut-other-twitter"
+              />
             </FooterIconLink>
             <FooterIconLink platform="Instagram">
-              <FaInstagram className="transition duration-300 hover:text-knut-other-instagram" />
+              <FaInstagram
+                size={26}
+                className="transition duration-300 hover:text-knut-other-instagram"
+              />
             </FooterIconLink>
             <FooterIconLink platform="Merch">
-              <FaShoppingBag className="transition duration-300 hover:text-knut-other-merch" />
+              <FaShoppingBag
+                size={26}
+                className="transition duration-300 hover:text-knut-other-merch"
+              />
             </FooterIconLink>
           </div>
         </div>

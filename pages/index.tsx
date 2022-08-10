@@ -73,9 +73,9 @@ const Home = ({ twitch }: HomeProps) => {
 
           <div className="flex">
             <div className="w-1/2">
-              <h1 className="text-2xl mt-4 mb-2 font-black text-knut-light-header dark:text-knut-dark-header">
+              <h2 className="text-2xl mt-4 font-black text-knut-light-header dark:text-knut-dark-header">
                 🥩 Meal Plans
-              </h1>
+              </h2>
               <p>
                 <CustomLink
                   href={
@@ -111,9 +111,9 @@ const Home = ({ twitch }: HomeProps) => {
             </div>
 
             <div className="w-1/2">
-              <h1 className="text-2xl mt-4 font-black text-knut-light-header dark:text-knut-dark-header">
+              <h2 className="text-2xl mt-4 font-black text-knut-light-header dark:text-knut-dark-header">
                 💖 Community
-              </h1>
+              </h2>
               <p>
                 <CustomLink
                   href={''}
@@ -163,9 +163,9 @@ const Home = ({ twitch }: HomeProps) => {
 
           <div className="flex">
             <div className="w-1/2">
-              <h1 className="text-2xl mt-4 mb-2 font-black text-knut-light-header dark:text-knut-dark-header">
+              <h2 className="text-2xl mt-4 mb-2 font-black text-knut-light-header dark:text-knut-dark-header">
                 📕 Plans
-              </h1>
+              </h2>
               <p>
                 <CustomLink
                   href={''}
@@ -208,9 +208,9 @@ const Home = ({ twitch }: HomeProps) => {
               </p>
             </div>
             <div className="w-1/2">
-              <h1 className="text-2xl mt-4 mb-2 font-black text-knut-light-header dark:text-knut-dark-header">
+              <h2 className="text-2xl mt-4 mb-2 font-black text-knut-light-header dark:text-knut-dark-header">
                 🛠️ Tools
-              </h1>
+              </h2>
               <p className="text-knut-light-header dark:text-knut-dark-header">
                 MyFitnessPal{' '}
                 <CustomLink
@@ -248,9 +248,9 @@ const Home = ({ twitch }: HomeProps) => {
 
           <div className="flex">
             <div className="w-1/2">
-              <h1 className="text-2xl mt-4 mb-2 font-black text-knut-light-header dark:text-knut-dark-header">
+              <h2 className="text-2xl mt-4 mb-2 font-black text-knut-light-header dark:text-knut-dark-header">
                 📈 Progress
-              </h1>
+              </h2>
               <p>
                 <CustomLink
                   href={''}
@@ -274,9 +274,9 @@ const Home = ({ twitch }: HomeProps) => {
               </p>
             </div>
             <div className="w-1/2">
-              <h1 className="text-2xl mt-4 mb-2 font-black text-knut-light-header dark:text-knut-dark-header">
+              <h2 className="text-2xl mt-4 mb-2 font-black text-knut-light-header dark:text-knut-dark-header">
                 📃 Articles
-              </h1>
+              </h2>
               <p>
                 <CustomLink
                   href={'https://physiqonomics.com/fat-loss/'}
@@ -291,9 +291,9 @@ const Home = ({ twitch }: HomeProps) => {
           </div>
 
           <div className="my-20 text-center">
-            <h3 className="text-xl mt-4 font-black text-knut-light-header dark:text-knut-dark-header">
+            <h2 className="text-xl mt-4 font-black text-knut-light-header dark:text-knut-dark-header">
               Want to help out?
-            </h3>
+            </h2>
             <p>
               <CustomLink
                 href={'https://github.com/Bitsnoxx/CampKnut/issues'}
@@ -315,7 +315,7 @@ const Home = ({ twitch }: HomeProps) => {
                 darkColor={'dark:text-knut-dark-header'}
                 lightColor={'text-knut-light-header'}
               >
-                Discord
+                discord
               </CustomLink>
             </div>
             <div className="text-center">
