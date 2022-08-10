@@ -1,4 +1,3 @@
-import type { NextPage } from 'next';
 import Image from 'next/image';
 
 import PageLayout from 'components/layout/PageLayout';
@@ -7,8 +6,45 @@ import Participants from 'components/mainPage/Participants';
 import CustomLink from 'components/ui/CustomLink';
 import Important from 'components/ui/Important';
 import { tips } from 'content/text';
+import { Streamer } from 'model/twitch';
 
-const Home: NextPage = () => {
+export async function getStaticProps() {
+  const oAuthResponse = await fetch(
+    `https://id.twitch.tv/oauth2/token?client_id=${process.env.NEXT_TWITCH_CLIENT_ID}&client_secret=${process.env.NEXT_TWITCH_CLIENT_SECRET}&grant_type=client_credentials`,
+    {
+      method: 'POST',
+    },
+  );
+
+  let oAuthJSON = await oAuthResponse.json();
+
+  let request = {
+    method: 'GET',
+    headers: {
+      Authorization: 'Bearer ' + oAuthJSON.access_token,
+      'Client-Id': process.env.NEXT_TWITCH_CLIENT_ID || '',
+    },
+  };
+
+  const url =
+    'https://api.twitch.tv/helix/streams?&user_login=knut&user_login=Malena&user_login=Asmongold&user_login=MitchJones&user_login=Malena&user_login=Jeanette&user_login=Streamers&user_login=Mizkif&user_login=Nmplol&user_login=Cyr&user_login=RichwCampbell&user_login=Tectone&user_login=Erobb221&user_login=EsfandTV&user_login=Lacari&user_login=Chefs&user_login=Exxzy';
+
+  const res = await fetch(url, request);
+  const data = await res.json();
+
+  return {
+    props: {
+      twitch: data.data,
+    },
+    revalidate: 600,
+  };
+}
+
+interface HomeProps {
+  twitch: Streamer[];
+}
+
+const Home = ({ twitch }: HomeProps) => {
   return (
     <PageLayout>
       <article>
@@ -25,7 +61,7 @@ const Home: NextPage = () => {
 
           <Introduction />
 
-          <Participants />
+          <Participants twitchData={twitch} />
 
           <Important>
             <p>💡 {tips.knowYourLimits}</p>

@@ -4,7 +4,7 @@ export default function Document() {
   const analyticsSecret = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
   return (
     <Html>
-      <Head>
+      <Head className="dark" style={{ colorScheme: 'dark' }}>
         <link rel="apple-touch-icon" sizes="180x180" href="/knut3head.webp"></link>
 
         <meta name="theme-color" content="#121212" />

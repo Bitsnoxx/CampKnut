@@ -6,7 +6,7 @@ module.exports = {
   darkMode: 'class',
   theme: {
     fontSize: {
-      smol: '.75rem',
+      smol: '.625rem',
     },
     extend: {
       colors: {
