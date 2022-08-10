@@ -32,6 +32,7 @@ specifiers:
   next: 12.2.3
   next-compose-plugins: ^2.2.1
   next-purgecss: ^3.1.2
+  next-themes: ^0.2.0
   postcss: ^8.4.16
   prettier: ^2.7.1
   prettier-plugin-tailwindcss: ^0.1.13
