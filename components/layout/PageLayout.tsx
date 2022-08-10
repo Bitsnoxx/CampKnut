@@ -16,7 +16,7 @@ export default function PageLayout({ children, widthClassName = 'max-w-5xl', ope
       <>
       <Head>
           <title> {openGraph?.title}</title>
-          <meta name="description" content={openGraph?.title} />
+          <meta name="description" content={openGraph?.description} />
           <meta property="og:title" content={openGraph?.title} />
           <meta property="og:type" content={openGraph?.type} />
           <meta property="og:url" content={openGraph?.url} />
