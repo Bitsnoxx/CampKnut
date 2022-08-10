@@ -23,6 +23,8 @@ export default function Header() {
     setMounted(true);
   }, []);
 
+  if (!isMounted) return null;
+
   Router.events.on('routeChangeStart', () => setActive(false));
 
   return (

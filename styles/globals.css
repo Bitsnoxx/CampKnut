@@ -4,6 +4,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
+:root {
+  --background: #121212;
+  --foreground: #121212;
+}
+
 h1 {
   font-size: 2rem;
 }
@@ -15,6 +20,7 @@ p {
 }
 a {
   font-size: 1.1rem;
+  font-weight: 400;
 }
 a:hover {
   text-decoration: underline;

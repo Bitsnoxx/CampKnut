@@ -114,15 +114,13 @@ export default function Vote() {
             You need to login to vote
           </h1>
 
-          <section className="container mx-auto flex justify-center">
-            <Image
-              src={`/HUHH.webp`}
-              className="mx-auto"
-              height={128}
-              width={128}
-              alt="HUHH"
-            ></Image>
-          </section>
+          <Image
+            src={`/HUHH.webp`}
+            className="mx-auto "
+            height={128}
+            width={128}
+            alt="HUHH"
+          ></Image>
 
           <div className="text-3xl mt-5 mb-4 mr-4 text-center font-bold">
             <button
@@ -142,7 +140,7 @@ export default function Vote() {
       <article>
         <h1 className="text-3xl mt-5 mb-4 mr-4 text-center font-black text-knut-light-header dark:text-knut-dark-header">
           Who do you think will perform the best, {user?.user_metadata.nickname}
-          <h2 className="inline-flex items-center justify-center">
+          <h2 className="ml-4 inline-flex items-center justify-center">
             <Image
               src={user?.user_metadata.picture}
               alt="Camp Knut"
