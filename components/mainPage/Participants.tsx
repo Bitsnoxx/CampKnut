@@ -34,7 +34,9 @@ export default function Participants({ twitchData }: { twitchData: Streamer[] })
     <div className="my-10 grid w-full grid-cols-2 gap-4 md:grid-cols-5">
       {categories.map((category) => (
         <div key={category.title}>
-          <h1 className="text-2xl mt-4 text-left font-black">{category.title}</h1>
+          <h2 className="text-2xl mt-4 text-left font-black text-knut-light-header dark:text-knut-dark-header">
+            {category.title}
+          </h2>
           <ul className="flex flex-col items-start text-left">
             {category?.data?.map((e) => (
               <li key={e.name} className="relative">

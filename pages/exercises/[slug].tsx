@@ -1,5 +1,4 @@
 import PageLayout from 'components/layout/PageLayout';
-import CustomLink from 'components/ui/CustomLink';
 import { placeHolderImage } from 'content/links';
 import { IUIExercise } from 'model/ui';
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next';
@@ -36,12 +35,10 @@ export default function ExercisePage({
           <h2 className="text-2xl pb-4 font-medium text-knut-light-header dark:text-knut-dark-header">
             Muscle groups:
           </h2>
-          <p className="text-knut-light-header hover:font-black dark:text-knut-dark-header">
+          <p className="text-knut-light-header dark:text-knut-dark-header">
             {tags?.map((e) => (
               <span key={e} className="mr-2 rounded-xl bg-sky-200 p-1 px-3 dark:bg-knut-dark-tag">
-                <CustomLink href={`/exercises/${e}`} type="a">
-                  {e}
-                </CustomLink>
+                {e}
               </span>
             ))}
           </p>

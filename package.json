@@ -18,6 +18,7 @@
     "@next/mdx": "^12.2.4",
     "@supabase/supabase-js": "^1.35.6",
     "contentful": "^9.1.33",
+    "cssnano": "^5.1.12",
     "eslint-plugin-tailwindcss": "^3.6.0",
     "gray-matter": "^4.0.3",
     "next": "12.2.3",
@@ -54,5 +55,10 @@
   },
   "resolutions": {
     "@types/react": "^17.0.38"
+  },
+  "pnpm": {
+    "overrides": {
+      "glob-parent@<5.1.2": ">=5.1.2"
+    }
   }
 }

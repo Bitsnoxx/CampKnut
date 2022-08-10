@@ -2,4 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+p {
+  font-size: 1.1rem;
+}
+a {
+  font-size: 1.1rem;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+header > ul > li > a {
+  font-size: 0.9rem;
+  hover: underline;
+}
+#__next > div > main > article > div > div:nth-child(10),
+#__next > div > main > article > div > div:nth-child(10) > a {
+  font-size: 1.1rem;
+}
+span {
+  font-size: 1.2rem;
+}
