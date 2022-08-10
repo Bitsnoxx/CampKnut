@@ -33,6 +33,7 @@ export default function ContentPage({ playlist }: { playlist: PlaylistItem[] }) 
             return (
               <iframe
                 key={id}
+                loading="lazy"
                 src={`https://www.youtube-nocookie.com/embed/${snippet.resourceId.videoId}`}
                 allowFullScreen
                 width="400"

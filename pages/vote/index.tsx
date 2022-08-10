@@ -140,7 +140,7 @@ export default function Vote() {
   return (
     <PageLayout>
       <article>
-        <h1 className="text-3xl mt-5 mb-4 mr-4 text-center font-black text-knut-light-header dark:text-knut-dark-header">
+        <h2 className="text-3xl mt-5 mb-4 mr-4 text-center font-black text-knut-light-header dark:text-knut-dark-header">
           Vote on your favourite streamer{' '}
           <span className="inline-flex items-center justify-center">
             {user?.user_metadata.nickname}
@@ -154,7 +154,7 @@ export default function Vote() {
               className="inline-block aspect-auto pl-3"
             />
           </span>
-        </h1>
+        </h2>
         {hasVoted && (
           <h2 className="text-center">
             You have voted for{' '}
@@ -164,7 +164,7 @@ export default function Vote() {
             . You can change your vote below.
           </h2>
         )}
-        <div className="text-3xl mt-5 mb-4 mr-4 text-center font-bold">
+        <div className="mt-5 mb-4 mr-4 text-center font-bold">
           <button
             onClick={() => signOutTwitch()}
             className="text-2xl rounded-xl bg-knut-other-twitch p-2.5 text-center text-knut-dark-header"
