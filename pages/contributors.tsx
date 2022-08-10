@@ -1,11 +1,20 @@
 import PageLayout from 'components/layout/PageLayout';
 import Important from 'components/ui/Important';
 import { contributors } from 'content/contributors';
+import {OpenGraph} from "../model/opengraph";
+import {seo} from "../content/text";
+import {baseUrl} from "../content/links";
 
-const HallOfFame = () => {
+const Contributors = () => {
+  let og:OpenGraph = {
+    site_name: seo.title,
+    title: "Contributors - " + seo.title,
+    description: "Contributors who made this website possible",
+    url: baseUrl + "/contributors",
+  }
   return (
     <>
-      <PageLayout>
+      <PageLayout openGraph={og}>
         <h1 className="text-3xl mb-4 text-center font-bold">Contributors 🥇</h1>
         <div className="flex justify-center">
           <div className="p-4">
@@ -44,4 +53,4 @@ const HallOfFame = () => {
   );
 };
 
-export default HallOfFame;
+export default Contributors;

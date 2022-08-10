@@ -6,8 +6,6 @@ import clsx from 'clsx';
 import { useTheme } from 'next-themes';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import { FiLoader } from 'react-icons/fi';
-import { supabase } from 'utils/supabaseClient';
-const session = supabase.auth.session();
 
 export default function Header() {
   const [active, setActive] = useState(false);

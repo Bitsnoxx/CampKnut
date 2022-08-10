@@ -1,8 +1,10 @@
 import PageLayout from 'components/layout/PageLayout';
-import { placeHolderImage } from 'content/links';
+import {baseUrl, placeHolderImage} from 'content/links';
 import { IUIExercise } from 'model/ui';
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next';
 import { getExercises, getOneExercise } from 'utils/contentful';
+import {OpenGraph} from "../../model/opengraph";
+import {seo} from "../../content/text";
 
 export default function ExercisePage({
   exerciseElement,
@@ -12,9 +14,17 @@ export default function ExercisePage({
   const newUrl = new URL(youtubeLink);
   const videoId = newUrl.pathname.substring(1);
   const timestamp = newUrl.searchParams.get('t');
+  let og:OpenGraph = {
+    site_name: seo.title,
+    title: name + " - "+  seo.title,
+    description: "An overview of exercises done during Camp Knut.",
+    type: "video.other",
+    url: baseUrl + "/exercises",
+    // cahnge  url to individual slug
+  }
 
   return (
-    <PageLayout>
+      <PageLayout openGraph={og}>
       <div>
         <h1 className="text-3xl font-bold text-knut-light-text dark:text-knut-dark-text">{name}</h1>
         <div className="mt-5 flex flex-col gap-16 md:flex-row">

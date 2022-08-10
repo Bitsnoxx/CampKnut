@@ -5,13 +5,24 @@ import Image from 'next/image';
 import PageLayout from 'components/layout/PageLayout';
 import { IWorkoutPost } from 'model/contentful';
 import { getWorkoutPosts } from 'utils/contentful';
+import {OpenGraph} from "../../model/opengraph";
+import {seo} from "../../content/text";
+import {baseUrl} from "../../content/links";
 
 export default function WorkoutListPage({
   workouts,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+
   const items = workouts.items as IWorkoutPost[];
+  let og:OpenGraph = {
+    site_name: seo.title,
+    title: "Workout - " + seo.title,
+    description: "Workout plan for Camp Knut",
+    url: baseUrl + "/workout",
+  }
+
   return (
-    <PageLayout widthClassName="max-w-none">
+      <PageLayout widthClassName="max-w-none" openGraph={og}>
       <div className="mx-auto w-11/12">
         <div className="pb-6">
           <h1 className=" pb-5 font-bold">Workout Posts</h1>
