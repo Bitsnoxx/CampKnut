@@ -44,9 +44,9 @@ export default function Participants({ twitchData }: { twitchData: Streamer[] })
                   {e.name}
                 </CustomLink>
                 {isLive(e?.twitchName) && (
-                  <span className="absolute -right-2.5 top-0.5 inline-block h-2 w-2 shrink-0">
-                    <span className="absolute inline-flex h-2 w-2 animate-ping rounded-full bg-red-600 opacity-75"></span>
-                    <span className="absolute inline-flex h-2 w-2 rounded-full bg-red-600"></span>
+                  <span className="absolute ml-1.5 inline-block h-3 w-3 shrink-0 pt-2">
+                    <span className="absolute inline-flex h-3 w-3 animate-ping rounded-full bg-red-600 opacity-75"></span>
+                    <span className="absolute inline-flex h-3 w-3 rounded-full bg-red-600"></span>
                   </span>
                 )}
               </li>
