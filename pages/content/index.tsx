@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
-import PageLayout from '../../components/layout/PageLayout';
-import { Playlist, PlaylistItem } from '../../model/youtube';
+import PageLayout from 'components/layout/PageLayout';
+import { Playlist, PlaylistItem } from 'model/youtube';
 
 export async function getStaticProps() {
   const res = await fetch(
@@ -22,20 +22,18 @@ export default function ContentPage({ playlist }: { playlist: PlaylistItem[] }) 
   return (
     <PageLayout widthClassName="container flex-1 mx-auto p-4 max-w-none">
       <div className="mx-auto w-11/12">
-        <h1 className="text-3xl pb-5 font-bold">Content</h1>
+        <h1 className="pb-4 font-bold">Content</h1>
         <div
-          className="grid auto-rows-max gap-4"
+          className="grid auto-rows-max gap-6"
           style={{
-            gridTemplateColumns: 'repeat(auto-fill,minmax(260px,1fr))',
+            gridTemplateColumns: 'repeat(auto-fill,minmax(320px,1fr))',
           }}
         >
           {playlist.reverse().map((item) => {
             const { id, snippet } = item;
-            const { title, thumbnails } = snippet;
-            const { medium } = thumbnails;
 
             return (
-              <a
+              <iframe
                 key={id}
                 href={`https://www.youtube.com/watch?v=KWLDgKV0pEs${snippet.resourceId.videoId}`}
                 target="_blank"
