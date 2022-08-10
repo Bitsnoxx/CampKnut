@@ -114,13 +114,15 @@ export default function Vote() {
             You need to login to vote
           </h1>
 
-          <Image
-            src={`/HUHH.webp`}
-            className="mx-auto "
-            height={128}
-            width={128}
-            alt="HUHH"
-          ></Image>
+          <section className="container mx-auto flex justify-center">
+            <Image
+              src={`/HUHH.webp`}
+              className="mx-auto"
+              height={128}
+              width={128}
+              alt="HUHH"
+            ></Image>
+          </section>
 
           <div className="text-3xl mt-5 mb-4 mr-4 text-center font-bold">
             <button
