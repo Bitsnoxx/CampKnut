@@ -36,7 +36,7 @@ export async function getStaticProps() {
     props: {
       twitch: data.data,
     },
-    revalidate: 600,
+    revalidate: 15,
   };
 }
 
