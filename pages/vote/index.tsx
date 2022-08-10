@@ -141,19 +141,18 @@ export default function Vote() {
     <PageLayout>
       <article>
         <h1 className="text-3xl mt-5 mb-4 mr-4 text-center font-black text-knut-light-header dark:text-knut-dark-header">
-          Vote on your favourite streamer{' '}
-          <span className="inline-flex items-center justify-center">
-            {user?.user_metadata.nickname}
+          Who do you think will perform the best, {user?.user_metadata.nickname}
+          <h2 className="ml-4 inline-flex items-center justify-center">
             <Image
               src={user?.user_metadata.picture}
               alt="Camp Knut"
-              width={25}
-              height={25}
+              width={64}
+              height={64}
               priority={true}
               decoding="async"
-              className="inline-block aspect-auto pl-3"
+              className="inline-block aspect-auto"
             />
-          </span>
+          </h2>
         </h1>
         {hasVoted && (
           <h2 className="text-center">
@@ -164,7 +163,7 @@ export default function Vote() {
             . You can change your vote below.
           </h2>
         )}
-        <div className="text-3xl mt-5 mb-4 mr-4 text-center font-bold">
+        <div className="mt-5 mb-4 mr-4 text-center font-bold">
           <button
             onClick={() => signOutTwitch()}
             className="text-2xl rounded-xl bg-knut-other-twitch p-2.5 text-center text-knut-dark-header"
@@ -191,7 +190,7 @@ export default function Vote() {
                     ['text-white dark:text-black']: selected,
                   })}
                 >
-                  {name}
+                  <h2>{name}</h2>
                 </h3>
                 <section className="container mx-auto flex justify-center">
                   <Image
