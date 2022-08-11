@@ -68,7 +68,7 @@ export default function Header() {
 
           </div>
           <div className={clsx(active ? 'flex' : 'hidden', 'grow lg:flex')}>
-            <ul className="flex list-none flex-col px-4 lg:mx-auto lg:flex-row lg:justify-center lg:gap-8">
+            <ul className="flex list-none flex-col px-4 lg:mx-auto lg:flex-row lg:justify-center lg:gap-8 lg:items-center">
               <li>
                 <Link href="/">
                   <a className="text-sm flex cursor-pointer items-center py-4 font-bold uppercase leading-snug hover:opacity-75 ">
@@ -117,23 +117,23 @@ export default function Header() {
               <li>
                 {isMounted && (
                   <button
-                    className="cursor-pointer py-4 font-black uppercase leading-snug text-knut-light-header hover:opacity-75 dark:text-knut-dark-header lg:flex hidden"
+                    className="items-center cursor-pointer py-4 text-knut-light-header hover:opacity-75 dark:text-knut-dark-header lg:flex hidden"
                     onClick={() => {
                       setTheme(theme === 'light' ? 'dark' : 'light');
                     }}
                   >
                     {theme && theme === 'dark' ? (
-                      <FaSun size={24} title="Get flash-banged" />
+                      <FaSun size={20} title="Get flash-banged" />
                     ) : (
-                      <FaMoon size={24} title="Switch to gamer mode" />
+                      <FaMoon size={20} title="Switch to gamer mode" />
                     )}
                   </button>
                 )}
                 {!isMounted && (
                   <button
-                    className="cursor-pointer py-4 font-black uppercase leading-snug text-knut-light-header hover:opacity-75 dark:text-knut-dark-header lg:flex hidden"
+                    className="items-center cursor-pointer py-4 text-knut-light-header hover:opacity-75 dark:text-knut-dark-header lg:flex hidden"
                   >
-                    <FiLoader size={24} />
+                    <FiLoader size={20} />
                   </button>
                 )}
               </li>
