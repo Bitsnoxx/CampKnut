@@ -10,8 +10,8 @@ export interface OpenGraph {
 
 export interface OpenGraphImage {
     url: string,
-    type: string,
-    height: string,
-    width: string,
-    alt: string
+    type?: string,
+    height?: string,
+    width?: string,
+    alt?: string
 }
