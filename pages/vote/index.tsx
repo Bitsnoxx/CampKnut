@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { User } from '@supabase/supabase-js';
 import clsx from 'clsx';
 
-import { participants } from 'content/streamers';
+import { participants, StreamerInfoType } from 'content/streamers';
 import PageLayout from 'components/layout/PageLayout';
 import {
   supabase,
@@ -19,7 +19,7 @@ const streamers = participants.find((e) => e.category === 'streamers')?.members;
 export default function Vote() {
   const [isLoading, setIsLoading] = useState(true);
   const [user, setUser] = useState<User | null>(null);
-  const [vote, setVote] = useState<string>();
+  const [vote, setVote] = useState<string | null | undefined>(null);
   const [previousVote, setPreviousVote] = useState<string>();
   const [hasVoted, setHasVoted] = useState(false);
 
@@ -71,6 +71,7 @@ export default function Vote() {
 
     const { data: listener } = supabase.auth.onAuthStateChange(async (event, session) => {
       setUser(session?.user ?? null);
+      setVote(null);
     });
 
     return () => {
@@ -105,121 +106,133 @@ export default function Vote() {
     );
   }
 
-  if (!user) {
-    return (
-      <PageLayout>
-        <article>
-          <h1 className="text-3xl mt-5 mb-4 mr-4 text-center font-bold text-knut-light-header dark:text-knut-dark-header">
-            {' '}
-            You need to login to vote
-          </h1>
+  const Streamer = (streamer: StreamerInfoType) => {
+    const { twitchName, name } = streamer;
+    const selected = vote === twitchName;
 
-          <section className="container mx-auto flex justify-center">
-            <Image
-              src={`/HUHH.webp`}
-              className="mx-auto"
-              height={128}
-              width={128}
-              alt="HUHH"
-            ></Image>
-          </section>
+    const wrapperClassName = clsx('rounded-xl p-3 text-center transition duration-300', {
+      ['bg-knut-light-bg-info dark:bg-knut-dark-bg-info']: !selected,
+      ['bg-knut-dark-bg-info dark:bg-knut-light-bg-info']: selected,
+    });
 
-          <div className="text-3xl mt-5 mb-4 mr-4 text-center font-bold">
-            <button
-              onClick={() => signInTwitch()}
-              className="text-2xl rounded-xl bg-knut-other-twitch p-2.5 text-center text-knut-dark-header"
-            >
-              Sign in
-            </button>
-          </div>
-        </article>
-      </PageLayout>
+    const Text = () => (
+      <>
+        <h2
+          className={clsx('text-2xl pb-2 font-black', {
+            ['text-black dark:text-white']: !selected,
+            ['text-white dark:text-black']: selected,
+          })}
+        >
+          {name}
+        </h2>
+        <section className="container mx-auto flex justify-center">
+          <Image
+            src={`/participants/${twitchName}.webp`}
+            className="mx-auto rounded-md"
+            height={250}
+            width={250}
+            objectFit="cover"
+            alt={name}
+          />
+        </section>
+      </>
     );
-  }
+
+    if (!user) {
+      return (
+        <div className={wrapperClassName}>
+          <Text />
+        </div>
+      );
+    }
+
+    return (
+      <button type="button" onClick={() => setVote(twitchName)} className={wrapperClassName}>
+        <Text />
+      </button>
+    );
+  };
 
   return (
     <PageLayout>
       <article>
-        <h1 className="text-3xl mt-5 mb-4 mr-4 text-center font-black text-knut-light-header dark:text-knut-dark-header">
-          Who do you think will perform the best, {user?.user_metadata.nickname}
-          <h2 className="ml-4 inline-flex items-center justify-center">
-            <Image
-              src={user?.user_metadata.picture}
-              alt="Camp Knut"
-              width={64}
-              height={64}
-              priority={true}
-              decoding="async"
-              className="inline-block aspect-auto"
-            />
-          </h2>
-        </h1>
-        {hasVoted && (
-          <h2 className="text-center">
-            You have voted for{' '}
-            <strong>
-              <em>{streamers?.find((s) => s.twitchName === previousVote)?.name}</em>
-            </strong>
-            . You can change your vote below.
-          </h2>
-        )}
-        <div className="mt-5 mb-4 mr-4 text-center font-bold">
-          <button
-            onClick={() => signOutTwitch()}
-            className="text-2xl rounded-xl bg-knut-other-twitch p-2.5 text-center text-knut-dark-header"
-          >
-            Sign Out
-          </button>
-        </div>
-        <div className="grid grid-cols-1 gap-6 p-6 md:grid-cols-2 lg:grid-cols-3">
-          {streamers?.map(({ twitchName, name }) => {
-            const selected = vote === twitchName;
-            return (
+        {user ? (
+          <>
+            <h1 className="text-3xl mt-5 mb-4 mr-4 text-center font-black text-knut-light-header dark:text-knut-dark-header">
+              Who do you think will perform the best, {user?.user_metadata.nickname}
+              <span className="ml-4 inline-flex items-center justify-center">
+                <Image
+                  src={user?.user_metadata.picture}
+                  alt="Camp Knut"
+                  width={64}
+                  height={64}
+                  priority={true}
+                  decoding="async"
+                  className="inline-block aspect-auto"
+                />
+              </span>
+            </h1>
+            {hasVoted && (
+              <h2 className="text-center">
+                You have voted for{' '}
+                <strong>
+                  <em>{streamers?.find((s) => s.twitchName === previousVote)?.name}</em>
+                </strong>
+                . You can change your vote below.
+              </h2>
+            )}
+            <div className="mt-5 mb-4 mr-4 text-center font-bold">
               <button
-                type="button"
-                key={twitchName}
-                onClick={() => setVote(twitchName)}
-                className={clsx('rounded-xl p-3  transition duration-300', {
-                  ['bg-knut-light-bg-info dark:bg-knut-dark-bg-info']: !selected,
-                  ['bg-knut-dark-bg-info dark:bg-knut-light-bg-info']: selected,
-                })}
+                onClick={() => signOutTwitch()}
+                className="text-2xl rounded-xl bg-knut-other-twitch p-2.5 text-center text-knut-dark-header"
               >
-                <h3
-                  className={clsx('text-2xl pb-2 font-black', {
-                    ['text-black dark:text-white']: !selected,
-                    ['text-white dark:text-black']: selected,
-                  })}
-                >
-                  <h2>{name}</h2>
-                </h3>
-                <section className="container mx-auto flex justify-center">
-                  <Image
-                    src={`/participants/${twitchName}.webp`}
-                    className="mx-auto rounded-md"
-                    height={250}
-                    width={250}
-                    objectFit="cover"
-                    alt={name}
-                  />
-                </section>
+                Sign Out
               </button>
-            );
-          })}
+            </div>
+          </>
+        ) : (
+          <>
+            <h1 className="text-3xl mt-5 mb-4 mr-4 text-center font-bold text-knut-light-header dark:text-knut-dark-header">
+              {' '}
+              You need to login to vote
+            </h1>
+
+            <section className="container mx-auto flex justify-center">
+              <Image src={`/HUHH.webp`} className="mx-auto" height={128} width={128} alt="HUHH" />
+            </section>
+
+            <div className="text-3xl mt-5 mb-4 mr-4 text-center font-bold">
+              <button
+                onClick={() => signInTwitch()}
+                className="text-2xl rounded-xl bg-knut-other-twitch p-2.5 text-center text-knut-dark-header"
+              >
+                Sign in
+              </button>
+            </div>
+          </>
+        )}
+
+        <div className="grid grid-cols-1 gap-6 p-6 md:grid-cols-2 lg:grid-cols-3">
+          {streamers?.map((props) => (
+            <Streamer key={props.name} {...props} />
+          ))}
         </div>
 
-        <div className="flex justify-center">
-          <button
-            type="button"
-            onClick={submitVote}
-            className={clsx(' rounded py-3 px-6 font-bold', {
-              'cursor-not-allowed bg-gray-300 text-gray-500': !!!vote,
-              'bg-knut-dark-tag text-white': !!vote,
-            })}
-            disabled={!!!vote}
-          >
-            Vote
-          </button>
-        </div>
+        {user && (
+          <div className="flex justify-center">
+            <button
+              type="button"
+              onClick={submitVote}
+              className={clsx(' rounded py-3 px-6 font-bold', {
+                'cursor-not-allowed bg-gray-300 text-gray-500': !!!vote,
+                'bg-knut-dark-tag text-white': !!vote,
+              })}
+              disabled={!!!vote}
+            >
+              Vote
+            </button>
+          </div>
+        )}
       </article>
     </PageLayout>
   );
