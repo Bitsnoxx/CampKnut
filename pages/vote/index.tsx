@@ -82,23 +82,16 @@ export default function Vote() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const og_logged_in:OpenGraph = {
+  const og:OpenGraph = {
     site_name: seo.title,
     title: "Vote - " + seo.title,
     description: "Vote for the streamer you think has performed the best at Camp Knut",
     url: baseUrl + "/vote",
   }
 
-  const og:OpenGraph = {
-    site_name: seo.title,
-    title: "Vote - " + seo.title,
-    description: "You need to login to vote for the streamer you think has performed the best at Camp Knut!",
-    url: baseUrl + "/vote",
-  }
-
   if (isLoading) {
     return (
-      <PageLayout>
+      <PageLayout openGraph={og}>
         <div role="status" className="mx-auto h-14 w-14">
           <svg
             aria-hidden="true"
@@ -155,7 +148,7 @@ export default function Vote() {
   }
 
   return (
-    <PageLayout openGraph={og_logged_in}>
+    <PageLayout openGraph={og}>
       <article>
         <h1 className="text-3xl mt-5 mb-4 mr-4 text-center font-black text-knut-light-header dark:text-knut-dark-header">
           Who do you think will perform the best, {user?.user_metadata.nickname}

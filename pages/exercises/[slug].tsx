@@ -14,13 +14,14 @@ export default function ExercisePage({
   const newUrl = new URL(youtubeLink);
   const videoId = newUrl.pathname.substring(1);
   const timestamp = newUrl.searchParams.get('t');
+
   const og:OpenGraph = {
     site_name: seo.title,
     title: name + " - "+  seo.title,
     description: "An overview of exercises done during Camp Knut.",
     type: "video.other",
     url: baseUrl + "/exercises",
-    // cahnge  url to individual slug
+    // TODO: change url to individual slug
   }
 
   return (

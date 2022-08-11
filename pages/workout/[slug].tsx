@@ -15,7 +15,7 @@ export default function WorkoutPage({ post: { text, title } }: { post: IWorkoutP
     title:  title + " - " + seo.title,
     description: "Workout",
     url: baseUrl + "/workout",
-    // cahnge  url to individual slug
+    // TODO: change  url to individual slug
   }
 
   return (
