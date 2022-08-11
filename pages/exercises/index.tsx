@@ -7,10 +7,10 @@ import { getExercises } from 'utils/contentful';
 import slugify from 'utils/slugify';
 import ScrollContainer from 'react-indiana-drag-scroll';
 import { IUIExercise } from 'model/ui';
-import {baseUrl, placeHolderImage} from 'content/links';
+import { baseUrl, placeHolderImage } from 'content/links';
 import { CgClose } from 'react-icons/cg';
-import {OpenGraph} from "model/opengraph";
-import {seo} from "content/text";
+import { OpenGraph } from 'model/opengraph';
+import { seo } from 'content/text';
 
 export default function ExerciseListPage({
   exercises,
@@ -45,12 +45,13 @@ export default function ExerciseListPage({
     setSearchTags(searchTags.map((x) => ({ ...x, active: false })));
     setSearchTerm('');
   };
-  const og:OpenGraph = {
+
+  const og: OpenGraph = {
     site_name: seo.title,
-    title: "Exercises - " + seo.title,
-    description: "An overview of exercises done during Camp Knut.",
-    url: baseUrl + "/exercises",
-  }
+    title: 'Exercises - ' + seo.title,
+    description: 'An overview of exercises done during Camp Knut.',
+    url: baseUrl + '/exercises',
+  };
 
   return (
     <PageLayout widthClassName="max-w-none" openGraph={og}>

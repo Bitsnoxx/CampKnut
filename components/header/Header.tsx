@@ -43,7 +43,7 @@ export default function Header() {
               </button>
             </div>
             <div className={clsx(active ? 'flex' : 'hidden', 'grow lg:flex')}>
-              <ul className="flex list-none flex-col px-4 lg:mx-auto lg:flex-row lg:justify-center lg:gap-8">
+              <ul className="flex list-none flex-col items-center px-4 lg:mx-auto lg:flex-row lg:justify-center lg:gap-8">
                 <li>
                   <Link href="/">
                     <a className="text-sm flex cursor-pointer items-center py-4 font-bold uppercase leading-snug hover:opacity-75">
@@ -92,7 +92,7 @@ export default function Header() {
                 <li>
                   {isMounted && (
                     <button
-                      className="text-sm flex cursor-pointer py-[1.15625rem] font-black uppercase leading-snug text-knut-light-header hover:opacity-75 dark:text-knut-dark-header"
+                      className="text-sm flex cursor-pointer font-black uppercase leading-snug text-knut-light-header hover:opacity-75 dark:text-knut-dark-header"
                       onClick={() => {
                         setTheme(theme === 'light' ? 'dark' : 'light');
                       }}

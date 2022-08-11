@@ -5,10 +5,10 @@ import Introduction from 'components/mainPage/Introduction';
 import Participants from 'components/mainPage/Participants';
 import CustomLink from 'components/ui/CustomLink';
 import Important from 'components/ui/Important';
-import {seo, tips} from 'content/text';
+import { seo, tips } from 'content/text';
 import { Streamer } from 'model/twitch';
-import {OpenGraph, OpenGraphImage} from "../model/opengraph";
-import {baseUrl} from "content/links";
+import { OpenGraph, OpenGraphImage } from '../model/opengraph';
+import { baseUrl } from 'content/links';
 
 export async function getStaticProps() {
   const oAuthResponse = await fetch(
@@ -47,21 +47,22 @@ interface HomeProps {
 }
 
 const Home = ({ twitch }: HomeProps) => {
+  const og_image: OpenGraphImage = {
+    height: '630',
+    type: 'image',
+    url: '/CampKnut.webp',
+    width: '1200',
+    alt: 'A surely not photoshoped/edited phot of Knut himself',
+  };
 
-  let og_Image:OpenGraphImage = {
-    type: "image",
-    url: "public/knut3head.webp",
-  }
-
-  const og:OpenGraph = {
+  const og: OpenGraph = {
     site_name: seo.title,
     title: seo.title,
-    locale: "en_GB",
-    image: og_Image,
+    locale: 'en_GB',
     description: seo.description,
-    type: "website",
+    type: 'website',
     url: baseUrl,
-  }
+  };
 
   return (
     <PageLayout openGraph={og}>
