@@ -4,7 +4,7 @@ import {OpenGraph} from "../model/opengraph";
 import {seo} from "../content/text";
 
 export default function SocialsPage() {
-    let og:OpenGraph = {
+    const og:OpenGraph = {
         site_name: seo.title,
         title: "Socials - " + seo.title,
         description: "Knut's socials links",
