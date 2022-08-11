@@ -5,10 +5,10 @@ import Introduction from 'components/mainPage/Introduction';
 import Participants from 'components/mainPage/Participants';
 import CustomLink from 'components/ui/CustomLink';
 import Important from 'components/ui/Important';
-import { seo, tips } from 'content/text';
-import { Streamer } from 'model/twitch';
-import { OpenGraph, OpenGraphImage } from '../model/opengraph';
 import { baseUrl } from 'content/links';
+import { seo, tips } from 'content/text';
+import { HomeProps } from 'model/twitch';
+import { OpenGraph, OpenGraphImage } from '../model/opengraph';
 
 // Cake is a lie
 
@@ -42,10 +42,6 @@ export async function getStaticProps() {
     },
     revalidate: 60,
   };
-}
-
-interface HomeProps {
-  twitch: Streamer[];
 }
 
 const Home = ({ twitch }: HomeProps) => {
@@ -186,7 +182,7 @@ const Home = ({ twitch }: HomeProps) => {
               </h2>
               <p>
                 <CustomLink
-                  href={''}
+                  href={'/workout/workout-beginner'}
                   type={'Link'}
                   darkColor={'dark:text-knut-dark-header'}
                   lightColor={'text-knut-light-header'}
@@ -196,7 +192,7 @@ const Home = ({ twitch }: HomeProps) => {
               </p>
               <p>
                 <CustomLink
-                  href={''}
+                  href={'/workout/workout-plan-week-1'}
                   type={'Link'}
                   darkColor={'dark:text-knut-dark-header'}
                   lightColor={'text-knut-light-header'}
@@ -206,7 +202,7 @@ const Home = ({ twitch }: HomeProps) => {
               </p>
               <p>
                 <CustomLink
-                  href={''}
+                  href={'/workout/workout-plan-week-2'}
                   type={'Link'}
                   darkColor={'dark:text-knut-dark-header'}
                   lightColor={'text-knut-light-header'}
