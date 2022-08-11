@@ -61,6 +61,25 @@ export default function Header() {
                 </Link>
               </li>
               <li>
+                <Link href="/vote">
+                  <a className="text-sm flex cursor-pointer items-center py-4 font-bold uppercase leading-snug hover:opacity-75">
+                    Vote
+                  </a>
+                </Link>
+              </li>
+
+              <li>
+                <a
+                  href="https://store.streamelements.com/knut"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-sm flex cursor-pointer items-center py-4 font-bold uppercase leading-snug hover:opacity-75"
+                >
+                  Merch
+                </a>
+              </li>
+
+              <li>
                 <ThemeSwitch />
               </li>
             </ul>
