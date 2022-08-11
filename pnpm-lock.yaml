@@ -57,7 +57,6 @@ dependencies:
   eslint-plugin-tailwindcss: 3.6.0
   gray-matter: 4.0.3
   next: 12.2.3_biqbaboplfbrettd7655fr4n2y
-  next-sitemap: 3.1.17_6lynxinfr2uix4icggokqiwwie
   next-themes: 0.2.0_53oqlnqnxhbetdy4ljlkkvmoby
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
