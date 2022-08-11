@@ -1,9 +1,9 @@
 import PageLayout from 'components/layout/PageLayout';
 import Important from 'components/ui/Important';
 import { contributors } from 'content/contributors';
-import {OpenGraph} from "../model/opengraph";
-import {seo} from "../content/text";
-import {baseUrl} from "../content/links";
+import { OpenGraph } from "model/opengraph";
+import { SEO } from "content/text";
+import { baseUrl } from "content/links";
 
 const Contributors = () => {
   let og:OpenGraph = {
