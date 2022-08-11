@@ -29,8 +29,8 @@ export default function PageLayout({ children, widthClassName = 'max-w-5xl', ope
         <meta property="og:description" content={openGraph?.description} />
         <meta property="og:site_name" content={openGraph?.site_name} />
 
-        <meta name="twitter:card" content="summary"/>
-        <meta name="twitter:site" content={openGraph?.site_name}/>
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@Knutspild"/>
         <meta name="twitter:url" content={openGraph?.url}/>
         <meta name="twitter:title" content={openGraph?.title}/>
         <meta name="twitter:description" content={openGraph?.description}/>
