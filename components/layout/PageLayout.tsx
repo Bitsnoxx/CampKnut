@@ -28,6 +28,14 @@ export default function PageLayout({ children, widthClassName = 'max-w-5xl', ope
         <meta property="og:image:alt" content={openGraph?.image?.alt} />
         <meta property="og:description" content={openGraph?.description} />
         <meta property="og:site_name" content={openGraph?.site_name} />
+
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@Knutspild"/>
+        <meta name="twitter:url" content={openGraph?.url}/>
+        <meta name="twitter:title" content={openGraph?.title}/>
+        <meta name="twitter:description" content={openGraph?.description}/>
+        <meta name="twitter:image" content={openGraph?.image?.url}/>
+
       </Head>
       <div className="flex min-h-screen flex-col bg-knut-light-bg font-inter text-knut-light-text dark:bg-knut-dark-bg dark:text-knut-dark-text">
         <Header />

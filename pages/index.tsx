@@ -5,10 +5,12 @@ import Introduction from 'components/mainPage/Introduction';
 import Participants from 'components/mainPage/Participants';
 import CustomLink from 'components/ui/CustomLink';
 import Important from 'components/ui/Important';
-import { seo, tips } from 'content/text';
-import { Streamer } from 'model/twitch';
-import { OpenGraph, OpenGraphImage } from '../model/opengraph';
 import { baseUrl } from 'content/links';
+import { seo, tips } from 'content/text';
+import { HomeProps } from 'model/twitch';
+import { OpenGraph, OpenGraphImage } from '../model/opengraph';
+
+// Cake is a lie
 
 export async function getStaticProps() {
   const oAuthResponse = await fetch(
@@ -42,23 +44,16 @@ export async function getStaticProps() {
   };
 }
 
-interface HomeProps {
-  twitch: Streamer[];
-}
-
 const Home = ({ twitch }: HomeProps) => {
   const og_image: OpenGraphImage = {
-    height: '630',
-    type: 'image',
     url: '/CampKnut.webp',
-    width: '1200',
-    alt: 'A surely not photoshoped/edited phot of Knut himself',
   };
 
   const og: OpenGraph = {
     site_name: seo.title,
     title: seo.title,
     locale: 'en_GB',
+    image: og_image,
     description: seo.description,
     type: 'website',
     url: baseUrl,
@@ -187,7 +182,7 @@ const Home = ({ twitch }: HomeProps) => {
               </h2>
               <p>
                 <CustomLink
-                  href={''}
+                  href={'/workout/workout-beginner'}
                   type={'Link'}
                   darkColor={'dark:text-knut-dark-header'}
                   lightColor={'text-knut-light-header'}
@@ -197,7 +192,7 @@ const Home = ({ twitch }: HomeProps) => {
               </p>
               <p>
                 <CustomLink
-                  href={''}
+                  href={'/workout/workout-plan-week-1'}
                   type={'Link'}
                   darkColor={'dark:text-knut-dark-header'}
                   lightColor={'text-knut-light-header'}
@@ -207,7 +202,7 @@ const Home = ({ twitch }: HomeProps) => {
               </p>
               <p>
                 <CustomLink
-                  href={''}
+                  href={'/workout/workout-plan-week-2'}
                   type={'Link'}
                   darkColor={'dark:text-knut-dark-header'}
                   lightColor={'text-knut-light-header'}

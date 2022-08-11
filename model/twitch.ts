@@ -20,4 +20,8 @@ export interface Streamer {
   is_mature: boolean;
 }
 
+export interface HomeProps {
+  twitch: Streamer[];
+}
+
 export interface Pagination {}
