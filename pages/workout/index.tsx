@@ -14,7 +14,7 @@ export default function WorkoutListPage({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
 
   const items = workouts.items as IWorkoutPost[];
-  let og:OpenGraph = {
+  const og:OpenGraph = {
     site_name: seo.title,
     title: "Workout - " + seo.title,
     description: "Workout plan for Camp Knut",
