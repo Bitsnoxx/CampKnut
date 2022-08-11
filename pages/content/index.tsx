@@ -1,8 +1,8 @@
 import PageLayout from 'components/layout/PageLayout';
 import { Playlist, PlaylistItem } from 'model/youtube';
-import {OpenGraph} from "../../model/opengraph";
-import {seo} from "../../content/text";
-import {baseUrl} from "../../content/links";
+import { OpenGraph } from "model/opengraph";
+import { SEO } from "content/text";
+import { baseUrl } from "content/links";
 
 export async function getStaticProps() {
   const res = await fetch(
