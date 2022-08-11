@@ -2,7 +2,7 @@ import clsx from 'clsx';
 
 import Footer from 'components/footer/Footer';
 import Header from 'components/header/Header';
-import {OpenGraph} from "../../model/opengraph";
+import {OpenGraph} from "model/opengraph";
 import Head from "next/head";
 
 type PageLayoutProps = {
