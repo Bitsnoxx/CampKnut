@@ -50,17 +50,14 @@ interface HomeProps {
 
 const Home = ({ twitch }: HomeProps) => {
   const og_image: OpenGraphImage = {
-    height: '630',
-    type: 'image',
-    url: '/CampKnut.webp',
-    width: '1200',
-    alt: 'A surely not photoshoped/edited phot of Knut himself',
+    url: 'public/CampKnut.webp',
   };
 
   const og: OpenGraph = {
     site_name: seo.title,
     title: seo.title,
     locale: 'en_GB',
+    image: og_image,
     description: seo.description,
     type: 'website',
     url: baseUrl,
