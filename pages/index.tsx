@@ -130,7 +130,7 @@ const Home = ({ twitch }: HomeProps) => {
               </h2>
               <p>
                 <CustomLink
-                  href={''}
+                  href={'/workout/camp-knut-amazon-supplements-by-wakewilder'}
                   type={'Link'}
                   darkColor={'dark:text-knut-dark-header'}
                   lightColor={'text-knut-light-header'}
@@ -144,7 +144,7 @@ const Home = ({ twitch }: HomeProps) => {
 
               <p>
                 <CustomLink
-                  href={''}
+                  href={'/workout/stream-workout-log-maintained-by-drstone'}
                   type={'Link'}
                   darkColor={'dark:text-knut-dark-header'}
                   lightColor={'text-knut-light-header'}
@@ -278,7 +278,7 @@ const Home = ({ twitch }: HomeProps) => {
 
               <p>
                 <CustomLink
-                  href={''}
+                  href={'/workout/weekly-results'}
                   type={'Link'}
                   darkColor={'dark:text-knut-dark-header'}
                   lightColor={'text-knut-light-header'}
