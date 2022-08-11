@@ -3,8 +3,8 @@ import {baseUrl, placeHolderImage} from 'content/links';
 import { IUIExercise } from 'model/ui';
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next';
 import { getExercises, getOneExercise } from 'utils/contentful';
-import {OpenGraph} from "../../model/opengraph";
-import {seo} from "../../content/text";
+import { OpenGraph } from "model/opengraph";
+import { seo } from "content/text";
 
 export default function ExercisePage({
   exerciseElement,
