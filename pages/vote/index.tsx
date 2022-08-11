@@ -89,7 +89,7 @@ export default function Vote() {
     url: baseUrl + "/vote",
   }
 
-  let og:OpenGraph = {
+  const og:OpenGraph = {
     site_name: seo.title,
     title: "Vote - " + seo.title,
     description: "You need to login to vote for the streamer you think has performed the best at Camp Knut!",
