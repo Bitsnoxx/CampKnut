@@ -13,6 +13,9 @@ import {
   insertVoteForUser,
   getUsersVote,
 } from 'utils/supabaseClient';
+import {OpenGraph} from "model/opengraph";
+import {seo} from "content/text";
+import {baseUrl} from "content/links";
 
 const streamers = participants.find((e) => e.category === 'streamers')?.members;
 
@@ -79,6 +82,20 @@ export default function Vote() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const og_logged_in:OpenGraph = {
+    site_name: seo.title,
+    title: "Vote - " + seo.title,
+    description: "Vote for the streamer you think has performed the best at Camp Knut",
+    url: baseUrl + "/vote",
+  }
+
+  const og:OpenGraph = {
+    site_name: seo.title,
+    title: "Vote - " + seo.title,
+    description: "You need to login to vote for the streamer you think has performed the best at Camp Knut!",
+    url: baseUrl + "/vote",
+  }
+
   if (isLoading) {
     return (
       <PageLayout>
@@ -107,7 +124,7 @@ export default function Vote() {
 
   if (!user) {
     return (
-      <PageLayout>
+      <PageLayout openGraph={og}>
         <article>
           <h1 className="text-3xl mt-5 mb-4 mr-4 text-center font-bold text-knut-light-header dark:text-knut-dark-header">
             {' '}
@@ -138,7 +155,7 @@ export default function Vote() {
   }
 
   return (
-    <PageLayout>
+    <PageLayout openGraph={og_logged_in}>
       <article>
         <h1 className="text-3xl mt-5 mb-4 mr-4 text-center font-black text-knut-light-header dark:text-knut-dark-header">
           Who do you think will perform the best, {user?.user_metadata.nickname}

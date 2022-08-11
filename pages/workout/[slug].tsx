@@ -5,10 +5,21 @@ import PageLayout from 'components/layout/PageLayout';
 import renderOptions from 'components/richTextStyling';
 import { IWorkoutPostFields } from 'model/contentful';
 import { getOneWorkoutPost, getWorkoutPosts } from 'utils/contentful';
+import {OpenGraph} from "model/opengraph";
+import {seo} from "content/text";
+import {baseUrl} from "content/links";
 
 export default function WorkoutPage({ post: { text, title } }: { post: IWorkoutPostFields }) {
+  const og:OpenGraph = {
+    site_name: seo.title,
+    title:  title + " - " + seo.title,
+    description: "Workout",
+    url: baseUrl + "/workout",
+    // cahnge  url to individual slug
+  }
+
   return (
-    <PageLayout>
+    <PageLayout openGraph={og}>
       <article className=" w-full">
         <h1 className="text-3xl mb-8 mt-2.5 pb-8 text-center font-black text-knut-light-header dark:text-knut-dark-header">
           {title}

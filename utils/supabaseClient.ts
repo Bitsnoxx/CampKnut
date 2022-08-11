@@ -1,8 +1,6 @@
 import { createClient, User } from "@supabase/supabase-js";
+import {baseUrl} from "../content/links";
 
-const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
-  ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
-  : "http://localhost:3000";
 const VOTES_TABLE = "votes";
 
 export const supabase = createClient(
