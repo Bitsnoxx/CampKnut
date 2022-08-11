@@ -22,7 +22,7 @@ export async function getStaticProps() {
 }
 
 export default function ContentPage({ playlist }: { playlist: PlaylistItem[] }) {
-  let og:OpenGraph = {
+  const og:OpenGraph = {
     site_name: seo.title,
     title: "Content - " + seo.title,
     description: "Fun content and worth watching clips and videos from Camp Knut.",
@@ -31,7 +31,7 @@ export default function ContentPage({ playlist }: { playlist: PlaylistItem[] }) 
   }
 
   return (
-    <PageLayout widthClassName="container flex-1 mx-auto p-4 max-w-none">
+    <PageLayout widthClassName="container flex-1 mx-auto p-4 max-w-none" openGraph={og}>
       <div className="w-11/12 mx-auto">
         <h1 className="text-3xl font-bold pb-5">Content</h1>
         <div

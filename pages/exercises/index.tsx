@@ -45,7 +45,7 @@ export default function ExerciseListPage({
     setSearchTags(searchTags.map((x) => ({ ...x, active: false })));
     setSearchTerm('');
   };
-  let og:OpenGraph = {
+  const og:OpenGraph = {
     site_name: seo.title,
     title: "Exercises - " + seo.title,
     description: "An overview of exercises done during Camp Knut.",

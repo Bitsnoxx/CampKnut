@@ -22,7 +22,7 @@ export default function WorkoutListPage({
   }
 
   return (
-      <PageLayout widthClassName="max-w-none" openGraph={og}>
+    <PageLayout widthClassName="max-w-none" openGraph={og}>
       <div className="mx-auto w-11/12">
         <div className="pb-6">
           <h1 className=" pb-5 font-bold">Workout Posts</h1>

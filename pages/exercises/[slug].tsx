@@ -14,7 +14,7 @@ export default function ExercisePage({
   const newUrl = new URL(youtubeLink);
   const videoId = newUrl.pathname.substring(1);
   const timestamp = newUrl.searchParams.get('t');
-  let og:OpenGraph = {
+  const og:OpenGraph = {
     site_name: seo.title,
     title: name + " - "+  seo.title,
     description: "An overview of exercises done during Camp Knut.",

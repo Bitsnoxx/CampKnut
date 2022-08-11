@@ -49,17 +49,18 @@ interface HomeProps {
 const Home = ({ twitch }: HomeProps) => {
 
   let og_Image:OpenGraphImage = {
-    height: "300",
     type: "image",
-    url: "",
-    width: "",
-    alt: "A surely not photoshoped/edited phot of Knut himself"
+    url: "public/knut3head.webp",
+    width: "300",
+    height: "300",
+    alt: "A surely not photoshopped/edited photo of Knut himself"
   }
 
-  let og:OpenGraph = {
+  const og:OpenGraph = {
     site_name: seo.title,
     title: seo.title,
     locale: "en_GB",
+    image: og_Image,
     description: seo.description,
     type: "website",
     url: baseUrl,
