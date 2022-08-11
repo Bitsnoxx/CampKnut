@@ -82,7 +82,7 @@ export default function Vote() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  let og_logged_in:OpenGraph = {
+  const og_logged_in:OpenGraph = {
     site_name: seo.title,
     title: "Vote - " + seo.title,
     description: "Vote for the streamer you think has performed the best at Camp Knut",
