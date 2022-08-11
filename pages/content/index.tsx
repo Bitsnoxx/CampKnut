@@ -2,6 +2,9 @@ import Image from 'next/image';
 
 import PageLayout from 'components/layout/PageLayout';
 import { Playlist, PlaylistItem } from 'model/youtube';
+import { OpenGraph } from "model/opengraph";
+import { seo } from "content/text";
+import { baseUrl } from "content/links";
 
 export async function getStaticProps() {
   const res = await fetch(
@@ -19,8 +22,16 @@ export async function getStaticProps() {
 }
 
 export default function ContentPage({ playlist }: { playlist: PlaylistItem[] }) {
+  const og:OpenGraph = {
+    site_name: seo.title,
+    title: "Content - " + seo.title,
+    description: "Fun content and worth watching clips and videos from Camp Knut.",
+    type: "video.other",
+    url: baseUrl + "/content",
+  }
+
   return (
-    <PageLayout widthClassName="container flex-1 mx-auto p-4 max-w-none">
+    <PageLayout widthClassName="container flex-1 mx-auto p-4 max-w-none" openGraph={og}>
       <div className="w-11/12 mx-auto">
         <h1 className="text-3xl font-bold pb-5">Content</h1>
         <div

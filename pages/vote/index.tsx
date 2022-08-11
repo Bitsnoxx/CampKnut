@@ -13,6 +13,9 @@ import {
   insertVoteForUser,
   getUsersVote,
 } from 'utils/supabaseClient';
+import { OpenGraph } from 'model/opengraph';
+import { seo } from 'content/text';
+import { baseUrl } from 'content/links';
 
 const streamers = participants.find((e) => e.category === 'streamers')?.members;
 
@@ -80,9 +83,16 @@ export default function Vote() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const og: OpenGraph = {
+    site_name: seo.title,
+    title: 'Vote - ' + seo.title,
+    description: 'Vote for the streamer you think has performed the best at Camp Knut',
+    url: baseUrl + '/vote',
+  };
+
   if (isLoading) {
     return (
-      <PageLayout>
+      <PageLayout openGraph={og}>
         <div role="status" className="mx-auto h-14 w-14">
           <svg
             aria-hidden="true"
@@ -154,7 +164,7 @@ export default function Vote() {
   };
 
   return (
-    <PageLayout>
+    <PageLayout openGraph={og}>
       <article>
         {user ? (
           <>
