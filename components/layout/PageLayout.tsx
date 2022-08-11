@@ -35,7 +35,6 @@ export default function PageLayout({ children, widthClassName = 'max-w-5xl', ope
         <meta name="twitter:title" content={openGraph?.title}/>
         <meta name="twitter:description" content={openGraph?.description}/>
         <meta name="twitter:image" content={openGraph?.image?.url}/>
-        <meta name="twitter:image:alt" content={openGraph?.image?.alt} />
 
       </Head>
       <div className="flex min-h-screen flex-col bg-knut-light-bg font-inter text-knut-light-text dark:bg-knut-dark-bg dark:text-knut-dark-text">
