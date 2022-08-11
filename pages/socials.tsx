@@ -1,15 +1,15 @@
 import PageLayout from 'components/layout/PageLayout';
 import {baseUrl, socials} from 'content/links';
-import {OpenGraph} from "../model/opengraph";
-import {seo} from "../content/text";
+import {OpenGraph} from "model/opengraph";
+import {seo} from "content/text";
 
 export default function SocialsPage() {
-    const og:OpenGraph = {
-        site_name: seo.title,
-        title: "Socials - " + seo.title,
-        description: "Knut's socials links",
-        url: baseUrl + "/socials",
-    }
+  const og:OpenGraph = {
+    site_name: seo.title,
+    title: "Socials - " + seo.title,
+    description: "Knut's socials links",
+    url: baseUrl + "/socials",
+  }
   return (
     <PageLayout openGraph={og}>
       <h1 className="text-2xl mb-4 font-bold">Knut&apos;s socials</h1>

@@ -13,9 +13,9 @@ import {
   insertVoteForUser,
   getUsersVote,
 } from 'utils/supabaseClient';
-import {OpenGraph} from "../../model/opengraph";
-import {seo} from "../../content/text";
-import {baseUrl} from "../../content/links";
+import {OpenGraph} from "model/opengraph";
+import {seo} from "content/text";
+import {baseUrl} from "content/links";
 
 const streamers = participants.find((e) => e.category === 'streamers')?.members;
 

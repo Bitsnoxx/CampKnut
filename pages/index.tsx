@@ -8,7 +8,7 @@ import Important from 'components/ui/Important';
 import {seo, tips} from 'content/text';
 import { Streamer } from 'model/twitch';
 import {OpenGraph, OpenGraphImage} from "../model/opengraph";
-import {baseUrl} from "../content/links";
+import {baseUrl} from "content/links";
 
 export async function getStaticProps() {
   const oAuthResponse = await fetch(

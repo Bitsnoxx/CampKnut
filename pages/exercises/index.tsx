@@ -9,8 +9,8 @@ import ScrollContainer from 'react-indiana-drag-scroll';
 import { IUIExercise } from 'model/ui';
 import {baseUrl, placeHolderImage} from 'content/links';
 import { CgClose } from 'react-icons/cg';
-import {OpenGraph} from "../../model/opengraph";
-import {seo} from "../../content/text";
+import {OpenGraph} from "model/opengraph";
+import {seo} from "content/text";
 
 export default function ExerciseListPage({
   exercises,

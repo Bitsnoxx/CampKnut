@@ -5,9 +5,9 @@ import PageLayout from 'components/layout/PageLayout';
 import renderOptions from 'components/richTextStyling';
 import { IWorkoutPostFields } from 'model/contentful';
 import { getOneWorkoutPost, getWorkoutPosts } from 'utils/contentful';
-import {OpenGraph} from "../../model/opengraph";
-import {seo} from "../../content/text";
-import {baseUrl} from "../../content/links";
+import {OpenGraph} from "model/opengraph";
+import {seo} from "content/text";
+import {baseUrl} from "content/links";
 
 export default function WorkoutPage({ post: { text, title } }: { post: IWorkoutPostFields }) {
   const og:OpenGraph = {

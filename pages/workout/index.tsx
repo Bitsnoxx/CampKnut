@@ -5,9 +5,9 @@ import Image from 'next/image';
 import PageLayout from 'components/layout/PageLayout';
 import { IWorkoutPost } from 'model/contentful';
 import { getWorkoutPosts } from 'utils/contentful';
-import {OpenGraph} from "../../model/opengraph";
-import {seo} from "../../content/text";
-import {baseUrl} from "../../content/links";
+import {OpenGraph} from "model/opengraph";
+import {seo} from "content/text";
+import {baseUrl} from "content/links";
 
 export default function WorkoutListPage({
   workouts,
