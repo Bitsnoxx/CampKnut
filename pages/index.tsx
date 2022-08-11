@@ -10,6 +10,8 @@ import { Streamer } from 'model/twitch';
 import { OpenGraph, OpenGraphImage } from '../model/opengraph';
 import { baseUrl } from 'content/links';
 
+// Cake is a lie
+
 export async function getStaticProps() {
   const oAuthResponse = await fetch(
     `https://id.twitch.tv/oauth2/token?client_id=${process.env.NEXT_TWITCH_CLIENT_ID}&client_secret=${process.env.NEXT_TWITCH_CLIENT_SECRET}&grant_type=client_credentials`,
