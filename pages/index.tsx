@@ -50,7 +50,7 @@ interface HomeProps {
 
 const Home = ({ twitch }: HomeProps) => {
   const og_image: OpenGraphImage = {
-    url: '/CampKnut.png',
+    url: '/CampKnut.webp',
   };
 
   const og: OpenGraph = {
