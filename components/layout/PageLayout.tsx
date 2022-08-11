@@ -21,7 +21,7 @@ export default function PageLayout({ children, widthClassName = 'max-w-5xl', ope
         <meta property="og:type" content={openGraph?.type} />
         <meta property="og:url" content={openGraph?.url} />
         <meta property="og:locale" content={openGraph?.locale} />
-        <meta property="og:image:url" content={openGraph?.image?.url} />
+        <meta property="og:image" content={openGraph?.image?.url} />
         <meta property="og:image:type" content={openGraph?.image?.type} />
         <meta property="og:image:height" content={openGraph?.image?.height} />
         <meta property="og:image:width" content={openGraph?.image?.width} />

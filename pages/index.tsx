@@ -51,9 +51,6 @@ const Home = ({ twitch }: HomeProps) => {
   let og_Image:OpenGraphImage = {
     type: "image",
     url: "public/knut3head.webp",
-    width: "300",
-    height: "300",
-    alt: "A surely not photoshopped/edited photo of Knut himself"
   }
 
   const og:OpenGraph = {
