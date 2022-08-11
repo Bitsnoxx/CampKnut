@@ -52,7 +52,7 @@ export const participants: ParticipantsType[] = [
       },
       {
         twitchId: 127463427,
-        name: 'RichwCampbell',
+        name: 'RichWCampbell',
         url: 'https://www.twitch.tv/richwcampbell',
         twitchName: 'richwcampbell',
       },
