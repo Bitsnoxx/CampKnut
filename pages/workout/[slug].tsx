@@ -10,7 +10,7 @@ import {seo} from "../../content/text";
 import {baseUrl} from "../../content/links";
 
 export default function WorkoutPage({ post: { text, title } }: { post: IWorkoutPostFields }) {
-  let og:OpenGraph = {
+  const og:OpenGraph = {
     site_name: seo.title,
     title:  title + " - " + seo.title,
     description: "Workout",
