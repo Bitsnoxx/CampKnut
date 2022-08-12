@@ -31,7 +31,7 @@ const Contributors = () => {
                 </tr>
               </thead>{' '}
               <tbody>
-                {developers.map((developers, index) => (
+                {developers?.map((developers, index) => (
                   <tr
                     key={index}
                     className={
@@ -53,7 +53,7 @@ const Contributors = () => {
                 </tr>
               </thead>{' '}
               <tbody>
-                {graphics.map((developers, index) => (
+                {graphics?.map((developers, index) => (
                   <tr
                     key={index}
                     className={
@@ -75,7 +75,7 @@ const Contributors = () => {
                 </tr>
               </thead>{' '}
               <tbody>
-                {fixers.map((developers, index) => (
+                {fixers?.map((developers, index) => (
                   <tr
                     key={index}
                     className={
