@@ -114,6 +114,12 @@ export const participants: ParticipantsType[] = [
         url: 'https://www.twitch.tv/jeanetteiswatching',
         twitchName: 'jeanetteiswatching',
       },
+      {
+        twitchId: 503310135,
+        name: 'HafthorJulius',
+        url: 'https://www.twitch.tv/hafthorjulius',
+        twitchName: 'hafthorjulius',
+      },
     ],
   },
   {
