@@ -1,16 +1,30 @@
+import { GetStaticProps, InferGetStaticPropsType } from 'next';
+
 import CalendarPreview from 'components/calendar/calendarPreview';
 import PageLayout from 'components/layout/PageLayout';
 import { ICalendarEventFields } from 'model/contentful';
-import { GetStaticProps, InferGetStaticPropsType } from 'next';
+
 import { getCalendarEvents } from 'utils/contentful';
+import { OpenGraph } from 'model/opengraph';
+import { baseUrl } from 'content/links';
+import { introduction, seo } from 'content/text';
+
+const og: OpenGraph = {
+  site_name: introduction.title,
+  title: introduction.title,
+  locale: 'en_GB',
+  description: seo.description,
+  type: 'website',
+  url: baseUrl,
+};
 
 export default function CalendarListEvents({
   calendarEntries,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <PageLayout widthClassName="max-w-none">
+    <PageLayout widthClassName="container flex-1 mx-auto p-4 max-w-none" openGraph={og}>
       <div className="mx-auto w-11/12">
-        <h1 className="text-3xl font-bold">Calendar</h1>
+        <h1 className="text-3xl pb-5 font-bold">Calendar</h1>
         <div className="pb-6">
           <div className="flex w-full max-w-2xl flex-row items-center gap-4">
             <div className="relative w-full"></div>

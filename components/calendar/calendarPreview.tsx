@@ -11,7 +11,7 @@ export default function CalendarPreview({ title, vod, date }: ICalendarEventFiel
   }
 
   return (
-    <div className="bg-knut h-full rounded-lg bg-knut-light-bg-info transition duration-300 hover:bg-knut-light-bg dark:bg-knut-dark-bg-info hover:dark:bg-knut-dark-bg ">
+    <div className="bg-knut h-full rounded-lg bg-knut-light-bg-info transition duration-300 hover:bg-knut-light-bg dark:bg-knut-dark-bg-info hover:dark:bg-knut-dark-bg  ">
       {showIframe && vod ? (
         <iframe
           className="aspect-video w-full"
@@ -34,16 +34,18 @@ export default function CalendarPreview({ title, vod, date }: ICalendarEventFiel
           />
         </button>
       )}
-      <p className="text-l p-4 text-knut-light-header dark:text-knut-dark-header">{title}</p>
+      <p className="text-l pt-2 pl-4 text-knut-light-header dark:text-knut-dark-header">{title}</p>
       {vod && (
         <Link href={vod}>
-          <p className="text-l p-4 text-knut-light-header dark:text-knut-dark-header">
+          <p className="text-l pt-2 pl-4 text-knut-light-header dark:text-knut-dark-header">
             <a>VOD link</a>
           </p>
         </Link>
       )}
 
-      <p className="text-l p-4 text-knut-light-header dark:text-knut-dark-header">{date}</p>
+      <p className="text-l pt-2 pl-4 pb-4 text-knut-light-header dark:text-knut-dark-header">
+        {date}
+      </p>
     </div>
   );
 }
