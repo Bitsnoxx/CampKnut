@@ -31,12 +31,7 @@ export const components = {
   },
   a: (props: any) => {
     return (
-      <a
-        target={'_blank'}
-        rel="noreferrer"
-        className="text-knut-light-header hover:font-black dark:text-knut-dark-header"
-        {...props}
-      />
+      <a target={'_blank'} rel="noreferrer" className="  text-xl hover:underline " {...props} />
     );
   },
   Important: (props: any) => <Important>{props.children}</Important>,

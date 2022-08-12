@@ -1,17 +1,18 @@
 import PageLayout from 'components/layout/PageLayout';
 import Important from 'components/ui/Important';
 import { contributors } from 'content/contributors';
-import { OpenGraph } from "model/opengraph";
-import { seo } from "content/text";
-import { baseUrl } from "content/links";
+import { OpenGraph } from 'model/opengraph';
+import { seo } from 'content/text';
+import { baseUrl } from 'content/links';
 
 const Contributors = () => {
-  const og:OpenGraph = {
+  const og: OpenGraph = {
     site_name: seo.title,
-    title: "Contributors - " + seo.title,
-    description: "Contributors who made this website possible",
-    url: baseUrl + "/contributors",
-  }
+    title: 'Contributors - ' + seo.title,
+    description: 'Contributors who made this website possible',
+    url: baseUrl + '/contributors',
+  };
+
   return (
     <>
       <PageLayout openGraph={og}>
