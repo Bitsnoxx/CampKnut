@@ -40,8 +40,6 @@ export const getStaticProps: GetStaticProps<{
       calendarEntries: calendarEntries.items.map(({ fields }) => {
         return {
           ...fields,
-          title: fields.title,
-          slug: fields.slug,
           date: new Date(fields.date).toDateString(),
         };
       }),
