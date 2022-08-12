@@ -24,15 +24,22 @@ export const contributors: ContributorType[] = [
   {
     category: 'Graphics',
     members: [
-      { username: 'thorstendenk', help: 'Graphics' },
-      { username: 'vegardand', help: 'Graphics' },
+      { username: 'thorstendenk', help: 'Main picture on front page' },
+      { username: 'vegardand', help: 'Calendar image' },
+    ],
+  },
+  {
+    category: 'Maintainers',
+    members: [
+      { username: 'Tahtooz', help: 'Spotify playlist, OCD' },
+      { username: 'DrStone', help: 'Workout log' },
     ],
   },
   {
     category: 'Fixes',
     members: [
       { username: 'Freelancer', help: 'Workout page' },
-      { username: 'TheBigWall', help: 'CalendarPage' },
+      { username: 'TheBigWall', help: 'Calendar entries' },
       { username: 'JigaPlank', help: 'Exercises, Design' },
       { username: 'WaYa', help: 'Tip' },
       { username: 'Shatty', help: 'Feedback' },

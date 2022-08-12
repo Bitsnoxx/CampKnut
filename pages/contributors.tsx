@@ -6,6 +6,7 @@ import { seo } from 'content/text';
 import { baseUrl } from 'content/links';
 
 const developers = contributors.find((e) => e.category === 'Stallions')?.members;
+const maintainers = contributors.find((e) => e.category === 'Maintainers')?.members;
 const graphics = contributors.find((e) => e.category === 'Graphics')?.members;
 const fixers = contributors.find((e) => e.category === 'Fixes')?.members;
 
@@ -54,15 +55,37 @@ const Contributors = () => {
                 </tr>
               </thead>{' '}
               <tbody>
-                {graphics?.map((developers, index) => (
+                {maintainers?.map((maintainers, index) => (
                   <tr
                     key={index}
                     className={
                       index % 2 === 0 ? 'bg-knut-light-bg-info dark:bg-knut-dark-bg-info' : ''
                     }
                   >
-                    <td className="p-2">{developers.username}</td>
-                    <td className="p-2">{developers.help}</td>
+                    <td className="p-2">{maintainers.username}</td>
+                    <td className="p-2">{maintainers.help}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <h1 className="py-10 text-center">Graphics</h1>
+            <table className="w-96">
+              <thead>
+                <tr>
+                  <th className="p-2 text-left">Username</th>
+                  <th className="p-2 text-left">Topic</th>
+                </tr>
+              </thead>{' '}
+              <tbody>
+                {graphics?.map((graphics, index) => (
+                  <tr
+                    key={index}
+                    className={
+                      index % 2 === 0 ? 'bg-knut-light-bg-info dark:bg-knut-dark-bg-info' : ''
+                    }
+                  >
+                    <td className="p-2">{graphics.username}</td>
+                    <td className="p-2">{graphics.help}</td>
                   </tr>
                 ))}
               </tbody>
@@ -76,15 +99,15 @@ const Contributors = () => {
                 </tr>
               </thead>{' '}
               <tbody>
-                {fixers?.map((developers, index) => (
+                {fixers?.map((fixers, index) => (
                   <tr
                     key={index}
                     className={
                       index % 2 === 0 ? 'bg-knut-light-bg-info dark:bg-knut-dark-bg-info' : ''
                     }
                   >
-                    <td className="p-2">{developers.username}</td>
-                    <td className="p-2">{developers.help}</td>
+                    <td className="p-2">{fixers.username}</td>
+                    <td className="p-2">{fixers.help}</td>
                   </tr>
                 ))}
               </tbody>
