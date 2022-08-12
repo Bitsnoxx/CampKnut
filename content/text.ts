@@ -18,7 +18,7 @@ export const errors = {
   serverError: "Server error, that's awkward. That wasn't supposed to happen",
 };
 export const seo = {
-  description: `Camp Knut is a 30-day long training camp where Knut will take Mizkif, Nmplol, Lacari, Tectone, Erobb221 through a full bodybuilding experience. By the end of the
+  description: `Camp Knut is a 30-day long training camp where Knut will take Mizkif, Nmplol, EsfandTV, Cyr, Lacari, Tectone and Erobb221 through a full bodybuilding experience. By the end of the
   training camp, they will go on a bodybuilding show. They will also be judged by their performance by Knut, WakeWilder, Malena and Asmongold.`,
-  title: introduction.title
+  title: introduction.title,
 };

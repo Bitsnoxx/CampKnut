@@ -24,7 +24,7 @@ export default function ContentPage({ playlist }: { playlist: PlaylistItem[] }) 
   const og: OpenGraph = {
     site_name: seo.title,
     title: 'Content - ' + seo.title,
-    description: 'Fun content and worth watching clips and videos from Camp Knut.',
+    description: 'Collection of content from Youtube',
     type: 'video.other',
     url: baseUrl + '/content',
   };

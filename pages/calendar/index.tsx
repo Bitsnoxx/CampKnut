@@ -4,16 +4,16 @@ import CalendarPreview from 'components/calendar/calendarPreview';
 import PageLayout from 'components/layout/PageLayout';
 import { ICalendarEventFields } from 'model/contentful';
 
-import { getCalendarEvents } from 'utils/contentful';
-import { OpenGraph } from 'model/opengraph';
 import { baseUrl } from 'content/links';
-import { introduction, seo } from 'content/text';
+import { introduction } from 'content/text';
+import { OpenGraph } from 'model/opengraph';
+import { getCalendarEvents } from 'utils/contentful';
 
 const og: OpenGraph = {
   site_name: introduction.title,
   title: introduction.title,
   locale: 'en_GB',
-  description: seo.description,
+  description: 'Calendar for Camp Knut',
   type: 'website',
   url: baseUrl,
 };

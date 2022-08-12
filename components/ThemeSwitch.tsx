@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
+import { useEffect, useState } from 'react';
 import { FaMoon, FaSun } from 'react-icons/fa';
-import { FiLoader } from 'react-icons/fi';
 
 type ThemeSwitchType = {
   className?: string;
@@ -19,7 +18,7 @@ export default function ThemeSwitch({ className }: ThemeSwitchType) {
 
   return (
     <>
-      {isMounted ? (
+      {isMounted && (
         <button
           className={className}
           onClick={() => {
@@ -31,10 +30,6 @@ export default function ThemeSwitch({ className }: ThemeSwitchType) {
           ) : (
             <FaMoon size={19} title="Switch to gamer mode" />
           )}
-        </button>
-      ) : (
-        <button className={className}>
-          <FiLoader size={19} />
         </button>
       )}
     </>
