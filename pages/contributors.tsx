@@ -46,7 +46,7 @@ const Contributors = () => {
                 ))}
               </tbody>
             </table>
-            <h1 className="py-10 text-center">Graphics</h1>
+            <h1 className="py-10 text-center">Maintainers</h1>
             <table className="w-96">
               <thead>
                 <tr>
@@ -68,7 +68,7 @@ const Contributors = () => {
                 ))}
               </tbody>
             </table>
-            <h1 className="py-10 text-center">Maintainers</h1>
+            <h1 className="py-10 text-center">Graphics</h1>
             <table className="w-96">
               <thead>
                 <tr>
