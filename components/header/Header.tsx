@@ -41,9 +41,9 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link href="/content">
+                <Link href="/calendar">
                   <a className="text-sm flex cursor-pointer items-center py-4 font-bold uppercase leading-snug hover:opacity-75">
-                    Content
+                    Calendar
                   </a>
                 </Link>
               </li>
@@ -58,6 +58,13 @@ export default function Header() {
                 <Link href="/workout">
                   <a className="text-sm flex cursor-pointer items-center py-4 font-bold uppercase leading-snug hover:opacity-75">
                     Workout
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/content">
+                  <a className="text-sm flex cursor-pointer items-center py-4 font-bold uppercase leading-snug hover:opacity-75">
+                    Content
                   </a>
                 </Link>
               </li>
