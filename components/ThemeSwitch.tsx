@@ -1,10 +1,14 @@
 import { useEffect, useState } from 'react';
-
 import { useTheme } from 'next-themes';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import { FiLoader } from 'react-icons/fi';
 
-export default function ThemeSwitch() {
+type ThemeSwitchType = {
+  className?: string;
+};
+
+
+export default function ThemeSwitch({className}: ThemeSwitchType) {
   const [isMounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
@@ -18,7 +22,7 @@ export default function ThemeSwitch() {
     <>
       {isMounted && (
         <button
-          className="text-sm flex cursor-pointer font-black uppercase leading-snug text-knut-light-header hover:opacity-75 dark:text-knut-dark-header"
+          className={className}
           onClick={() => {
             setTheme(theme === 'light' ? 'dark' : 'light');
           }}
@@ -31,7 +35,9 @@ export default function ThemeSwitch() {
         </button>
       )}
       {!isMounted && (
-        <button className="text-sm flex cursor-pointer py-4 font-black uppercase leading-snug text-knut-light-header hover:opacity-75 dark:text-knut-dark-header">
+        <button
+          className={className}
+        >
           <FiLoader size={19} />
         </button>
       )}

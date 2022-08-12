@@ -1,9 +1,9 @@
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import Router from 'next/router';
-import { useState } from 'react';
 
 import clsx from 'clsx';
-import ThemeSwitch from 'components/ThemeSwitch';
+import ThemeSwitch from "../ThemeSwitch";
 
 export default function Header() {
   const [active, setActive] = useState(false);
@@ -11,7 +11,7 @@ export default function Header() {
   const handleClick = () => {
     setActive(!active);
   };
-
+  
   Router.events.on('routeChangeStart', () => setActive(false));
 
   return (
@@ -29,6 +29,7 @@ export default function Header() {
               <span className="relative mt-1 block h-px w-6 rounded-sm bg-knut-dark-bg dark:bg-knut-light-bg"></span>
               <span className="relative mt-1 block h-px w-6 rounded-sm bg-knut-dark-bg dark:bg-knut-light-bg"></span>
             </button>
+            <ThemeSwitch className={"text-xl px-4 py-5 font-black uppercase leading-snug text-knut-light-header hover:opacity-75 dark:text-knut-dark-header"}/>
           </div>
           <div className={clsx(active ? 'flex' : 'hidden', 'grow lg:flex')}>
             <ul className="flex list-none flex-col px-4 lg:mx-auto lg:flex-row lg:items-center lg:justify-center lg:gap-8">
@@ -67,7 +68,6 @@ export default function Header() {
                   </a>
                 </Link>
               </li>
-
               <li>
                 <a
                   href="https://store.streamelements.com/knut"
@@ -78,9 +78,8 @@ export default function Header() {
                   Merch
                 </a>
               </li>
-
               <li>
-                <ThemeSwitch />
+                <ThemeSwitch className={"hidden cursor-pointer items-center py-4 text-knut-light-header hover:opacity-75 dark:text-knut-dark-header lg:flex"}/>
               </li>
             </ul>
           </div>
