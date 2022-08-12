@@ -7,8 +7,7 @@ type ThemeSwitchType = {
   className?: string;
 };
 
-
-export default function ThemeSwitch({className}: ThemeSwitchType) {
+export default function ThemeSwitch({ className }: ThemeSwitchType) {
   const [isMounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
@@ -20,7 +19,7 @@ export default function ThemeSwitch({className}: ThemeSwitchType) {
 
   return (
     <>
-      {isMounted && (
+      {isMounted ? (
         <button
           className={className}
           onClick={() => {
@@ -33,11 +32,8 @@ export default function ThemeSwitch({className}: ThemeSwitchType) {
             <FaMoon size={19} title="Switch to gamer mode" />
           )}
         </button>
-      )}
-      {!isMounted && (
-        <button
-          className={className}
-        >
+      ) : (
+        <button className={className}>
           <FiLoader size={19} />
         </button>
       )}

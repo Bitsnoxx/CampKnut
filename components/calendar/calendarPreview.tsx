@@ -1,7 +1,7 @@
 import { ICalendarEventFields } from 'model/contentful';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState, FC } from 'react';
+import { useState } from 'react';
 
 export default function CalendarPreview({ title, vod, date }: ICalendarEventFields) {
   const [showIframe, setShowIframe] = useState(false);
