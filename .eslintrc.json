@@ -1,6 +1,6 @@
 {
   "extends": [
-    "next/core-web-vitals","prettier", "plugin:@next/next/recommended"
+    "next/core-web-vitals","prettier"
   ],
   "plugins": [
     "tailwindcss","react", "simple-import-sort"
