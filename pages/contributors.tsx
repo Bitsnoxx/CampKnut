@@ -1,9 +1,9 @@
 import PageLayout from 'components/layout/PageLayout';
 import Important from 'components/ui/Important';
 import { contributors } from 'content/contributors';
-import { OpenGraph } from 'model/opengraph';
-import { seo } from 'content/text';
 import { baseUrl } from 'content/links';
+import { seo } from 'content/text';
+import { OpenGraph } from 'model/opengraph';
 
 const developers = contributors.find((e) => e.category === 'Stallions')?.members;
 const maintainers = contributors.find((e) => e.category === 'Maintainers')?.members;

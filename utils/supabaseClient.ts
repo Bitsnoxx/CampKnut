@@ -1,19 +1,20 @@
-import { createClient, User } from "@supabase/supabase-js";
-import {baseUrl} from "../content/links";
+import { createClient, User } from '@supabase/supabase-js';
 
-const VOTES_TABLE = "votes";
+import { baseUrl } from '../content/links';
+
+const VOTES_TABLE = 'votes';
 
 export const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL || "",
-  process.env.NEXT_PUBLIC_SUPABASE_KEY || ""
+  process.env.NEXT_PUBLIC_SUPABASE_URL || '',
+  process.env.NEXT_PUBLIC_SUPABASE_KEY || '',
 );
 
 export const signInTwitch = async (redirectTo = `${baseUrl}/vote`) => {
   await supabase.auth.signIn(
     {
-      provider: "twitch",
+      provider: 'twitch',
     },
-    { redirectTo }
+    { redirectTo },
   );
 };
 
@@ -22,30 +23,30 @@ export const signOutTwitch = async () => {
 };
 
 // TODO: handle errors
-export const getUsersVote = async (userId: User["id"]) => {
+export const getUsersVote = async (userId: User['id']) => {
   const { data, error } = await supabase
     .from(VOTES_TABLE)
-    .select("vote")
-    .filter("user_id", "eq", userId);
+    .select('vote')
+    .filter('user_id', 'eq', userId);
 
   return data;
 };
 
 // TODO: handle errors
-export const updateVoteForUser = async (userId: User["id"], vote: string) => {
+export const updateVoteForUser = async (userId: User['id'], vote: string) => {
   const { data, error } = await supabase
     .from(VOTES_TABLE)
     .update({ vote: vote })
-    .eq("user_id", userId);
+    .eq('user_id', userId);
 
   return data;
 };
 
 // TODO: handle errors
-export const insertVoteForUser = async (userId: User["id"], vote: string) => {
+export const insertVoteForUser = async (userId: User['id'], vote: string) => {
   const { data, error } = await supabase
     .from(VOTES_TABLE)
-    .insert({ user_id: userId, vote: vote }, { returning: "minimal" });
+    .insert({ user_id: userId, vote: vote }, { returning: 'minimal' });
 
   return data;
 };

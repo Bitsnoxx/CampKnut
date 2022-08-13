@@ -4,14 +4,11 @@ module.exports = {
   useTabs: false,
   semi: true,
   singleQuote: true,
-  quoteProps: "as-needed",
+  quoteProps: 'as-needed',
   jsxSingleQuote: false,
-  trailingComma: "all",
+  trailingComma: 'all',
   bracketSpacing: true,
   jsxBracketSameLine: false,
-  arrowParens: "always",
-  plugins: [
-    require("prettier-plugin-tailwindcss"),
-    require("eslint-plugin-tailwindcss"),
-  ],
+  arrowParens: 'always',
+  plugins: [require('prettier-plugin-tailwindcss'), require('eslint-plugin-tailwindcss')],
 };

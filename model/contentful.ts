@@ -1,11 +1,13 @@
-import type { Asset, Entry } from "contentful";
-import { Document } from "@contentful/rich-text-types";
+import type { Asset, Entry } from 'contentful';
+
+import { Document } from '@contentful/rich-text-types';
 
 export interface ICalendarEventFields {
   title: string;
   vod: string;
   date: string;
   slug: string;
+  getVideoId(): string;
 }
 
 export interface ICalendarEvent extends Entry<ICalendarEventFields> {
@@ -17,9 +19,9 @@ export interface ICalendarEvent extends Entry<ICalendarEventFields> {
     locale: string;
     contentType: {
       sys: {
-        id: "calendarEvent";
-        linkType: "ContentType";
-        type: "Link";
+        id: 'calendarEvent';
+        linkType: 'ContentType';
+        type: 'Link';
       };
     };
   };
@@ -42,9 +44,9 @@ export interface IExercise extends Entry<IExerciseFields> {
     locale: string;
     contentType: {
       sys: {
-        id: "exercise";
-        linkType: "ContentType";
-        type: "Link";
+        id: 'exercise';
+        linkType: 'ContentType';
+        type: 'Link';
       };
     };
   };
@@ -65,9 +67,9 @@ export interface IWorkoutPost extends Entry<IWorkoutPostFields> {
     locale: string;
     contentType: {
       sys: {
-        id: "workoutPost";
-        linkType: "ContentType";
-        type: "Link";
+        id: 'workoutPost';
+        linkType: 'ContentType';
+        type: 'Link';
       };
     };
   };
@@ -81,6 +83,6 @@ export interface IContentfulQuery {
   [key: string]: any;
 }
 
-export type CONTENT_TYPE = "workoutPost" | "exercise" | "calendarEvent";
-export type LOCALE_CODE = "en-US";
-export type CONTENTFUL_DEFAULT_LOCALE_CODE = "en-US";
+export type CONTENT_TYPE = 'workoutPost' | 'exercise' | 'calendarEvent';
+export type LOCALE_CODE = 'en-US';
+export type CONTENTFUL_DEFAULT_LOCALE_CODE = 'en-US';

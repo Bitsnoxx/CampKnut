@@ -1,21 +1,23 @@
-import React, { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
-import { User } from '@supabase/supabase-js';
-import clsx from 'clsx';
 
-import { participants, StreamerInfoType } from 'content/streamers';
+import React, { useCallback, useEffect, useState } from 'react';
+
 import PageLayout from 'components/layout/PageLayout';
+import { baseUrl } from 'content/links';
+import { participants, StreamerInfoType } from 'content/streamers';
+import { seo } from 'content/text';
+import { OpenGraph } from 'model/opengraph';
 import {
-  supabase,
+  getUsersVote,
+  insertVoteForUser,
   signInTwitch,
   signOutTwitch,
+  supabase,
   updateVoteForUser,
-  insertVoteForUser,
-  getUsersVote,
 } from 'utils/supabaseClient';
-import { OpenGraph } from 'model/opengraph';
-import { seo } from 'content/text';
-import { baseUrl } from 'content/links';
+
+import clsx from 'clsx';
+import { User } from '@supabase/supabase-js';
 
 const streamers = participants.find((e) => e.category === 'streamers')?.members;
 

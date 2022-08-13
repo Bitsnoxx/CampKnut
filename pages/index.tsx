@@ -6,8 +6,9 @@ import Participants from 'components/mainPage/Participants';
 import CustomLink from 'components/ui/CustomLink';
 import Important from 'components/ui/Important';
 import { baseUrl } from 'content/links';
-import { seo, tips } from 'content/text';
+import { introduction, seo, tips } from 'content/text';
 import { HomeProps } from 'model/twitch';
+
 import { OpenGraph, OpenGraphImage } from '../model/opengraph';
 
 // Cake is a lie
@@ -50,8 +51,8 @@ const Home = ({ twitch }: HomeProps) => {
   };
 
   const og: OpenGraph = {
-    site_name: seo.title,
-    title: seo.title,
+    site_name: introduction.title,
+    title: introduction.title,
     locale: 'en_GB',
     image: og_image,
     description: seo.description,

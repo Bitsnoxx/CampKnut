@@ -2,10 +2,9 @@ import { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import CalendarPreview from 'components/calendar/calendarPreview';
 import PageLayout from 'components/layout/PageLayout';
-import { ICalendarEventFields } from 'model/contentful';
-
 import { baseUrl } from 'content/links';
 import { introduction } from 'content/text';
+import { ICalendarEventFields } from 'model/contentful';
 import { OpenGraph } from 'model/opengraph';
 import { getCalendarEvents } from 'utils/contentful';
 

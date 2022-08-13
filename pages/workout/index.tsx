@@ -1,13 +1,13 @@
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import PageLayout from 'components/layout/PageLayout';
-import { IWorkoutPost } from 'model/contentful';
-import { getWorkoutPosts } from 'utils/contentful';
-import { OpenGraph } from 'model/opengraph';
-import { seo } from 'content/text';
 import { baseUrl } from 'content/links';
+import { seo } from 'content/text';
+import { IWorkoutPost } from 'model/contentful';
+import { OpenGraph } from 'model/opengraph';
+import { getWorkoutPosts } from 'utils/contentful';
 
 export default function WorkoutListPage({
   workouts,

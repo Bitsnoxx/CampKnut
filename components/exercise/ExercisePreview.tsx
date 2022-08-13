@@ -1,8 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
+
 import React from 'react';
 
 import { IUIExercise } from 'model/ui';
+
 import ExerciseTag from './ExerciseTag';
 
 export default function ExercisePreview({ image, name, slug, tags }: IUIExercise) {

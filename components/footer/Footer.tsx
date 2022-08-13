@@ -1,18 +1,17 @@
-import { useState } from 'react';
 import Image from 'next/image';
 
+import { useState } from 'react';
 import {
-  FaTwitch,
-  FaYoutube,
-  FaTwitter,
+  FaHeart,
   FaInstagram,
   FaReddit,
   FaShoppingBag,
-  FaHeart,
+  FaTwitch,
+  FaTwitter,
+  FaYoutube,
 } from 'react-icons/fa';
 
 import FooterIconLink from 'components/footer/FooterIconLink';
-
 import CustomLink from 'components/ui/CustomLink';
 
 export default function Footer() {

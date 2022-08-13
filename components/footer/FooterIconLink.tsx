@@ -1,5 +1,6 @@
-import clsx from 'clsx';
 import { socials } from 'content/links';
+
+import clsx from 'clsx';
 
 type FooterIconLinkProps = {
   children: JSX.Element | JSX.Element[];
