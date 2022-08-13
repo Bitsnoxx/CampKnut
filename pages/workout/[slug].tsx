@@ -9,13 +9,12 @@ import {OpenGraph} from "model/opengraph";
 import {seo} from "content/text";
 import {baseUrl} from "content/links";
 
-export default function WorkoutPage({ post: { text, title } }: { post: IWorkoutPostFields }) {
+export default function WorkoutPage({ post: { text, title, slug } }: { post: IWorkoutPostFields }) {
   const og:OpenGraph = {
     site_name: seo.title,
     title:  title + " - " + seo.title,
     description: "Workout",
-    url: baseUrl + "/workout",
-    // TODO: change  url to individual slug
+    url: baseUrl + "/workout/" + slug,
   }
 
   return (

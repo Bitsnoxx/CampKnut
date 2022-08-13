@@ -9,7 +9,7 @@ import { seo } from "content/text";
 export default function ExercisePage({
   exerciseElement,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const { name, tags, youtubeLink } = exerciseElement;
+  const { name, tags, youtubeLink, slug } = exerciseElement;
 
   const newUrl = new URL(youtubeLink);
   const videoId = newUrl.pathname.substring(1);
@@ -17,11 +17,10 @@ export default function ExercisePage({
 
   const og:OpenGraph = {
     site_name: seo.title,
-    title: name + " - "+  seo.title,
-    description: "An overview of exercises done during Camp Knut.",
+    title: exerciseElement.name + " - "+  seo.title,
+    description: 'Camp Knut ' + exerciseElement.name,
     type: "video.other",
-    url: baseUrl + "/exercises",
-    // TODO: change url to individual slug
+    url: baseUrl + "/exercises/" + exerciseElement.slug,
   }
 
   return (
