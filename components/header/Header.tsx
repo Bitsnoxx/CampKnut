@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import Router from 'next/router';
+
 import { useState } from 'react';
 
+import ThemeSwitch from 'components/ThemeSwitch';
+
 import clsx from 'clsx';
-import ThemeSwitch from '../ThemeSwitch';
 
 export default function Header() {
   const [active, setActive] = useState(false);

@@ -1,7 +1,9 @@
-import { ICalendarEventFields } from 'model/contentful';
 import Image from 'next/image';
 import Link from 'next/link';
+
 import { useState } from 'react';
+
+import { ICalendarEventFields } from 'model/contentful';
 
 export default function CalendarPreview({ title, vod, date }: ICalendarEventFields) {
   const [showIframe, setShowIframe] = useState(false);
@@ -43,7 +45,7 @@ export default function CalendarPreview({ title, vod, date }: ICalendarEventFiel
         </Link>
       )}
 
-      <p className="text-l pt-2 pl-4 pb-4 text-knut-light-header dark:text-knut-dark-header">
+      <p className="text-l pt-2 pl-4 pb-4 text-knut-light-header dark:text-knut-dark-header ">
         {date}
       </p>
     </div>

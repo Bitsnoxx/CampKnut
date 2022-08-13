@@ -1,15 +1,16 @@
+import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next';
+
 import PageLayout from 'components/layout/PageLayout';
 import { baseUrl, placeHolderImage } from 'content/links';
-import { IUIExercise } from 'model/ui';
-import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next';
-import { getExercises, getOneExercise } from 'utils/contentful';
-import { OpenGraph } from 'model/opengraph';
 import { seo } from 'content/text';
+import { OpenGraph } from 'model/opengraph';
+import { IUIExercise } from 'model/ui';
+import { getExercises, getOneExercise } from 'utils/contentful';
 
 export default function ExercisePage({
   exerciseElement,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const { name, tags, youtubeLink } = exerciseElement;
+  const { name, tags, youtubeLink, slug } = exerciseElement;
 
   const newUrl = new URL(youtubeLink);
   const videoId = newUrl.pathname.substring(1);
@@ -17,11 +18,10 @@ export default function ExercisePage({
 
   const og: OpenGraph = {
     site_name: seo.title,
-    title: seo.title + exerciseElement.name,
-    description: 'Camp Knut' + exerciseElement.name,
+    title: name + ' - ' + seo.title,
+    description: 'Camp Knut' + name,
     type: 'video.other',
-    url: baseUrl + '/exercises',
-    // TODO: change url to individual slug
+    url: baseUrl + '/exercises/' + slug,
   };
 
   return (

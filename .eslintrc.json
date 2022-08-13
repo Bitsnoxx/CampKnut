@@ -1,11 +1,13 @@
 {
   "extends": [
-    "next/core-web-vitals", "next", "prettier"
+    "next/core-web-vitals","prettier"
   ],
   "plugins": [
-    "tailwindcss"
+    "tailwindcss","react", "simple-import-sort"
   ],
-  "rules": {
+"rules": {
+  "simple-import-sort/imports": "error",
+  "simple-import-sort/exports": "error",
     "constructor-super": "warn",
     "no-console": "warn",
     "no-const-assign": "warn",
@@ -19,5 +21,25 @@
     "tailwindcss/enforces-shorthand": "error",
     "tailwindcss/no-contradicting-classname": "error",
     "valid-typeof": "warn"
-  }
+  },
+  "overrides": [
+    // override "simple-import-sort" config
+    {
+      "files": ["*.js", "*.jsx", "*.ts", "*.tsx"],
+      "rules": {
+        "simple-import-sort/imports": [
+          "error",
+          {
+            "groups": [
+              ["^next"],
+              ["^react$", "^[a-z]"],
+              ["^components","^content","^model","^pages","^utils"],
+              ["^clsx","supabase/supabase-js", "^contentful"],
+              ["^.+\\.?(css)$"]
+            ]
+          }
+        ]
+      }
+    }
+  ]
 }

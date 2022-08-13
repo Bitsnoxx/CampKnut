@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import { useState, FC } from 'react';
+
+import { FC, useState } from 'react';
 
 import { PlaylistItem } from 'model/youtube';
 

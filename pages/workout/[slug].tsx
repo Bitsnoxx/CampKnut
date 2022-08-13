@@ -1,22 +1,22 @@
 import { GetStaticProps } from 'next';
 
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import PageLayout from 'components/layout/PageLayout';
 import renderOptions from 'components/richTextStyling';
+import { baseUrl } from 'content/links';
+import { seo } from 'content/text';
 import { IWorkoutPostFields } from 'model/contentful';
+import { OpenGraph } from 'model/opengraph';
 import { getOneWorkoutPost, getWorkoutPosts } from 'utils/contentful';
-import {OpenGraph} from "model/opengraph";
-import {seo} from "content/text";
-import {baseUrl} from "content/links";
 
-export default function WorkoutPage({ post: { text, title } }: { post: IWorkoutPostFields }) {
-  const og:OpenGraph = {
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+
+export default function WorkoutPage({ post: { text, title, slug } }: { post: IWorkoutPostFields }) {
+  const og: OpenGraph = {
     site_name: seo.title,
-    title:  title + " - " + seo.title,
-    description: "Workout",
-    url: baseUrl + "/workout",
-    // TODO: change  url to individual slug
-  }
+    title: title + ' - ' + seo.title,
+    description: 'Workout',
+    url: baseUrl + '/workout/' + slug,
+  };
 
   return (
     <PageLayout openGraph={og}>

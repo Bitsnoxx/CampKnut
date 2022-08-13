@@ -1,16 +1,19 @@
-import clsx from 'clsx';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
+
 import { useEffect, useState } from 'react';
+import { CgClose } from 'react-icons/cg';
+import ScrollContainer from 'react-indiana-drag-scroll';
+
 import ExercisePreview from 'components/exercise/ExercisePreview';
 import PageLayout from 'components/layout/PageLayout';
+import { baseUrl, placeHolderImage } from 'content/links';
+import { seo } from 'content/text';
+import { OpenGraph } from 'model/opengraph';
+import { IUIExercise } from 'model/ui';
 import { getExercises } from 'utils/contentful';
 import slugify from 'utils/slugify';
-import ScrollContainer from 'react-indiana-drag-scroll';
-import { IUIExercise } from 'model/ui';
-import { baseUrl, placeHolderImage } from 'content/links';
-import { CgClose } from 'react-icons/cg';
-import { OpenGraph } from 'model/opengraph';
-import { seo } from 'content/text';
+
+import clsx from 'clsx';
 
 export default function ExerciseListPage({
   exercises,
