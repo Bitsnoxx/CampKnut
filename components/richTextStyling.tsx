@@ -1,5 +1,4 @@
 import Important from './ui/Important';
-
 import type { Options } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
 
