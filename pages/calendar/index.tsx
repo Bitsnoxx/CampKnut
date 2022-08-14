@@ -10,7 +10,7 @@ import { getCalendarEvents } from 'utils/contentful';
 
 const og: OpenGraph = {
   site_name: introduction.title,
-  title: 'Calendar' + introduction.title,
+  title: 'Calendar ' + introduction.title,
   locale: 'en_GB',
   description: 'Calendar for Camp Knut',
   type: 'website',
