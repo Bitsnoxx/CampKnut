@@ -47,7 +47,7 @@ export async function getStaticProps() {
 
 const Home = ({ twitch }: HomeProps) => {
   const og_image: OpenGraphImage = {
-    url: '/CampKnut.webp',
+    url: '/CampKnutNew.webp',
   };
 
   const og: OpenGraph = {
@@ -65,7 +65,7 @@ const Home = ({ twitch }: HomeProps) => {
       <article>
         <div>
           <Image
-            src="/CampKnut.webp"
+            src="/CampKnutNew.webp"
             alt="Camp Knut"
             width={2560}
             height={1450}
