@@ -1,10 +1,11 @@
-import { createClient } from 'contentful';
 import type {
   ICalendarEventFields,
   IContentfulQuery,
   IExerciseFields,
   IWorkoutPostFields,
 } from 'model/contentful';
+
+import { createClient } from 'contentful';
 
 const client = createClient({
   space: process.env.NEXT_CONTENTFUL_SPACE_ID ?? 'ErrorNoSpaceID',

@@ -24,10 +24,10 @@ export const components = {
     return <p className="list-inside list-disc" {...props} />;
   },
   li: (props: any) => {
-    return <li className="not-prose list-inside list-disc text-red-600" {...props} />;
+    return <li className="not-prose list-inside list-disc " {...props} />;
   },
   ul: (props: any) => {
-    return <ul className="list-inside list-disc text-red-600" {...props} />;
+    return <ul className="list-inside list-disc" {...props} />;
   },
   a: (props: any) => {
     return (
