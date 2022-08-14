@@ -27,7 +27,7 @@ export default function ExercisePreview({ image, name, slug, tags }: IUIExercise
           <div className="mt-auto py-3">
             <div className="px-1.5">
               {tags?.map((t) => (
-                <ExerciseTag key={t} className="mx-1.5 inline-block">
+                <ExerciseTag key={t} className="mx-1.5 mt-1.5 inline-block">
                   {t}
                 </ExerciseTag>
               ))}

@@ -30,19 +30,34 @@ export default function CalendarPreview({ title, vod, date }: ICalendarEventFiel
             alt="Camp Knut"
             height={315}
             width={560}
-            priority={true}
             decoding="async"
             className="aspect-auto"
           />
         </button>
       )}
       <p className="text-l pt-2 pl-4 text-knut-light-header dark:text-knut-dark-header">{title}</p>
-      {vod && (
+      {vod ? (
         <Link href={vod}>
           <p className="text-l pt-2 pl-4 text-knut-light-header dark:text-knut-dark-header">
             <a>VOD link</a>
           </p>
         </Link>
+      ) : (
+        <>
+          <p className="text-l inline-block pt-2 pl-4 text-knut-light-header dark:text-knut-dark-header">
+            No vod
+          </p>
+          <div className="ml-2 inline-block">
+            <Image
+              src="/Sadge.webp"
+              alt="Sadge"
+              width={32}
+              height={32}
+              decoding="async"
+              className="ml-4 inline-block aspect-auto"
+            />
+          </div>
+        </>
       )}
 
       <p className="text-l pt-2 pl-4 pb-4 text-knut-light-header dark:text-knut-dark-header ">
