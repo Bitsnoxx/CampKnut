@@ -6,6 +6,7 @@ import Participants from 'components/mainPage/Participants';
 import CustomLink from 'components/ui/CustomLink';
 import Important from 'components/ui/Important';
 import { baseUrl } from 'content/links';
+import { participants } from 'content/streamers';
 import { introduction, seo, tips } from 'content/text';
 import { HomeProps } from 'model/twitch';
 
@@ -31,8 +32,18 @@ export async function getStaticProps() {
     },
   };
 
-  const url =
-    'https://api.twitch.tv/helix/streams?&user_login=knut&user_login=Malena&user_login=Asmongold&user_login=MitchJones&user_login=Malena&user_login=Jeanette&user_login=Streamers&user_login=Mizkif&user_login=Nmplol&user_login=Cyr&user_login=RichwCampbell&user_login=Tectone&user_login=Erobb221&user_login=EsfandTV&user_login=Lacari&user_login=Chefs&user_login=Exxzy';
+  const twitchNames = [
+    ...new Set(
+      participants.reduce((acc, cur) => {
+        cur.members.forEach((member) => acc.push(member.twitchName as never));
+        return acc;
+      }, []),
+    ),
+  ];
+
+  const Pag = twitchNames.join('&user_login=');
+
+  const url = `https://api.twitch.tv/helix/streams?&user_login=${Pag}`;
 
   const res = await fetch(url, request);
   const data = await res.json();
