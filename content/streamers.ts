@@ -2,7 +2,7 @@ export type StreamerInfoType = {
   twitchId: number;
   name: string;
   url: string;
-  twitchName?: string;
+  twitchName: string;
 };
 
 export type ParticipantsType = {
@@ -119,6 +119,12 @@ export const participants: ParticipantsType[] = [
         name: 'HafthorJulius',
         url: 'https://www.twitch.tv/hafthorjulius',
         twitchName: 'hafthorjulius',
+      },
+      {
+        twitchId: 31069476,
+        name: 'dCapio',
+        url: 'https://www.twitch.tv/dcapio',
+        twitchName: 'dcapio',
       },
     ],
   },
