@@ -6,9 +6,9 @@ import Participants from 'components/mainPage/Participants';
 import CustomLink from 'components/ui/CustomLink';
 import Important from 'components/ui/Important';
 import { baseUrl } from 'content/links';
+import { participants } from 'content/streamers';
 import { introduction, seo, tips } from 'content/text';
 import { HomeProps } from 'model/twitch';
-import { participants } from 'content/streamers';
 
 import { OpenGraph, OpenGraphImage } from '../model/opengraph';
 
@@ -32,10 +32,10 @@ export async function getStaticProps() {
     },
   };
 
-    const twitchNames = [
+  const twitchNames = [
     ...new Set(
       participants.reduce((acc, cur) => {
-        cur.members.forEach((member) => acc.push(member.twitchName));
+        cur.members.forEach((member) => acc.push(member.twitchName as never));
         return acc;
       }, []),
     ),
