@@ -14,8 +14,6 @@ export default function Header() {
     setActive(!active);
   };
 
-  Router.events.on('routeChangeStart', () => setActive(false));
-
   return (
     <header className="sticky top-0 z-10 w-full bg-knut-light-bg text-knut-light-text dark:bg-knut-dark-bg dark:text-knut-dark-text">
       <link rel="apple-touch-icon" href="public/icons/knut3head-96x96.webp" />
