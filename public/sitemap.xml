@@ -1,307 +1,321 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--	created with www.mysitemapgenerator.com	-->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <link type="text/css" id="dark-mode" rel="stylesheet" href=""/>
   <url>
     <loc>https://campknut.gg/</loc>
-    <lastmod>2022-08-12T03:53:40+01:00</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://campknut.gg/content</loc>
-    <lastmod>2022-08-12T03:53:40+01:00</lastmod>
-    <priority>0.8</priority>
+    <loc>https://campknut.gg/calendar</loc>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises</loc>
-    <lastmod>2022-08-12T03:53:40+01:00</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://campknut.gg/workout</loc>
-    <lastmod>2022-08-12T03:53:40+01:00</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://campknut.gg/content</loc>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://campknut.gg/vote</loc>
-    <lastmod>2022-08-12T03:53:40+01:00</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://campknut.gg/workout/camp-knut-amazon-supplements-by-wakewilder</loc>
-    <lastmod>2022-08-12T03:53:40+01:00</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://campknut.gg/workout/stream-workout-log-maintained-by-drstone</loc>
-    <lastmod>2022-08-12T03:53:40+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://campknut.gg/workout/workout-beginner</loc>
-    <lastmod>2022-08-12T03:53:40+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://campknut.gg/workout/workout-plan-week-1</loc>
-    <lastmod>2022-08-12T03:53:40+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://campknut.gg/workout/workout-plan-week-2</loc>
-    <lastmod>2022-08-12T03:53:40+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://campknut.gg/workout/weekly-results</loc>
-    <lastmod>2022-08-12T03:53:40+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://campknut.gg/contributors</loc>
-    <lastmod>2022-08-12T03:53:40+01:00</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/arm-curl-machine</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/barbell-bench-press-medium-grip</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/barbell-shoulder-press</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/cable-front-raises</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/cambered-bar-pushdowns</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/chest-press-machine</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/crossover-tricep-cable-push-downs</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/dumbbell-bicep-curls</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/dumbell-lateral-raises</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/gluteator</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/high-row-machine</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/hip-abductor</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/incline-bench-press</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/incline-cable-flys</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/iso-lateral-row</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/lat-pulldown</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/lat-pullover-machine</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/lateral-seated-leg-press</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/lateral-shoulder-raise</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/leaning-rear-delt-flys</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/machine-lateral-raises</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/lat-pull-down-nordic-hamstring-curl</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/overhead-tricep-extensions</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/power-front-squat-machine-hack-squat</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/rear-delts-flies</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/resistance-shoulder-press</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/rope-pulldowns</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/rope-straight-arm-lat-pulldowns</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/seated-dip-machine</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/seated-single-leg-extensions</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/shoulder-press-machine</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/skull-crushers-overhead-tricep-pulls</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/standing-bent-over-rows</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/standing-cable-curls</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/standing-leg-curl</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/stiff-leg-deadlift-on-a-bench</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/tricep-dip-machine</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/tricep-extension-w-rope</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/tricep-rope-pushdowns</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://campknut.gg/exercises/upper-chest-press</loc>
-    <lastmod>2022-08-12T03:53:43+01:00</lastmod>
+    <lastmod>2022-08-17T11:07:38+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
