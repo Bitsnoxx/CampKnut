@@ -26,6 +26,9 @@ const renderOptions: Options = {
     [BLOCKS.PARAGRAPH]: (_node, children) => {
       return <p className="py-1.5">{children}</p>;
     },
+    [BLOCKS.UL_LIST]: (_node, children) => {
+      return <ul className="">{children}</ul>;
+    },
     [BLOCKS.QUOTE]: (_node, children) => {
       return <Important elementType="blockquote">{children}</Important>;
     },
