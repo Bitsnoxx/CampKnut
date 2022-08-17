@@ -8,7 +8,9 @@
   --background: #121212;
   --foreground: #121212;
 }
-
+body {
+  overflow-y: scroll;
+}
 h1 {
   font-size: 2rem;
 }
