@@ -1,6 +1,6 @@
 ## [Camp Knut](https://campknut.gg/ "Camp Knut")
 
-![Camp Knut](https://campknut.gg/_next/image?url=https%3A%2F%2Fsuper-static-assets.s3.amazonaws.com%2Ff0361509-fde0-4bea-98b9-5dcbbbd77a89%2Fimages%2F96b35806-e5ed-433a-96f8-ba631a3d27bb.png&w=1920&q=80)
+![Camp Knut](https://campknut.gg/_next/image?url=%2FCampKnutMerch.webp&w=3840&q=75)
 
 ### CampKnut.gg
 Camp Knut is a 30-day long training camp, where a group of streamers tries to follow Knut's workout routine and diet.
@@ -17,6 +17,7 @@ Improve fitness, look and health as much as possible in 30 days. The final show 
 - [WakeWilder](https://www.twitch.tv/WakeWilder/ "WakeWilder")
 - [Malena](https://www.twitch.tv/malena/ "Malena")
 - [Asmongold](https://www.twitch.tv/Asmongold/ "Asmongold")
+
 ## Streamers
 - [Mizkif](https://www.twitch.tv/Mizkif/ "Mizkif")
 - [Nmplol](https://www.twitch.tv/Nmplol/ "Nmplol")
@@ -32,6 +33,7 @@ Improve fitness, look and health as much as possible in 30 days. The final show 
 - [Malena](https://www.twitch.tv/malena/ "Malena")
 - [Jeanette](https://www.twitch.tv/jeanetteiswatching/ "Jeanette")
 - [HafthorJulius](https://www.twitch.tv/HafthorJulius/ "HafthorJulius")
+- [dCapio](https://www.twitch.tv/dcapio "dCapio")
 
 ## Chefs
 - [Exxzy](https://www.twitch.tv/Exxzy/ "Exxzy")
