@@ -81,7 +81,7 @@ export default function Header() {
               </li>
               <li>
                 <a
-                  href="https://store.streamelements.com/knut"
+                  href="https://merch.campknut.gg/"
                   target="_blank"
                   rel="noreferrer"
                   className="text-sm flex cursor-pointer items-center py-4 font-bold uppercase leading-snug hover:opacity-75"
